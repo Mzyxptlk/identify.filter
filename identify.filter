@@ -20,8 +20,9 @@ Option[DefaultFilterLevel]: IDs 0-80
 
 ItemDisplay[]: %WHITE%%NAME% %NL% %CONTINUE%
 
-// Stats in purple indicate an unknown stat. Stats in cyan indicate a guessed
-// stat. Everything else should(TM) be correct.
+// Stats in purple indicate an unknown stat. Stats in cyan (%BOLD%) indicate a
+// tentative stat. Everything else should(TM) be correct. If it's not, that's a
+// bug.
 
 ItemDisplay[(MAG OR !MAG) FILTERLVL=1]: %NAME% (IDs 0-80) %NL% %CONTINUE%
 ItemDisplay[(MAG OR !MAG) FILTERLVL=2]: %NAME% (IDs 81-510) %NL% %CONTINUE%
@@ -81,7 +82,7 @@ ItemDisplay[STAT460 FILTERLVL!=1]: %NAME% STAT460 = %STAT(460)% %PURPLE%???%WHIT
 ItemDisplay[STAT459 FILTERLVL!=1]: %NAME% STAT459 = %STAT(459)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT458 FILTERLVL!=1]: %NAME% STAT458 = %STAT(458)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT457 FILTERLVL!=1]: %NAME% STAT457 = %STAT(457)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT456 FILTERLVL!=1]: %NAME% STAT456 = %STAT(456)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT456 FILTERLVL!=1]: %NAME% STAT456 = %STAT(456)% %PURPLE%???%WHITE% %NL% %CONTINUE% // = 3 for a 3os Jalal's.
 ItemDisplay[STAT455 FILTERLVL!=1]: %NAME% STAT455 = %STAT(455)% ArmRWSocs %NL% %CONTINUE%
 ItemDisplay[STAT454 FILTERLVL!=1]: %NAME% STAT454 = %STAT(454)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT453 FILTERLVL!=1]: %NAME% STAT453 = %STAT(453)% ShieldRWSocs %NL% %CONTINUE%
@@ -91,7 +92,7 @@ ItemDisplay[STAT450 FILTERLVL!=1]: %NAME% STAT450 = %STAT(450)% %PURPLE%???%WHIT
 ItemDisplay[STAT449 FILTERLVL!=1]: %NAME% STAT449 = %STAT(449)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT448 FILTERLVL!=1]: %NAME% STAT448 = %STAT(448)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT447 FILTERLVL!=1]: %NAME% STAT447 = %STAT(447)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT446 FILTERLVL!=1]: %NAME% STAT446 = %STAT(446)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT446 FILTERLVL!=1]: %NAME% STAT446 = +%STAT(446)%% Summon Dmg %NL% %CONTINUE%
 ItemDisplay[STAT445 FILTERLVL!=1]: %NAME% STAT445 = %STAT(445)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT444 FILTERLVL!=1]: %NAME% STAT444 = %STAT(444)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT443 FILTERLVL!=1]: %NAME% STAT443 = %STAT(443)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -100,7 +101,7 @@ ItemDisplay[STAT441 FILTERLVL!=1]: %NAME% STAT441 = %STAT(441)% %PURPLE%???%WHIT
 ItemDisplay[STAT440 FILTERLVL!=1]: %NAME% STAT440 = %STAT(440)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT439 FILTERLVL!=1]: %NAME% STAT439 = %STAT(439)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT438 FILTERLVL!=1]: %NAME% STAT438 = %STAT(438)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT437 FILTERLVL!=1]: %NAME% STAT437 = %STAT(437)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT437 FILTERLVL!=1]: %NAME% STAT437 = +%STAT(437)% Cold Skills %NL% %CONTINUE%
 ItemDisplay[STAT436 FILTERLVL!=1]: %NAME% STAT436 = %STAT(436)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT435 FILTERLVL!=1]: %NAME% STAT435 = %STAT(435)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT434 FILTERLVL!=1]: %NAME% STAT434 = %STAT(434)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -108,10 +109,10 @@ ItemDisplay[STAT433 FILTERLVL!=1]: %NAME% STAT433 = %STAT(433)% %PURPLE%???%WHIT
 ItemDisplay[STAT432 FILTERLVL!=1]: %NAME% STAT432 = %STAT(432)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT431 FILTERLVL!=1]: %NAME% STAT431 = %STAT(431)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT430 FILTERLVL!=1]: %NAME% STAT430 = %STAT(430)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT429 FILTERLVL!=1]: %NAME% STAT429 = +%STAT(429)% MagicArrows %NL% %CONTINUE%
+ItemDisplay[STAT429 FILTERLVL!=1]: %NAME% STAT429 = +%STAT(429)% Magic Arrows %NL% %CONTINUE%
 ItemDisplay[STAT428 FILTERLVL!=1]: %NAME% STAT428 = %STAT(428)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT427 FILTERLVL!=1]: %NAME% STAT427 = %STAT(427)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT426 FILTERLVL!=1]: %NAME% STAT426 = +%STAT(426)% ColdArrows %NL% %CONTINUE%
+ItemDisplay[STAT427 FILTERLVL!=1]: %NAME% STAT427 = +%STAT(427)% Ice Arrows %NL% %CONTINUE%
+ItemDisplay[STAT426 FILTERLVL!=1]: %NAME% STAT426 = +%STAT(426)% Cold Arrows %NL% %CONTINUE%
 ItemDisplay[STAT425 FILTERLVL!=1]: %NAME% STAT425 = %STAT(425)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT424 FILTERLVL!=1]: %NAME% STAT424 = %STAT(424)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT423 FILTERLVL!=1]: %NAME% STAT423 = %STAT(423)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -183,10 +184,10 @@ ItemDisplay[STAT360 FILTERLVL!=1]: %NAME% STAT360 = %STAT(360)% IsCorrupted %NL%
 // - 1261 = NoChange, boots
 // - 1333 = NoChange, armor
 // - 1337 = NoChange, armor
-// - 1553 = 3/5 Sockets, weap
-// - 1928 = +18 Life, amu
+// - 1553 = 3/5 Sockets, weapon
+// - 1928 = +18 Life, amulet
 //
-// More values welcome.
+// More values welcome!
 ItemDisplay[STAT359 FILTERLVL!=1]: %NAME% STAT359 = %STAT(359)% Corruption %NL% %CONTINUE%
 
 // 358 was D2's highest defined stat. The above are all PoD-only.
