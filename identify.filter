@@ -5,8 +5,8 @@
 
 Attribute[Author]: Mzyxptlk
 Attribute[Name]: identify
-Attribute[Version]: 0.4.2
-Attribute[Date]: 2024-03-28
+Attribute[Version]: 0.5
+Attribute[Date]: 2024-03-30
 
 // When item names become too long, the game crashes. Most of the common stats
 // are in the lower regions, so we split those out from the rest. If you really
@@ -14,7 +14,8 @@ Attribute[Date]: 2024-03-28
 
 FilterLevel[1]: IDs 0-80
 FilterLevel[2]: IDs 81-510
-FilterLevel[3]: All CRASH RISK
+FilterLevel[3]: Skills
+FilterLevel[4]: All CRASH RISK
 
 Option[DefaultFilterLevel]: IDs 0-80
 
@@ -26,8 +27,10 @@ ItemDisplay[]: %WHITE%%NAME% %NL% %CONTINUE%
 
 ItemDisplay[(MAG OR !MAG) FILTERLVL=1]: %NAME% (IDs 0-80) %NL% %CONTINUE%
 ItemDisplay[(MAG OR !MAG) FILTERLVL=2]: %NAME% (IDs 81-510) %NL% %CONTINUE%
-ItemDisplay[(MAG OR !MAG) FILTERLVL=3]: %NAME% (All IDs) %NL% %CONTINUE%
+ItemDisplay[(MAG OR !MAG) FILTERLVL=3]: %NAME% (Skills) %NL% %CONTINUE%
+ItemDisplay[(MAG OR !MAG) FILTERLVL=4]: %NAME% (All IDs) %NL% %CONTINUE%
 
+EnableIf[(FILTERLVL=2 OR FILTERLVL=4)]:
 ItemDisplay[STAT510 FILTERLVL!=1]: %NAME% STAT510 = %STAT(510)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT509 FILTERLVL!=1]: %NAME% STAT509 = %STAT(509)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT508 FILTERLVL!=1]: %NAME% STAT508 = %STAT(508)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -50,7 +53,7 @@ ItemDisplay[STAT492 FILTERLVL!=1]: %NAME% STAT492 = %STAT(492)% %PURPLE%???%WHIT
 ItemDisplay[STAT491 FILTERLVL!=1]: %NAME% STAT491 = %STAT(491)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT490 FILTERLVL!=1]: %NAME% STAT490 = %STAT(490)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT489 FILTERLVL!=1]: %NAME% STAT489 = %STAT(489)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT488 FILTERLVL!=1]: %NAME% STAT488 = %STAT(488)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT488 FILTERLVL!=1]: %NAME% STAT488 = +%STAT(488)%% SummonDef %NL% %CONTINUE%
 ItemDisplay[STAT487 FILTERLVL!=1]: %NAME% STAT487 = %STAT(487)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT486 FILTERLVL!=1]: %NAME% STAT486 = %STAT(486)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT485 FILTERLVL!=1]: %NAME% STAT485 = %STAT(485)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -110,7 +113,7 @@ ItemDisplay[STAT432 FILTERLVL!=1]: %NAME% STAT432 = %STAT(432)% %PURPLE%???%WHIT
 ItemDisplay[STAT431 FILTERLVL!=1]: %NAME% STAT431 = %STAT(431)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT430 FILTERLVL!=1]: %NAME% STAT430 = %STAT(430)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT429 FILTERLVL!=1]: %NAME% STAT429 = +%STAT(429)% Magic Arrows %NL% %CONTINUE%
-ItemDisplay[STAT428 FILTERLVL!=1]: %NAME% STAT428 = %STAT(428)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT428 FILTERLVL!=1]: %NAME% STAT428 = +%STAT(428)% Fire Arrows %NL% %CONTINUE%
 ItemDisplay[STAT427 FILTERLVL!=1]: %NAME% STAT427 = +%STAT(427)% Ice Arrows %NL% %CONTINUE%
 ItemDisplay[STAT426 FILTERLVL!=1]: %NAME% STAT426 = +%STAT(426)% Cold Arrows %NL% %CONTINUE%
 ItemDisplay[STAT425 FILTERLVL!=1]: %NAME% STAT425 = %STAT(425)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -138,7 +141,6 @@ ItemDisplay[STAT404 FILTERLVL!=1]: %NAME% STAT404 = %STAT(404)% %PURPLE%???%WHIT
 ItemDisplay[STAT403 FILTERLVL!=1]: %NAME% STAT403 = %STAT(403)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT402 FILTERLVL!=1]: %NAME% STAT402 = %STAT(402)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT401 FILTERLVL!=1]: %NAME% STAT401 = %STAT(401)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT400 FILTERLVL!=1]: %NAME% STAT400 = %STAT(400)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT400 FILTERLVL!=1]: %NAME% STAT400 = -%STAT(400)% Phys Pierc %NL% %CONTINUE%
 ItemDisplay[STAT399 FILTERLVL!=1]: %NAME% STAT399 = +%STAT(399)% Phys Skill Dmg %NL% %CONTINUE%
 ItemDisplay[STAT398 FILTERLVL!=1]: %NAME% STAT398 = %STAT(398)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -266,8 +268,8 @@ ItemDisplay[STAT246 FILTERLVL!=1]: %NAME% STAT246 = %STAT(246)% %BOLD%UndeadAR/C
 ItemDisplay[STAT245 FILTERLVL!=1]: %NAME% STAT245 = %STAT(245)% %BOLD%DemonAR/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT244 FILTERLVL!=1]: %NAME% STAT244 = %STAT(244)% %BOLD%UndeadDmg/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT243 FILTERLVL!=1]: %NAME% STAT243 = %STAT(243)% %BOLD%DemonDmg/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT242 FILTERLVL!=1]: %NAME% STAT242 = %STAT(242)% %BOLD%Stam/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT241 FILTERLVL!=1]: %NAME% STAT241 = %STAT(241)% %BOLD%StamRegen/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT242 FILTERLVL!=1]: %NAME% STAT242 = +%STAT(242)%/8 Stam/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT241 FILTERLVL!=1]: %NAME% STAT241 = +%STAT(241)%/8 StamRegen/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT240 FILTERLVL!=1]: %NAME% STAT240 = +%STAT(240)%/8 MF/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT239 FILTERLVL!=1]: %NAME% STAT239 = %STAT(239)%/8 %BOLD%GF/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT238 FILTERLVL!=1]: %NAME% STAT238 = %STAT(238)%/8 Attacker Takes Dmg/Clvl %NL% %CONTINUE%
@@ -281,20 +283,20 @@ ItemDisplay[STAT231 FILTERLVL!=1]: %NAME% STAT231 = %STAT(231)%%/8 %BOLD%FireRes
 ItemDisplay[STAT230 FILTERLVL!=1]: %NAME% STAT230 = %STAT(230)%%/8 %BOLD%ColdRes/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT229 FILTERLVL!=1]: %NAME% STAT229 = %STAT(229)%/8 %BOLD%PoisDmg/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT228 FILTERLVL!=1]: %NAME% STAT228 = %STAT(228)%/8 %BOLD%LightDmg/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT227 FILTERLVL!=1]: %NAME% STAT227 = %STAT(227)%/8 %BOLD%FireDmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT227 FILTERLVL!=1]: %NAME% STAT227 = %STAT(227)%/8 FireDmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT226 FILTERLVL!=1]: %NAME% STAT226 = %STAT(226)%/8 ColdDmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT225 FILTERLVL!=1]: %NAME% STAT225 = +%STAT(225)%%/2 AR/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT224 FILTERLVL!=1]: %NAME% STAT224 = +%STAT(224)%/2 AR/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT223 FILTERLVL!=1]: %NAME% STAT223 = +%STAT(223)%/8 %BOLD%Vit/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT222 FILTERLVL!=1]: %NAME% STAT222 = +%STAT(222)%/8 %BOLD%Ene/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT221 FILTERLVL!=1]: %NAME% STAT221 = +%STAT(221)%/8 %BOLD%Dex/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT220 FILTERLVL!=1]: %NAME% STAT220 = +%STAT(220)%/8 %BOLD%Str/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT220 FILTERLVL!=1]: %NAME% STAT220 = +%STAT(220)%/8 Str/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT219 FILTERLVL!=1]: %NAME% STAT219 = +%STAT(219)%%/8 MaxDmg/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT218 FILTERLVL!=1]: %NAME% STAT218 = +%STAT(218)%/8 MaxDmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT217 FILTERLVL!=1]: %NAME% STAT217 = +%STAT(217)%/8 Mana/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT216 FILTERLVL!=1]: %NAME% STAT216 = +%STAT(216)%/8 Life/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT215 FILTERLVL!=1]: %NAME% STAT215 = +%STAT(215)%%/8 %BOLD%Arm/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT214 FILTERLVL!=1]: %NAME% STAT214 = +%STAT(214)%/8 %BOLD%Arm/Clvl????%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT214 FILTERLVL!=1]: %NAME% STAT214 = +%STAT(214)%% %BOLD%DmgReduc????%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT213 FILTERLVL!=1]: %NAME% STAT213 = %STAT(213)% %BOLD%unused???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT212 FILTERLVL!=1]: %NAME% STAT212 = %STAT(212)% %BOLD%unused???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT211 FILTERLVL!=1]: %NAME% STAT211 = %STAT(211)% %BOLD%unused???%WHITE% %NL% %CONTINUE%
@@ -385,7 +387,7 @@ ItemDisplay[STAT131 FILTERLVL!=1]: %NAME% STAT131 = %STAT(131)% %BOLD%thorns_per
 ItemDisplay[STAT130 FILTERLVL!=1]: %NAME% STAT130 = %STAT(130)% %BOLD%lifetap_level???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT129 FILTERLVL!=1]: %NAME% STAT129 = %STAT(129)% %BOLD%ironmaiden_level???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT128 FILTERLVL!=1]: %NAME% STAT128 = Atk Takes Light Dmg +%STAT(128)% %NL% %CONTINUE%
-ItemDisplay[STAT127 FILTERLVL!=1]: %NAME% STAT127 = +%STAT(127)% All Skills %NL% %CONTINUE%
+ItemDisplay[STAT127 FILTERLVL!=1]: %NAME% STAT127/ALLSK = +%STAT(127)% All Skills %NL% %CONTINUE%
 ItemDisplay[STAT126 FILTERLVL!=1]: %NAME% STAT126 = %STAT(126)% %BOLD%Elemental Skill???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT125 FILTERLVL!=1]: %NAME% STAT125 = %STAT(125)% %BOLD%Throwable???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT124 FILTERLVL!=1]: %NAME% STAT124 = %STAT(124)% UndeadAR %NL% %CONTINUE%
@@ -413,105 +415,810 @@ ItemDisplay[STAT105 FILTERLVL!=1]: %NAME% STAT105 = %STAT(105)%% FCR %NL% %CONTI
 ItemDisplay[STAT102 FILTERLVL!=1]: %NAME% STAT102 = %STAT(102)%% FBR %NL% %CONTINUE%
 ItemDisplay[STAT101 FILTERLVL!=1]: %NAME% STAT101 = %STAT(101)% %BOLD%skill_poison_override_length? %NL% %CONTINUE%
 ItemDisplay[STAT100 FILTERLVL!=1]: %NAME% STAT100 = %STAT(100)% %BOLD%Monster player count???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT99  FILTERLVL!=1]: %NAME% STAT99 = %STAT(99)% FHR %NL% %CONTINUE%
-ItemDisplay[STAT98  FILTERLVL!=1]: %NAME% STAT98 = %STAT(98)% %BOLD%state???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT97  FILTERLVL!=1]: %NAME% STAT97 = %STAT(97,0)% Oskill? %NL% %CONTINUE%
-ItemDisplay[STAT96  FILTERLVL!=1]: %NAME% STAT96 = %STAT(96)%% FRW %NL% %CONTINUE%
-ItemDisplay[STAT95  FILTERLVL!=1]: %NAME% STAT95 = %STAT(95)% %BOLD%Last block frame???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT94  FILTERLVL!=1]: %NAME% STAT94 = %STAT(94)% %BOLD%item_levelreqpct? %NL% %CONTINUE%
-ItemDisplay[STAT93  FILTERLVL!=1]: %NAME% STAT93 = %STAT(93)% IAS %NL% %CONTINUE%
-ItemDisplay[STAT92  FILTERLVL!=1]: %NAME% STAT92 = +%STAT(92)% Level req (Upgraded) %NL% %CONTINUE%
-ItemDisplay[STAT91  FILTERLVL!=1]: %NAME% STAT91 = Reqs %STAT(91)%% %NL% %CONTINUE%
-ItemDisplay[STAT90  FILTERLVL!=1]: %NAME% STAT90 = %STAT(90)% %BOLD%Light Color nv???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT89  FILTERLVL!=1]: %NAME% STAT89 = %STAT(89)% LightRadius %NL% %CONTINUE%
-ItemDisplay[STAT88  FILTERLVL!=1]: %NAME% STAT88 = %STAT(88)% %BOLD%Double Herb Duration???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT87  FILTERLVL!=1]: %NAME% STAT87 = -%STAT(87)%% VendorPrice %NL% %CONTINUE%
-ItemDisplay[STAT86  FILTERLVL!=1]: %NAME% STAT86 = %STAT(86)% LPK %NL% %CONTINUE%
-ItemDisplay[STAT85  FILTERLVL!=1]: %NAME% STAT85 = +%STAT(85)%% Exp (/6) %NL% %CONTINUE%
-ItemDisplay[STAT84  FILTERLVL!=1]: %NAME% STAT84 = %STAT(84)% %BOLD%Unsentparam???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT83  FILTERLVL!=1]: %NAME% STAT83 = +%STAT(83)% Class SK %NL% %CONTINUE%
-// ItemDisplay[STAT82  FILTERLVL!=1]: %NAME% STAT82 = %STAT(82)% timeduration %NL% %CONTINUE%
-ItemDisplay[STAT81  FILTERLVL!=1]: %NAME% STAT81 = %STAT(81)% Knockback %NL% %CONTINUE%
-ItemDisplay[STAT80  FILTERLVL!=2]: %NAME% STAT80 = %STAT(80)%% MF %NL% %CONTINUE%
-ItemDisplay[STAT79  FILTERLVL!=2]: %NAME% STAT79 = %STAT(79)%% GF %NL% %CONTINUE%
-ItemDisplay[STAT78  FILTERLVL!=2]: %NAME% STAT78 = %STAT(78)% Attacker Takes Damage %NL% %CONTINUE%
-ItemDisplay[STAT77  FILTERLVL!=2]: %NAME% STAT77 = +%STAT(77)%% Mana %NL% %CONTINUE%
-ItemDisplay[STAT76  FILTERLVL!=2]: %NAME% STAT76 = +%STAT(76)%% Life %NL% %CONTINUE%
-ItemDisplay[STAT75  FILTERLVL!=2]: %NAME% STAT75 = +%STAT(75)%% %BOLD%MaxDura? %NL% %CONTINUE%
-ItemDisplay[STAT74  FILTERLVL!=2]: %NAME% STAT74 = Replen %STAT(74)%*25/256 Life/Sec %NL% %CONTINUE%
-ItemDisplay[STAT73  FILTERLVL!=2]: %NAME% STAT73 = %STAT(73)% MaxDura %NL% %CONTINUE%
-ItemDisplay[STAT72  FILTERLVL!=2]: %NAME% STAT72 = %STAT(72)% Dura %NL% %CONTINUE%
-// ItemDisplay[STAT71  FILTERLVL!=2]: %NAME% STAT71 = %STAT(71)% value %NL% %CONTINUE%
-ItemDisplay[STAT70  FILTERLVL!=2]: %NAME% STAT70 = %STAT(70)% Quantity %NL% %CONTINUE%
-// ItemDisplay[STAT69  FILTERLVL!=2]: %NAME% STAT69 = %STAT(69)% other_animrate %NL% %CONTINUE%
-ItemDisplay[STAT68  FILTERLVL!=2]: %NAME% STAT68 = %STAT(68)% WSM (negative) %NL% %CONTINUE%
-ItemDisplay[STAT67  FILTERLVL!=2]: %NAME% STAT67 = %STAT(67)% FRW (equip weight) %NL% %CONTINUE%
-ItemDisplay[STAT66  FILTERLVL!=2]: %NAME% STAT66 = %STAT(66)% %BOLD%Stun (in frames?) %NL% %CONTINUE%
-ItemDisplay[STAT65  FILTERLVL!=2]: %NAME% STAT65 = %STAT(65)% %BOLD%stamdrainmaxdam? %NL% %CONTINUE%
-ItemDisplay[STAT64  FILTERLVL!=2]: %NAME% STAT64 = %STAT(64)% %BOLD%stamdrainmindam? %NL% %CONTINUE%
-ItemDisplay[STAT63  FILTERLVL!=2]: %NAME% STAT63 = %STAT(63)% %BOLD%manadrainmaxdam? %NL% %CONTINUE%
-ItemDisplay[STAT62  FILTERLVL!=2]: %NAME% STAT62 = %STAT(62)% ML %NL% %CONTINUE%
-ItemDisplay[STAT61  FILTERLVL!=2]: %NAME% STAT61 = %STAT(61)% %BOLD%lifedrainmaxdam? %NL% %CONTINUE%
-ItemDisplay[STAT60  FILTERLVL!=2]: %NAME% STAT60 = %STAT(60)% LL %NL% %CONTINUE%
-ItemDisplay[STAT59  FILTERLVL!=2]: %NAME% STAT59 = %STAT(59)%/25 Sec Pois Len %NL% %CONTINUE%
-ItemDisplay[STAT58  FILTERLVL!=2]: %NAME% STAT58 = %STAT(58)%/256 Max Pois Dmg/Sec %NL% %CONTINUE%
-ItemDisplay[STAT57  FILTERLVL!=2]: %NAME% STAT57 = %STAT(57)%/256 Min Pois Dmg/Sec %NL% %CONTINUE%
-ItemDisplay[STAT56  FILTERLVL!=2]: %NAME% STAT56 = %STAT(56)%/25 Chill Sec %NL% %CONTINUE%
-ItemDisplay[STAT55  FILTERLVL!=2]: %NAME% STAT55 = %STAT(55)% Max Cold Dmg %NL% %CONTINUE%
-ItemDisplay[STAT54  FILTERLVL!=2]: %NAME% STAT54 = %STAT(54)% Min Cold Dmg %NL% %CONTINUE%
-ItemDisplay[STAT53  FILTERLVL!=2]: %NAME% STAT53 = %STAT(53)% Max Magic Dmg %NL% %CONTINUE%
-ItemDisplay[STAT52  FILTERLVL!=2]: %NAME% STAT52 = %STAT(52)% Min Magic Dmg %NL% %CONTINUE%
-ItemDisplay[STAT51  FILTERLVL!=2]: %NAME% STAT51 = %STAT(51)% Max Light Dmg %NL% %CONTINUE%
-ItemDisplay[STAT50  FILTERLVL!=2]: %NAME% STAT50 = %STAT(50)% Min Light Dmg %NL% %CONTINUE%
-ItemDisplay[STAT49  FILTERLVL!=2]: %NAME% STAT49 = %STAT(49)% Max Fire Dmg %NL% %CONTINUE%
-ItemDisplay[STAT48  FILTERLVL!=2]: %NAME% STAT48 = +%STAT(48)% Min Fire Dmg %NL% %CONTINUE%
-// ItemDisplay[STAT47  FILTERLVL!=2]: %NAME% STAT47 = %STAT(47)% damage_aura %NL% %CONTINUE%
-ItemDisplay[STAT46  FILTERLVL!=2]: %NAME% STAT46 = MaxPRes +%STAT(46)%% %NL% %CONTINUE%
-ItemDisplay[STAT45  FILTERLVL!=2]: %NAME% STAT45 = PRes +%STAT(45)%% %NL% %CONTINUE%
-ItemDisplay[STAT44  FILTERLVL!=2]: %NAME% STAT44 = MaxCR +%STAT(44)%% %NL% %CONTINUE%
-ItemDisplay[STAT43  FILTERLVL!=2]: %NAME% STAT43 = CRes +%STAT(43)%% %NL% %CONTINUE%
-ItemDisplay[STAT42  FILTERLVL!=2]: %NAME% STAT42 = MaxLRes +%STAT(42)%% %NL% %CONTINUE%
-ItemDisplay[STAT41  FILTERLVL!=2]: %NAME% STAT41 = LRes +%STAT(41)%% %NL% %CONTINUE%
-ItemDisplay[STAT40  FILTERLVL!=2]: %NAME% STAT40 = MaxFRes +%STAT(40)%% %NL% %CONTINUE%
-ItemDisplay[STAT39  FILTERLVL!=2]: %NAME% STAT39 = FRes +%STAT(39)%% %NL% %CONTINUE%
-ItemDisplay[STAT38  FILTERLVL!=2]: %NAME% STAT38 = MaxMagRes +%STAT(38)%% %NL% %CONTINUE%
-ItemDisplay[STAT37  FILTERLVL!=2]: %NAME% STAT37 = MagRes +%STAT(37)%% %NL% %CONTINUE%
-ItemDisplay[STAT36  FILTERLVL!=2]: %NAME% STAT36 = +%STAT(36)%% Phys Dmg Reduc %NL% %CONTINUE%
-ItemDisplay[STAT35  FILTERLVL!=2]: %NAME% STAT35 = Magic/Ele Dmg Reduc by %STAT(35)% %NL% %CONTINUE%
-ItemDisplay[STAT34  FILTERLVL!=2]: %NAME% STAT34 = Phys Dmg Reduc by %STAT(34)% %NL% %CONTINUE%
-ItemDisplay[STAT33  FILTERLVL!=2]: %NAME% STAT33 = +%STAT(33)% MeleeDef %NL% %CONTINUE%
-ItemDisplay[STAT32  FILTERLVL!=2]: %NAME% STAT32 = +%STAT(32)% MissileDef %NL% %CONTINUE%
-ItemDisplay[STAT31  FILTERLVL!=2]: %NAME% STAT31 = %STAT(31)% Def %NL% %CONTINUE%
-// ItemDisplay[STAT30  FILTERLVL!=2]: %NAME% STAT30 = %STAT(30)% CharExpPrevLvl %NL% %CONTINUE%
-// ItemDisplay[STAT29  FILTERLVL!=2]: %NAME% STAT29 = %STAT(29)% CharExpNextLvl %NL% %CONTINUE%
-ItemDisplay[STAT28  FILTERLVL!=2]: %NAME% STAT28 = StamHeal %STAT(28)%% %NL% %CONTINUE%
-ItemDisplay[STAT27  FILTERLVL!=2]: %NAME% STAT27 = +%STAT(27)%% ManaRegen %NL% %CONTINUE%
-ItemDisplay[STAT26  FILTERLVL!=2]: %NAME% STAT26 = %STAT(26)% %BOLD%manarecovery? %NL% %CONTINUE%
-ItemDisplay[STAT25  FILTERLVL!=2]: %NAME% STAT25 = %STAT(25)% %BOLD%damagepercent? %NL% %CONTINUE%
-ItemDisplay[STAT24  FILTERLVL!=2]: %NAME% STAT24 = %STAT(24)% 2H MaxDmg %NL% %CONTINUE%
-ItemDisplay[STAT23  FILTERLVL!=2]: %NAME% STAT23 = %STAT(23)% 2H MinDmg %NL% %CONTINUE%
-ItemDisplay[STAT22  FILTERLVL!=2]: %NAME% STAT22 = %STAT(22)% 1H MaxDmg %NL% %CONTINUE%
-ItemDisplay[STAT21  FILTERLVL!=2]: %NAME% STAT21 = %STAT(21)% 1H MinDmg %NL% %CONTINUE%
-ItemDisplay[STAT20  FILTERLVL!=2]: %NAME% STAT20 = +%STAT(20)%% Block Rate (-16) %NL% %CONTINUE%
-ItemDisplay[STAT19  FILTERLVL!=2]: %NAME% STAT19 = %STAT(19)% AR %NL% %CONTINUE%
-ItemDisplay[STAT18  FILTERLVL!=2]: %NAME% STAT18 = +%STAT(18)%% Min Dmg %NL% %CONTINUE%
-ItemDisplay[STAT17  FILTERLVL!=2]: %NAME% STAT17 = +%STAT(17)%% Max Dmg %NL% %CONTINUE%
-ItemDisplay[STAT16  FILTERLVL!=2]: %NAME% STAT16 = +%STAT(16)%% Def %NL% %CONTINUE%
-// ItemDisplay[STAT15  FILTERLVL!=2]: %NAME% STAT15 = %STAT(15)% CharGoldInStash %NL% %CONTINUE%
-// ItemDisplay[STAT14  FILTERLVL!=2]: %NAME% STAT14 = %STAT(14)% CharGold %NL% %CONTINUE%
-// ItemDisplay[STAT13  FILTERLVL!=2]: %NAME% STAT13 = %STAT(13)% CharXP %NL% %CONTINUE%
-// ItemDisplay[STAT12  FILTERLVL!=2]: %NAME% STAT12 = %STAT(12)% Clvl %NL% %CONTINUE%
-ItemDisplay[STAT11  FILTERLVL!=2]: %NAME% STAT11 = +%STAT(11)% Stam %NL% %CONTINUE%
-// ItemDisplay[STAT10  FILTERLVL!=2]: %NAME% STAT10 = %STAT(10)% CharStamina %NL% %CONTINUE%
-ItemDisplay[STAT9   FILTERLVL!=2]: %NAME% STAT9 = +%STAT(9)% Mana %NL% %CONTINUE%
-// ItemDisplay[STAT8   FILTERLVL!=2]: %NAME% STAT8 = %STAT(8)% CharMana %NL% %CONTINUE%
-ItemDisplay[STAT7   FILTERLVL!=2]: %NAME% STAT7 = +%STAT(7)% Life %NL% %CONTINUE%
-// ItemDisplay[STAT6   FILTERLVL!=2]: %NAME% STAT6 = %STAT(6)% CharHP %NL% %CONTINUE%
-// ItemDisplay[STAT5   FILTERLVL!=2]: %NAME% STAT5 = %STAT(5)% CharUnusedSkillPoints %NL% %CONTINUE%
-// ItemDisplay[STAT4   FILTERLVL!=2]: %NAME% STAT4 = %STAT(4)% CharUnusedStatPoints %NL% %CONTINUE%
-ItemDisplay[STAT3   FILTERLVL!=2]: %NAME% STAT3 = +%STAT(3)% Vit %NL% %CONTINUE%
-ItemDisplay[STAT2   FILTERLVL!=2]: %NAME% STAT2 = +%STAT(2)% Dex %NL% %CONTINUE%
-ItemDisplay[STAT1   FILTERLVL!=2]: %NAME% STAT1 = +%STAT(1)% Ene %NL% %CONTINUE%
-ItemDisplay[STAT0   FILTERLVL!=2]: %NAME% STAT0 = +%STAT(0)% Str %NL% %CONTINUE%
+ItemDisplay[STAT99]: %NAME% STAT99 = %STAT(99)% FHR %NL% %CONTINUE%
+ItemDisplay[STAT98]: %NAME% STAT98 = %STAT(98)% %BOLD%state???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT97]: %NAME% STAT97 = %STAT(97,0)% Oskill? %NL% %CONTINUE%
+ItemDisplay[STAT96]: %NAME% STAT96 = %STAT(96)%% FRW %NL% %CONTINUE%
+ItemDisplay[STAT95]: %NAME% STAT95 = %STAT(95)% %BOLD%Last block frame???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT94]: %NAME% STAT94 = %STAT(94)% %BOLD%item_levelreqpct? %NL% %CONTINUE%
+ItemDisplay[STAT93]: %NAME% STAT93 = %STAT(93)% IAS %NL% %CONTINUE%
+ItemDisplay[STAT92]: %NAME% STAT92 = +%STAT(92)% Level req (Upgraded) %NL% %CONTINUE%
+ItemDisplay[STAT91]: %NAME% STAT91 = Reqs %STAT(91)%% %NL% %CONTINUE%
+ItemDisplay[STAT90]: %NAME% STAT90 = %STAT(90)% %BOLD%Light Color nv???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT89]: %NAME% STAT89 = %STAT(89)% LightRadius %NL% %CONTINUE%
+ItemDisplay[STAT88]: %NAME% STAT88 = %STAT(88)% %BOLD%Double Herb Duration???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT87]: %NAME% STAT87 = -%STAT(87)%% VendorPrice %NL% %CONTINUE%
+ItemDisplay[STAT86]: %NAME% STAT86 = %STAT(86)% LPK %NL% %CONTINUE%
+ItemDisplay[STAT85]: %NAME% STAT85 = +%STAT(85)%% Exp (/6) %NL% %CONTINUE%
+ItemDisplay[STAT84]: %NAME% STAT84 = %STAT(84)% %BOLD%Unsentparam???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT83]: %NAME% STAT83 = +%STAT(83)% Class SK %NL% %CONTINUE%
+// ItemDisplay[STAT82]: %NAME% STAT82 = %STAT(82)% timeduration %NL% %CONTINUE%
+ItemDisplay[STAT81]: %NAME% STAT81 = %STAT(81)% Knockback %NL% %CONTINUE%
+EndIf[]
+
+EnableIf[(FILTERLVL=1 OR FILTERLVL=4)]:
+ItemDisplay[STAT80]: %NAME% STAT80 = %STAT(80)%% MF %NL% %CONTINUE%
+ItemDisplay[STAT79]: %NAME% STAT79 = %STAT(79)%% GF %NL% %CONTINUE%
+ItemDisplay[STAT78]: %NAME% STAT78 = %STAT(78)% Attacker Takes Damage %NL% %CONTINUE%
+ItemDisplay[STAT77]: %NAME% STAT77 = +%STAT(77)%% Mana %NL% %CONTINUE%
+ItemDisplay[STAT76]: %NAME% STAT76 = +%STAT(76)%% Life %NL% %CONTINUE%
+ItemDisplay[STAT75]: %NAME% STAT75 = +%STAT(75)%% %BOLD%MaxDura? %NL% %CONTINUE%
+ItemDisplay[STAT74]: %NAME% STAT74 = Replen %STAT(74)%*25/256 Life/Sec %NL% %CONTINUE%
+ItemDisplay[STAT73]: %NAME% STAT73 = %STAT(73)% MaxDura %NL% %CONTINUE%
+ItemDisplay[STAT72]: %NAME% STAT72 = %STAT(72)% Dura %NL% %CONTINUE%
+// ItemDisplay[STAT71]: %NAME% STAT71 = %STAT(71)% value %NL% %CONTINUE%
+ItemDisplay[STAT70]: %NAME% STAT70 = %STAT(70)% Quantity %NL% %CONTINUE%
+// ItemDisplay[STAT69]: %NAME% STAT69 = %STAT(69)% other_animrate %NL% %CONTINUE%
+ItemDisplay[STAT68]: %NAME% STAT68 = %STAT(68)% WSM (negative) %NL% %CONTINUE%
+ItemDisplay[STAT67]: %NAME% STAT67 = %STAT(67)% FRW (equip weight) %NL% %CONTINUE%
+ItemDisplay[STAT66]: %NAME% STAT66 = %STAT(66)% %BOLD%Stun (in frames?) %NL% %CONTINUE%
+ItemDisplay[STAT65]: %NAME% STAT65 = %STAT(65)% %BOLD%stamdrainmaxdam? %NL% %CONTINUE%
+ItemDisplay[STAT64]: %NAME% STAT64 = %STAT(64)% %BOLD%stamdrainmindam? %NL% %CONTINUE%
+ItemDisplay[STAT63]: %NAME% STAT63 = %STAT(63)% %BOLD%manadrainmaxdam? %NL% %CONTINUE%
+ItemDisplay[STAT62]: %NAME% STAT62 = %STAT(62)% ML %NL% %CONTINUE%
+ItemDisplay[STAT61]: %NAME% STAT61 = %STAT(61)% %BOLD%lifedrainmaxdam? %NL% %CONTINUE%
+ItemDisplay[STAT60]: %NAME% STAT60 = %STAT(60)% LL %NL% %CONTINUE%
+ItemDisplay[STAT59]: %NAME% STAT59 = %STAT(59)%/25 Sec Pois Len %NL% %CONTINUE%
+ItemDisplay[STAT58]: %NAME% STAT58 = %STAT(58)%/256 Max Pois Dmg/Sec %NL% %CONTINUE%
+ItemDisplay[STAT57]: %NAME% STAT57 = %STAT(57)%/256 Min Pois Dmg/Sec %NL% %CONTINUE%
+ItemDisplay[STAT56]: %NAME% STAT56 = %STAT(56)%/25 Chill Sec %NL% %CONTINUE%
+ItemDisplay[STAT55]: %NAME% STAT55 = %STAT(55)% Max Cold Dmg %NL% %CONTINUE%
+ItemDisplay[STAT54]: %NAME% STAT54 = %STAT(54)% Min Cold Dmg %NL% %CONTINUE%
+ItemDisplay[STAT53]: %NAME% STAT53 = %STAT(53)% Max Magic Dmg %NL% %CONTINUE%
+ItemDisplay[STAT52]: %NAME% STAT52 = %STAT(52)% Min Magic Dmg %NL% %CONTINUE%
+ItemDisplay[STAT51]: %NAME% STAT51 = %STAT(51)% Max Light Dmg %NL% %CONTINUE%
+ItemDisplay[STAT50]: %NAME% STAT50 = %STAT(50)% Min Light Dmg %NL% %CONTINUE%
+ItemDisplay[STAT49]: %NAME% STAT49 = %STAT(49)% Max Fire Dmg %NL% %CONTINUE%
+ItemDisplay[STAT48]: %NAME% STAT48 = +%STAT(48)% Min Fire Dmg %NL% %CONTINUE%
+// ItemDisplay[STAT47]: %NAME% STAT47 = %STAT(47)% damage_aura %NL% %CONTINUE%
+ItemDisplay[STAT46]: %NAME% STAT46 = MaxPRes +%STAT(46)%% %NL% %CONTINUE%
+ItemDisplay[STAT45]: %NAME% STAT45 = PRes +%STAT(45)%% %NL% %CONTINUE%
+ItemDisplay[STAT44]: %NAME% STAT44 = MaxCR +%STAT(44)%% %NL% %CONTINUE%
+ItemDisplay[STAT43]: %NAME% STAT43 = CRes +%STAT(43)%% %NL% %CONTINUE%
+ItemDisplay[STAT42]: %NAME% STAT42 = MaxLRes +%STAT(42)%% %NL% %CONTINUE%
+ItemDisplay[STAT41]: %NAME% STAT41 = LRes +%STAT(41)%% %NL% %CONTINUE%
+ItemDisplay[STAT40]: %NAME% STAT40 = MaxFRes +%STAT(40)%% %NL% %CONTINUE%
+ItemDisplay[STAT39]: %NAME% STAT39 = FRes +%STAT(39)%% %NL% %CONTINUE%
+ItemDisplay[STAT38]: %NAME% STAT38 = MaxMagRes +%STAT(38)%% %NL% %CONTINUE%
+ItemDisplay[STAT37]: %NAME% STAT37 = MagRes +%STAT(37)%% %NL% %CONTINUE%
+ItemDisplay[STAT36]: %NAME% STAT36 = +%STAT(36)%% Phys Dmg Reduc %NL% %CONTINUE%
+ItemDisplay[STAT35]: %NAME% STAT35 = Magic/Ele Dmg Reduc by %STAT(35)% %NL% %CONTINUE%
+ItemDisplay[STAT34]: %NAME% STAT34 = Phys Dmg Reduc by %STAT(34)% %NL% %CONTINUE%
+ItemDisplay[STAT33]: %NAME% STAT33 = +%STAT(33)% MeleeDef %NL% %CONTINUE%
+ItemDisplay[STAT32]: %NAME% STAT32 = +%STAT(32)% MissileDef %NL% %CONTINUE%
+ItemDisplay[STAT31]: %NAME% STAT31 = %STAT(31)% Def %NL% %CONTINUE%
+// ItemDisplay[STAT30]: %NAME% STAT30 = %STAT(30)% CharExpPrevLvl %NL% %CONTINUE%
+// ItemDisplay[STAT29]: %NAME% STAT29 = %STAT(29)% CharExpNextLvl %NL% %CONTINUE%
+ItemDisplay[STAT28]: %NAME% STAT28 = StamHeal %STAT(28)%% %NL% %CONTINUE%
+ItemDisplay[STAT27]: %NAME% STAT27 = +%STAT(27)%% ManaRegen %NL% %CONTINUE%
+ItemDisplay[STAT26]: %NAME% STAT26 = %STAT(26)% %BOLD%manarecovery? %NL% %CONTINUE%
+ItemDisplay[STAT25]: %NAME% STAT25 = %STAT(25)% %BOLD%damagepercent? %NL% %CONTINUE%
+ItemDisplay[STAT24]: %NAME% STAT24 = %STAT(24)% 2H MaxDmg %NL% %CONTINUE%
+ItemDisplay[STAT23]: %NAME% STAT23 = %STAT(23)% 2H MinDmg %NL% %CONTINUE%
+ItemDisplay[STAT22]: %NAME% STAT22 = %STAT(22)% 1H MaxDmg %NL% %CONTINUE%
+ItemDisplay[STAT21]: %NAME% STAT21 = %STAT(21)% 1H MinDmg %NL% %CONTINUE%
+ItemDisplay[STAT20]: %NAME% STAT20 = +%STAT(20)%% Block Rate (-16) %NL% %CONTINUE%
+ItemDisplay[STAT19]: %NAME% STAT19 = %STAT(19)% AR %NL% %CONTINUE%
+ItemDisplay[STAT18]: %NAME% STAT18 = +%STAT(18)%% Min Dmg %NL% %CONTINUE%
+ItemDisplay[STAT17]: %NAME% STAT17 = +%STAT(17)%% Max Dmg %NL% %CONTINUE%
+ItemDisplay[STAT16]: %NAME% STAT16 = +%STAT(16)%% Def %NL% %CONTINUE%
+// ItemDisplay[STAT15]: %NAME% STAT15 = %STAT(15)% CharGoldInStash %NL% %CONTINUE%
+// ItemDisplay[STAT14]: %NAME% STAT14 = %STAT(14)% CharGold %NL% %CONTINUE%
+// ItemDisplay[STAT13]: %NAME% STAT13 = %STAT(13)% CharXP %NL% %CONTINUE%
+// ItemDisplay[STAT12]: %NAME% STAT12 = %STAT(12)% Clvl %NL% %CONTINUE%
+ItemDisplay[STAT11]: %NAME% STAT11 = +%STAT(11)% Stam %NL% %CONTINUE%
+// ItemDisplay[STAT10]: %NAME% STAT10 = %STAT(10)% CharStamina %NL% %CONTINUE%
+ItemDisplay[STAT9]: %NAME% STAT9 = +%STAT(9)% Mana %NL% %CONTINUE%
+// ItemDisplay[STAT8]: %NAME% STAT8 = %STAT(8)% CharMana %NL% %CONTINUE%
+ItemDisplay[STAT7]: %NAME% STAT7 = +%STAT(7)% Life %NL% %CONTINUE%
+// ItemDisplay[STAT6]: %NAME% STAT6 = %STAT(6)% CharHP %NL% %CONTINUE%
+// ItemDisplay[STAT5]: %NAME% STAT5 = %STAT(5)% CharUnusedSkillPoints %NL% %CONTINUE%
+// ItemDisplay[STAT4]: %NAME% STAT4 = %STAT(4)% CharUnusedStatPoints %NL% %CONTINUE%
+ItemDisplay[STAT3]: %NAME% STAT3 = +%STAT(3)% Vit %NL% %CONTINUE%
+ItemDisplay[STAT2]: %NAME% STAT2 = +%STAT(2)% Dex %NL% %CONTINUE%
+ItemDisplay[STAT1]: %NAME% STAT1 = +%STAT(1)% Ene %NL% %CONTINUE%
+ItemDisplay[STAT0]: %NAME% STAT0 = +%STAT(0)% Str %NL% %CONTINUE%
+EndIf[]
+
+// Yep, these go in the opposite order as stats, to ensure that the text appears
+// in the same order as the skill list.
+EnableIf[(FILTERLVL=3 OR FILTERLVL=4)]:
+// ItemDisplay[SK0]: %NAME% SK0 = +%SKILL(0)% Attack %NL% %CONTINUE%
+// ItemDisplay[SK1]: %NAME% SK1 = +%SKILL(1)% Kick %NL% %CONTINUE%
+// ItemDisplay[SK2]: %NAME% SK2 = +%SKILL(2)% Throw %NL% %CONTINUE%
+// ItemDisplay[SK3]: %NAME% SK3 = +%SKILL(3)% Unsummon %NL% %CONTINUE%
+// ItemDisplay[SK4]: %NAME% SK4 = +%SKILL(4)% Left Hand Throw %NL% %CONTINUE%
+// ItemDisplay[SK5]: %NAME% SK5 = +%SKILL(5)% Left Hand Swing %NL% %CONTINUE%
+ItemDisplay[SK6]: %NAME% SK6 = +%SKILL(6)% Magic Arrow %NL% %CONTINUE%
+ItemDisplay[SK7]: %NAME% SK7 = +%SKILL(7)% Fire Arrow %NL% %CONTINUE%
+ItemDisplay[SK8]: %NAME% SK8 = +%SKILL(8)% Inner Sight %NL% %CONTINUE%
+ItemDisplay[SK9]: %NAME% SK9 = +%SKILL(9)% Critical Strike %NL% %CONTINUE%
+ItemDisplay[SK10]: %NAME% SK10 = +%SKILL(10)% Jab %NL% %CONTINUE%
+ItemDisplay[SK11]: %NAME% SK11 = +%SKILL(11)% Cold Arrow %NL% %CONTINUE%
+ItemDisplay[SK12]: %NAME% SK12 = +%SKILL(12)% Multiple Shot %NL% %CONTINUE%
+ItemDisplay[SK13]: %NAME% SK13 = +%SKILL(13)% Dodge %NL% %CONTINUE%
+ItemDisplay[SK14]: %NAME% SK14 = +%SKILL(14)% Power Strike %NL% %CONTINUE%
+ItemDisplay[SK15]: %NAME% SK15 = +%SKILL(15)% Poison Javelin %NL% %CONTINUE%
+ItemDisplay[SK16]: %NAME% SK16 = +%SKILL(16)% Exploding Arrow %NL% %CONTINUE%
+ItemDisplay[SK17]: %NAME% SK17 = +%SKILL(17)% Slow Missiles %NL% %CONTINUE%
+ItemDisplay[SK18]: %NAME% SK18 = +%SKILL(18)% Avoid %NL% %CONTINUE%
+ItemDisplay[SK19]: %NAME% SK19 = +%SKILL(19)% Impale %NL% %CONTINUE%
+ItemDisplay[SK20]: %NAME% SK20 = +%SKILL(20)% Lightning Bolt %NL% %CONTINUE%
+ItemDisplay[SK21]: %NAME% SK21 = +%SKILL(21)% Ice Arrow %NL% %CONTINUE%
+ItemDisplay[SK22]: %NAME% SK22 = +%SKILL(22)% Guided Arrow %NL% %CONTINUE%
+ItemDisplay[SK23]: %NAME% SK23 = +%SKILL(23)% Penetrate %NL% %CONTINUE%
+ItemDisplay[SK24]: %NAME% SK24 = +%SKILL(24)% Charged Strike %NL% %CONTINUE%
+ItemDisplay[SK25]: %NAME% SK25 = +%SKILL(25)% Plague Javelin %NL% %CONTINUE%
+ItemDisplay[SK26]: %NAME% SK26 = +%SKILL(26)% Strafe %NL% %CONTINUE%
+ItemDisplay[SK27]: %NAME% SK27 = +%SKILL(27)% Immolation Arrow %NL% %CONTINUE%
+ItemDisplay[SK28]: %NAME% SK28 = +%SKILL(28)% Decoy %NL% %CONTINUE%
+ItemDisplay[SK29]: %NAME% SK29 = +%SKILL(29)% Evade %NL% %CONTINUE%
+ItemDisplay[SK30]: %NAME% SK30 = +%SKILL(30)% Fend %NL% %CONTINUE%
+ItemDisplay[SK31]: %NAME% SK31 = +%SKILL(31)% Freezing Arrow %NL% %CONTINUE%
+ItemDisplay[SK32]: %NAME% SK32 = +%SKILL(32)% Valkyrie %NL% %CONTINUE%
+ItemDisplay[SK33]: %NAME% SK33 = +%SKILL(33)% Pierce %NL% %CONTINUE%
+ItemDisplay[SK34]: %NAME% SK34 = +%SKILL(34)% Lightning Strike %NL% %CONTINUE%
+ItemDisplay[SK35]: %NAME% SK35 = +%SKILL(35)% Lightning Fury %NL% %CONTINUE%
+ItemDisplay[SK36]: %NAME% SK36 = +%SKILL(36)% Fire Bolt %NL% %CONTINUE%
+ItemDisplay[SK37]: %NAME% SK37 = +%SKILL(37)% Warmth %NL% %CONTINUE%
+ItemDisplay[SK38]: %NAME% SK38 = +%SKILL(38)% Charged Bolt %NL% %CONTINUE%
+ItemDisplay[SK39]: %NAME% SK39 = +%SKILL(39)% Ice Bolt %NL% %CONTINUE%
+ItemDisplay[SK40]: %NAME% SK40 = +%SKILL(40)% Frigerate %NL% %CONTINUE%
+ItemDisplay[SK41]: %NAME% SK41 = +%SKILL(41)% Inferno %NL% %CONTINUE%
+ItemDisplay[SK42]: %NAME% SK42 = +%SKILL(42)% Static Field %NL% %CONTINUE%
+ItemDisplay[SK43]: %NAME% SK43 = +%SKILL(43)% Telekinesis %NL% %CONTINUE%
+ItemDisplay[SK44]: %NAME% SK44 = +%SKILL(44)% Frost Nova %NL% %CONTINUE%
+ItemDisplay[SK45]: %NAME% SK45 = +%SKILL(45)% Ice Blast %NL% %CONTINUE%
+ItemDisplay[SK46]: %NAME% SK46 = +%SKILL(46)% Immolate %NL% %CONTINUE%
+ItemDisplay[SK47]: %NAME% SK47 = +%SKILL(47)% Fire Ball %NL% %CONTINUE%
+ItemDisplay[SK48]: %NAME% SK48 = +%SKILL(48)% Nova %NL% %CONTINUE%
+ItemDisplay[SK49]: %NAME% SK49 = +%SKILL(49)% Lightning Surge %NL% %CONTINUE%
+ItemDisplay[SK50]: %NAME% SK50 = +%SKILL(50)% Shiver Armor %NL% %CONTINUE%
+ItemDisplay[SK51]: %NAME% SK51 = +%SKILL(51)% Fire Wall %NL% %CONTINUE%
+ItemDisplay[SK52]: %NAME% SK52 = +%SKILL(52)% Enflame %NL% %CONTINUE%
+ItemDisplay[SK53]: %NAME% SK53 = +%SKILL(53)% Teleport %NL% %CONTINUE%
+ItemDisplay[SK54]: %NAME% SK54 = +%SKILL(54)% Chain Lightning %NL% %CONTINUE%
+ItemDisplay[SK55]: %NAME% SK55 = +%SKILL(55)% Glacial Spike %NL% %CONTINUE%
+ItemDisplay[SK56]: %NAME% SK56 = +%SKILL(56)% Meteor %NL% %CONTINUE%
+ItemDisplay[SK57]: %NAME% SK57 = +%SKILL(57)% Discharge %NL% %CONTINUE%
+ItemDisplay[SK58]: %NAME% SK58 = +%SKILL(58)% Energy Shield %NL% %CONTINUE%
+ItemDisplay[SK59]: %NAME% SK59 = +%SKILL(59)% Blizzard %NL% %CONTINUE%
+ItemDisplay[SK60]: %NAME% SK60 = +%SKILL(60)% Chilling Armor %NL% %CONTINUE%
+ItemDisplay[SK61]: %NAME% SK61 = +%SKILL(61)% Fire Mastery %NL% %CONTINUE%
+ItemDisplay[SK62]: %NAME% SK62 = +%SKILL(62)% Hydra %NL% %CONTINUE%
+ItemDisplay[SK63]: %NAME% SK63 = +%SKILL(63)% Lightning Mastery %NL% %CONTINUE%
+ItemDisplay[SK64]: %NAME% SK64 = +%SKILL(64)% Frozen Orb %NL% %CONTINUE%
+ItemDisplay[SK65]: %NAME% SK65 = +%SKILL(65)% Cold Mastery %NL% %CONTINUE%
+ItemDisplay[SK66]: %NAME% SK66 = +%SKILL(66)% Amplify Damage %NL% %CONTINUE%
+ItemDisplay[SK67]: %NAME% SK67 = +%SKILL(67)% Teeth %NL% %CONTINUE%
+ItemDisplay[SK68]: %NAME% SK68 = +%SKILL(68)% Bone Armor %NL% %CONTINUE%
+ItemDisplay[SK69]: %NAME% SK69 = +%SKILL(69)% Summon Mastery %NL% %CONTINUE%
+ItemDisplay[SK70]: %NAME% SK70 = +%SKILL(70)% Raise Skeleton Warrior %NL% %CONTINUE%
+ItemDisplay[SK71]: %NAME% SK71 = +%SKILL(71)% Dim Vision %NL% %CONTINUE%
+ItemDisplay[SK72]: %NAME% SK72 = +%SKILL(72)% Weaken %NL% %CONTINUE%
+ItemDisplay[SK73]: %NAME% SK73 = +%SKILL(73)% Deadly Poison %NL% %CONTINUE%
+ItemDisplay[SK74]: %NAME% SK74 = +%SKILL(74)% Corpse Explosion %NL% %CONTINUE%
+ItemDisplay[SK75]: %NAME% SK75 = +%SKILL(75)% Clay Golem %NL% %CONTINUE%
+ItemDisplay[SK76]: %NAME% SK76 = +%SKILL(76)% Iron Maiden %NL% %CONTINUE%
+ItemDisplay[SK77]: %NAME% SK77 = +%SKILL(77)% Terror %NL% %CONTINUE%
+ItemDisplay[SK78]: %NAME% SK78 = +%SKILL(78)% Bone Wall %NL% %CONTINUE%
+ItemDisplay[SK79]: %NAME% SK79 = +%SKILL(79)% Convocation %NL% %CONTINUE%
+ItemDisplay[SK80]: %NAME% SK80 = +%SKILL(80)% Raise Skeletal Mage %NL% %CONTINUE%
+ItemDisplay[SK81]: %NAME% SK81 = +%SKILL(81)% Confuse %NL% %CONTINUE%
+ItemDisplay[SK82]: %NAME% SK82 = +%SKILL(82)% Life Tap %NL% %CONTINUE%
+ItemDisplay[SK83]: %NAME% SK83 = +%SKILL(83)% Desecrate %NL% %CONTINUE%
+ItemDisplay[SK84]: %NAME% SK84 = +%SKILL(84)% Bone Spear %NL% %CONTINUE%
+ItemDisplay[SK85]: %NAME% SK85 = +%SKILL(85)% Blood Golem %NL% %CONTINUE%
+ItemDisplay[SK86]: %NAME% SK86 = +%SKILL(86)% Attract %NL% %CONTINUE%
+ItemDisplay[SK87]: %NAME% SK87 = +%SKILL(87)% Decrepify %NL% %CONTINUE%
+ItemDisplay[SK88]: %NAME% SK88 = +%SKILL(88)% Flesh Offering %NL% %CONTINUE%
+ItemDisplay[SK89]: %NAME% SK89 = +%SKILL(89)% Bone Offering %NL% %CONTINUE%
+ItemDisplay[SK90]: %NAME% SK90 = +%SKILL(90)% Iron Golem %NL% %CONTINUE%
+ItemDisplay[SK91]: %NAME% SK91 = +%SKILL(91)% Lower Resist %NL% %CONTINUE%
+ItemDisplay[SK92]: %NAME% SK92 = +%SKILL(92)% Poison Nova %NL% %CONTINUE%
+ItemDisplay[SK93]: %NAME% SK93 = +%SKILL(93)% Bone Spirit %NL% %CONTINUE%
+ItemDisplay[SK94]: %NAME% SK94 = +%SKILL(94)% Fire Golem %NL% %CONTINUE%
+ItemDisplay[SK95]: %NAME% SK95 = +%SKILL(95)% Revive %NL% %CONTINUE%
+ItemDisplay[SK96]: %NAME% SK96 = +%SKILL(96)% Sacrifice %NL% %CONTINUE%
+ItemDisplay[SK97]: %NAME% SK97 = +%SKILL(97)% Smite %NL% %CONTINUE%
+ItemDisplay[SK98]: %NAME% SK98 = +%SKILL(98)% Might %NL% %CONTINUE%
+ItemDisplay[SK99]: %NAME% SK99 = +%SKILL(99)% Prayer %NL% %CONTINUE%
+ItemDisplay[SK100]: %NAME% SK100 = +%SKILL(100)% Resist Fire %NL% %CONTINUE%
+ItemDisplay[SK101]: %NAME% SK101 = +%SKILL(101)% Holy Bolt %NL% %CONTINUE%
+ItemDisplay[SK102]: %NAME% SK102 = +%SKILL(102)% Holy Fire %NL% %CONTINUE%
+ItemDisplay[SK103]: %NAME% SK103 = +%SKILL(103)% Precision %NL% %CONTINUE%
+ItemDisplay[SK104]: %NAME% SK104 = +%SKILL(104)% Defiance %NL% %CONTINUE%
+ItemDisplay[SK105]: %NAME% SK105 = +%SKILL(105)% Resist Cold %NL% %CONTINUE%
+ItemDisplay[SK106]: %NAME% SK106 = +%SKILL(106)% Zeal %NL% %CONTINUE%
+ItemDisplay[SK107]: %NAME% SK107 = +%SKILL(107)% Charge %NL% %CONTINUE%
+ItemDisplay[SK108]: %NAME% SK108 = +%SKILL(108)% Blessed Aim %NL% %CONTINUE%
+ItemDisplay[SK109]: %NAME% SK109 = +%SKILL(109)% Cleansing %NL% %CONTINUE%
+ItemDisplay[SK110]: %NAME% SK110 = +%SKILL(110)% Resist Lightning %NL% %CONTINUE%
+ItemDisplay[SK111]: %NAME% SK111 = +%SKILL(111)% Vengeance %NL% %CONTINUE%
+ItemDisplay[SK112]: %NAME% SK112 = +%SKILL(112)% Blessed Hammer %NL% %CONTINUE%
+ItemDisplay[SK113]: %NAME% SK113 = +%SKILL(113)% Concentration %NL% %CONTINUE%
+ItemDisplay[SK114]: %NAME% SK114 = +%SKILL(114)% Holy Freeze %NL% %CONTINUE%
+ItemDisplay[SK115]: %NAME% SK115 = +%SKILL(115)% Vigor %NL% %CONTINUE%
+ItemDisplay[SK116]: %NAME% SK116 = +%SKILL(116)% Conversion %NL% %CONTINUE%
+ItemDisplay[SK117]: %NAME% SK117 = +%SKILL(117)% Holy Shield %NL% %CONTINUE%
+ItemDisplay[SK118]: %NAME% SK118 = +%SKILL(118)% Holy Shock %NL% %CONTINUE%
+ItemDisplay[SK119]: %NAME% SK119 = +%SKILL(119)% Sanctuary %NL% %CONTINUE%
+ItemDisplay[SK120]: %NAME% SK120 = +%SKILL(120)% Meditation %NL% %CONTINUE%
+ItemDisplay[SK121]: %NAME% SK121 = +%SKILL(121)% Fist of the Heavens %NL% %CONTINUE%
+ItemDisplay[SK122]: %NAME% SK122 = +%SKILL(122)% Fanaticism %NL% %CONTINUE%
+ItemDisplay[SK123]: %NAME% SK123 = +%SKILL(123)% Conviction %NL% %CONTINUE%
+ItemDisplay[SK124]: %NAME% SK124 = +%SKILL(124)% Redemption %NL% %CONTINUE%
+ItemDisplay[SK125]: %NAME% SK125 = +%SKILL(125)% Salvation %NL% %CONTINUE%
+ItemDisplay[SK126]: %NAME% SK126 = +%SKILL(126)% Bash %NL% %CONTINUE%
+ItemDisplay[SK127]: %NAME% SK127 = +%SKILL(127)% Sword Mastery %NL% %CONTINUE%
+ItemDisplay[SK128]: %NAME% SK128 = +%SKILL(128)% Axe Mastery %NL% %CONTINUE%
+ItemDisplay[SK129]: %NAME% SK129 = +%SKILL(129)% Mace Mastery %NL% %CONTINUE%
+ItemDisplay[SK130]: %NAME% SK130 = +%SKILL(130)% Howl %NL% %CONTINUE%
+ItemDisplay[SK131]: %NAME% SK131 = +%SKILL(131)% Find Potion %NL% %CONTINUE%
+ItemDisplay[SK132]: %NAME% SK132 = +%SKILL(132)% Leap %NL% %CONTINUE%
+ItemDisplay[SK133]: %NAME% SK133 = +%SKILL(133)% Double Swing %NL% %CONTINUE%
+ItemDisplay[SK134]: %NAME% SK134 = +%SKILL(134)% Polearm Mastery %NL% %CONTINUE%
+ItemDisplay[SK135]: %NAME% SK135 = +%SKILL(135)% Throwing Mastery %NL% %CONTINUE%
+ItemDisplay[SK136]: %NAME% SK136 = +%SKILL(136)% Spear Mastery %NL% %CONTINUE%
+ItemDisplay[SK137]: %NAME% SK137 = +%SKILL(137)% Taunt %NL% %CONTINUE%
+ItemDisplay[SK138]: %NAME% SK138 = +%SKILL(138)% Shout %NL% %CONTINUE%
+ItemDisplay[SK139]: %NAME% SK139 = +%SKILL(139)% Stun %NL% %CONTINUE%
+ItemDisplay[SK140]: %NAME% SK140 = +%SKILL(140)% Double Throw %NL% %CONTINUE%
+ItemDisplay[SK141]: %NAME% SK141 = +%SKILL(141)% Increased Stamina %NL% %CONTINUE%
+ItemDisplay[SK142]: %NAME% SK142 = +%SKILL(142)% Find Item %NL% %CONTINUE%
+ItemDisplay[SK143]: %NAME% SK143 = +%SKILL(143)% Leap Attack %NL% %CONTINUE%
+ItemDisplay[SK144]: %NAME% SK144 = +%SKILL(144)% Concentrate %NL% %CONTINUE%
+ItemDisplay[SK145]: %NAME% SK145 = +%SKILL(145)% Iron Skin %NL% %CONTINUE%
+ItemDisplay[SK146]: %NAME% SK146 = +%SKILL(146)% Battle Cry %NL% %CONTINUE%
+ItemDisplay[SK147]: %NAME% SK147 = +%SKILL(147)% Frenzy %NL% %CONTINUE%
+ItemDisplay[SK148]: %NAME% SK148 = +%SKILL(148)% Increased Speed %NL% %CONTINUE%
+ItemDisplay[SK149]: %NAME% SK149 = +%SKILL(149)% Battle Orders %NL% %CONTINUE%
+ItemDisplay[SK150]: %NAME% SK150 = +%SKILL(150)% Grim Ward %NL% %CONTINUE%
+ItemDisplay[SK151]: %NAME% SK151 = +%SKILL(151)% Whirlwind %NL% %CONTINUE%
+ItemDisplay[SK152]: %NAME% SK152 = +%SKILL(152)% Berserk %NL% %CONTINUE%
+ItemDisplay[SK153]: %NAME% SK154 = +%SKILL(154)% Natural Resistance %NL% %CONTINUE%
+ItemDisplay[SK154]: %NAME% SK154 = +%SKILL(154)% War Cry %NL% %CONTINUE%
+ItemDisplay[SK155]: %NAME% SK155 = +%SKILL(155)% Battle Command %NL% %CONTINUE%
+// ItemDisplay[SK217]: %NAME% SK217 = +%SKILL(217)% Scroll of Identify %NL% %CONTINUE%
+// ItemDisplay[SK218]: %NAME% SK218 = +%SKILL(218)% Tome of Identify %NL% %CONTINUE%
+// ItemDisplay[SK219]: %NAME% SK219 = +%SKILL(219)% Scroll of Town Portal %NL% %CONTINUE%
+// ItemDisplay[SK220]: %NAME% SK220 = +%SKILL(220)% Tome of Town Portal %NL% %CONTINUE%
+ItemDisplay[SK221]: %NAME% SK221 = +%SKILL(221)% Raven %NL% %CONTINUE%
+ItemDisplay[SK222]: %NAME% SK222 = +%SKILL(222)% Poison Creeper %NL% %CONTINUE%
+ItemDisplay[SK223]: %NAME% SK223 = +%SKILL(223)% Werewolf %NL% %CONTINUE%
+ItemDisplay[SK224]: %NAME% SK224 = +%SKILL(224)% Lycanthopy %NL% %CONTINUE%
+ItemDisplay[SK225]: %NAME% SK225 = +%SKILL(225)% Firestorm %NL% %CONTINUE%
+ItemDisplay[SK226]: %NAME% SK226 = +%SKILL(226)% Oak Sage %NL% %CONTINUE%
+ItemDisplay[SK227]: %NAME% SK227 = +%SKILL(227)% Summon Spirit Wolf %NL% %CONTINUE%
+ItemDisplay[SK228]: %NAME% SK228 = +%SKILL(228)% Werebear %NL% %CONTINUE%
+ItemDisplay[SK229]: %NAME% SK229 = +%SKILL(229)% Molten Boulder %NL% %CONTINUE%
+ItemDisplay[SK230]: %NAME% SK230 = +%SKILL(230)% Arctic Blast %NL% %CONTINUE%
+ItemDisplay[SK231]: %NAME% SK231 = +%SKILL(231)% Carrion Vine %NL% %CONTINUE%
+ItemDisplay[SK232]: %NAME% SK232 = +%SKILL(232)% Feral Rage %NL% %CONTINUE%
+ItemDisplay[SK233]: %NAME% SK233 = +%SKILL(233)% Maul %NL% %CONTINUE%
+ItemDisplay[SK234]: %NAME% SK234 = +%SKILL(234)% Fissure %NL% %CONTINUE%
+ItemDisplay[SK235]: %NAME% SK235 = +%SKILL(235)% Cyclone Armor %NL% %CONTINUE%
+ItemDisplay[SK236]: %NAME% SK236 = +%SKILL(236)% Heart of Wolverine %NL% %CONTINUE%
+ItemDisplay[SK237]: %NAME% SK237 = +%SKILL(237)% Summon Dire Wolf %NL% %CONTINUE%
+ItemDisplay[SK238]: %NAME% SK238 = +%SKILL(238)% Rabies %NL% %CONTINUE%
+ItemDisplay[SK239]: %NAME% SK239 = +%SKILL(239)% Fire Claws %NL% %CONTINUE%
+ItemDisplay[SK240]: %NAME% SK240 = +%SKILL(240)% Twister %NL% %CONTINUE%
+ItemDisplay[SK241]: %NAME% SK241 = +%SKILL(241)% Spirit Creeper %NL% %CONTINUE%
+ItemDisplay[SK242]: %NAME% SK242 = +%SKILL(242)% Hunger %NL% %CONTINUE%
+ItemDisplay[SK243]: %NAME% SK243 = +%SKILL(243)% Shock Wave %NL% %CONTINUE%
+ItemDisplay[SK244]: %NAME% SK244 = +%SKILL(244)% Volcano %NL% %CONTINUE%
+ItemDisplay[SK245]: %NAME% SK245 = +%SKILL(245)% Tornado %NL% %CONTINUE%
+ItemDisplay[SK246]: %NAME% SK246 = +%SKILL(246)% Spirit of Barbs %NL% %CONTINUE%
+ItemDisplay[SK247]: %NAME% SK247 = +%SKILL(247)% Summon Grizzly Bear %NL% %CONTINUE%
+ItemDisplay[SK248]: %NAME% SK248 = +%SKILL(248)% Fury %NL% %CONTINUE%
+ItemDisplay[SK249]: %NAME% SK249 = +%SKILL(249)% Armageddon %NL% %CONTINUE%
+ItemDisplay[SK250]: %NAME% SK250 = +%SKILL(250)% Hurricane %NL% %CONTINUE%
+ItemDisplay[SK251]: %NAME% SK251 = +%SKILL(251)% Fire Blast %NL% %CONTINUE%
+ItemDisplay[SK252]: %NAME% SK252 = +%SKILL(252)% Claw Mastery %NL% %CONTINUE%
+ItemDisplay[SK253]: %NAME% SK253 = +%SKILL(253)% Psychic Hammer %NL% %CONTINUE%
+ItemDisplay[SK254]: %NAME% SK254 = +%SKILL(254)% Tiger Strike %NL% %CONTINUE%
+ItemDisplay[SK255]: %NAME% SK255 = +%SKILL(255)% Dragon Talon %NL% %CONTINUE%
+ItemDisplay[SK256]: %NAME% SK256 = +%SKILL(256)% Shock Web %NL% %CONTINUE%
+ItemDisplay[SK257]: %NAME% SK257 = +%SKILL(257)% Blade Sentinel %NL% %CONTINUE%
+ItemDisplay[SK258]: %NAME% SK258 = +%SKILL(258)% Burst of Speed %NL% %CONTINUE%
+ItemDisplay[SK259]: %NAME% SK259 = +%SKILL(259)% Fists of Fire %NL% %CONTINUE%
+ItemDisplay[SK260]: %NAME% SK260 = +%SKILL(260)% Dragon Claw %NL% %CONTINUE%
+ItemDisplay[SK261]: %NAME% SK261 = +%SKILL(261)% Charged Bolt Sentry %NL% %CONTINUE%
+ItemDisplay[SK262]: %NAME% SK262 = +%SKILL(262)% Wake of Fire %NL% %CONTINUE%
+ItemDisplay[SK263]: %NAME% SK263 = +%SKILL(263)% Weapon Block %NL% %CONTINUE%
+ItemDisplay[SK264]: %NAME% SK264 = +%SKILL(264)% Cloak of Shadows %NL% %CONTINUE%
+ItemDisplay[SK265]: %NAME% SK265 = +%SKILL(265)% Cobra Strike %NL% %CONTINUE%
+ItemDisplay[SK266]: %NAME% SK266 = +%SKILL(266)% Blade Fury %NL% %CONTINUE%
+ItemDisplay[SK267]: %NAME% SK267 = +%SKILL(267)% Fade %NL% %CONTINUE%
+ItemDisplay[SK268]: %NAME% SK268 = +%SKILL(268)% Shadow Warrior %NL% %CONTINUE%
+ItemDisplay[SK269]: %NAME% SK269 = +%SKILL(269)% Claws of Thunder %NL% %CONTINUE%
+ItemDisplay[SK270]: %NAME% SK270 = +%SKILL(270)% Dragon Tail %NL% %CONTINUE%
+ItemDisplay[SK271]: %NAME% SK271 = +%SKILL(271)% Lightning Sentry %NL% %CONTINUE%
+ItemDisplay[SK272]: %NAME% SK272 = +%SKILL(272)% Wake of Inferno %NL% %CONTINUE%
+ItemDisplay[SK273]: %NAME% SK273 = +%SKILL(273)% Mind Blast %NL% %CONTINUE%
+ItemDisplay[SK274]: %NAME% SK274 = +%SKILL(274)% Blades of Ice %NL% %CONTINUE%
+ItemDisplay[SK275]: %NAME% SK275 = +%SKILL(275)% Dragon Flight %NL% %CONTINUE%
+ItemDisplay[SK276]: %NAME% SK276 = +%SKILL(276)% Death Sentry %NL% %CONTINUE%
+ItemDisplay[SK277]: %NAME% SK277 = +%SKILL(277)% Blade Shield %NL% %CONTINUE%
+ItemDisplay[SK278]: %NAME% SK278 = +%SKILL(278)% Venom %NL% %CONTINUE%
+ItemDisplay[SK279]: %NAME% SK279 = +%SKILL(279)% Shadow Master %NL% %CONTINUE%
+ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% Phoenix Strike %NL% %CONTINUE%
+ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK281]: %NAME% SK281 = +%SKILL(281)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK282]: %NAME% SK282 = +%SKILL(282)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK283]: %NAME% SK283 = +%SKILL(283)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK284]: %NAME% SK284 = +%SKILL(284)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK285]: %NAME% SK285 = +%SKILL(285)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK286]: %NAME% SK286 = +%SKILL(286)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK287]: %NAME% SK287 = +%SKILL(287)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK288]: %NAME% SK288 = +%SKILL(288)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK289]: %NAME% SK289 = +%SKILL(289)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK290]: %NAME% SK290 = +%SKILL(290)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK291]: %NAME% SK291 = +%SKILL(291)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK292]: %NAME% SK292 = +%SKILL(292)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK293]: %NAME% SK293 = +%SKILL(293)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK294]: %NAME% SK294 = +%SKILL(294)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK295]: %NAME% SK295 = +%SKILL(295)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK296]: %NAME% SK296 = +%SKILL(296)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK297]: %NAME% SK297 = +%SKILL(297)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK298]: %NAME% SK298 = +%SKILL(298)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK299]: %NAME% SK299 = +%SKILL(299)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK300]: %NAME% SK300 = +%SKILL(300)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK301]: %NAME% SK301 = +%SKILL(301)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK302]: %NAME% SK302 = +%SKILL(302)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK303]: %NAME% SK303 = +%SKILL(303)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK304]: %NAME% SK304 = +%SKILL(304)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK305]: %NAME% SK305 = +%SKILL(305)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK306]: %NAME% SK306 = +%SKILL(306)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK307]: %NAME% SK307 = +%SKILL(307)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK308]: %NAME% SK308 = +%SKILL(308)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK309]: %NAME% SK309 = +%SKILL(309)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK310]: %NAME% SK310 = +%SKILL(310)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK311]: %NAME% SK311 = +%SKILL(311)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK312]: %NAME% SK312 = +%SKILL(312)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK313]: %NAME% SK313 = +%SKILL(313)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK314]: %NAME% SK314 = +%SKILL(314)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK315]: %NAME% SK315 = +%SKILL(315)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK316]: %NAME% SK316 = +%SKILL(316)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK317]: %NAME% SK317 = +%SKILL(317)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK318]: %NAME% SK318 = +%SKILL(318)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK319]: %NAME% SK319 = +%SKILL(319)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK320]: %NAME% SK320 = +%SKILL(320)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK321]: %NAME% SK321 = +%SKILL(321)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK322]: %NAME% SK322 = +%SKILL(322)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK323]: %NAME% SK323 = +%SKILL(323)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK324]: %NAME% SK324 = +%SKILL(324)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK325]: %NAME% SK325 = +%SKILL(325)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK326]: %NAME% SK326 = +%SKILL(326)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK327]: %NAME% SK327 = +%SKILL(327)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK328]: %NAME% SK328 = +%SKILL(328)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK329]: %NAME% SK329 = +%SKILL(329)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK330]: %NAME% SK330 = +%SKILL(330)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK331]: %NAME% SK331 = +%SKILL(331)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK332]: %NAME% SK332 = +%SKILL(332)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK333]: %NAME% SK333 = +%SKILL(333)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK334]: %NAME% SK334 = +%SKILL(334)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK335]: %NAME% SK335 = +%SKILL(335)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK336]: %NAME% SK336 = +%SKILL(336)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK337]: %NAME% SK337 = +%SKILL(337)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK338]: %NAME% SK338 = +%SKILL(338)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK339]: %NAME% SK339 = +%SKILL(339)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK340]: %NAME% SK340 = +%SKILL(340)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK341]: %NAME% SK341 = +%SKILL(341)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK342]: %NAME% SK342 = +%SKILL(342)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK343]: %NAME% SK343 = +%SKILL(343)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK344]: %NAME% SK344 = +%SKILL(344)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK345]: %NAME% SK345 = +%SKILL(345)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK346]: %NAME% SK346 = +%SKILL(346)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK347]: %NAME% SK347 = +%SKILL(347)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK348]: %NAME% SK348 = +%SKILL(348)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK349]: %NAME% SK349 = +%SKILL(349)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK350]: %NAME% SK350 = +%SKILL(350)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK351]: %NAME% SK351 = +%SKILL(351)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK352]: %NAME% SK352 = +%SKILL(352)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK353]: %NAME% SK353 = +%SKILL(353)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK354]: %NAME% SK354 = +%SKILL(354)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK355]: %NAME% SK355 = +%SKILL(355)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK356]: %NAME% SK356 = +%SKILL(356)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK357]: %NAME% SK357 = +%SKILL(357)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK358]: %NAME% SK358 = +%SKILL(358)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK359]: %NAME% SK359 = +%SKILL(359)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK360]: %NAME% SK360 = +%SKILL(360)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK361]: %NAME% SK361 = +%SKILL(361)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK362]: %NAME% SK362 = +%SKILL(362)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK363]: %NAME% SK363 = +%SKILL(363)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK364]: %NAME% SK364 = +%SKILL(364)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK365]: %NAME% SK365 = +%SKILL(365)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK366]: %NAME% SK366 = +%SKILL(366)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK367]: %NAME% SK367 = +%SKILL(367)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK368]: %NAME% SK368 = +%SKILL(368)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK369]: %NAME% SK369 = +%SKILL(369)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK370]: %NAME% SK370 = +%SKILL(370)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK371]: %NAME% SK371 = +%SKILL(371)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK372]: %NAME% SK372 = +%SKILL(372)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK373]: %NAME% SK373 = +%SKILL(373)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK374]: %NAME% SK374 = +%SKILL(374)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK375]: %NAME% SK375 = +%SKILL(375)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK376]: %NAME% SK376 = +%SKILL(376)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK377]: %NAME% SK377 = +%SKILL(377)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK378]: %NAME% SK378 = +%SKILL(378)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK379]: %NAME% SK379 = +%SKILL(379)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK380]: %NAME% SK380 = +%SKILL(380)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK381]: %NAME% SK381 = +%SKILL(381)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK382]: %NAME% SK382 = +%SKILL(382)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK383]: %NAME% SK383 = +%SKILL(383)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK384]: %NAME% SK384 = +%SKILL(384)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK385]: %NAME% SK385 = +%SKILL(385)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK386]: %NAME% SK386 = +%SKILL(386)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK387]: %NAME% SK387 = +%SKILL(387)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK388]: %NAME% SK388 = +%SKILL(388)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK389]: %NAME% SK389 = +%SKILL(389)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK390]: %NAME% SK390 = +%SKILL(390)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK391]: %NAME% SK391 = +%SKILL(391)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK392]: %NAME% SK392 = +%SKILL(392)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK393]: %NAME% SK393 = +%SKILL(393)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK394]: %NAME% SK394 = +%SKILL(394)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK395]: %NAME% SK395 = +%SKILL(395)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK396]: %NAME% SK396 = +%SKILL(396)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK397]: %NAME% SK397 = +%SKILL(397)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK398]: %NAME% SK398 = +%SKILL(398)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK399]: %NAME% SK399 = +%SKILL(399)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK400]: %NAME% SK400 = +%SKILL(400)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK401]: %NAME% SK401 = +%SKILL(401)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK402]: %NAME% SK402 = +%SKILL(402)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK403]: %NAME% SK403 = +%SKILL(403)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK404]: %NAME% SK404 = +%SKILL(404)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK405]: %NAME% SK405 = +%SKILL(405)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK406]: %NAME% SK406 = +%SKILL(406)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK407]: %NAME% SK407 = +%SKILL(407)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK408]: %NAME% SK408 = +%SKILL(408)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK409]: %NAME% SK409 = +%SKILL(409)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK410]: %NAME% SK410 = +%SKILL(410)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK411]: %NAME% SK411 = +%SKILL(411)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK412]: %NAME% SK412 = +%SKILL(412)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK413]: %NAME% SK413 = +%SKILL(413)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK414]: %NAME% SK414 = +%SKILL(414)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK415]: %NAME% SK415 = +%SKILL(415)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK416]: %NAME% SK416 = +%SKILL(416)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK417]: %NAME% SK417 = +%SKILL(417)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK418]: %NAME% SK418 = +%SKILL(418)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK419]: %NAME% SK419 = +%SKILL(419)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK420]: %NAME% SK420 = +%SKILL(420)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK421]: %NAME% SK421 = +%SKILL(421)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK422]: %NAME% SK422 = +%SKILL(422)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK423]: %NAME% SK423 = +%SKILL(423)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK424]: %NAME% SK424 = +%SKILL(424)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK425]: %NAME% SK425 = +%SKILL(425)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK426]: %NAME% SK426 = +%SKILL(426)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK427]: %NAME% SK427 = +%SKILL(427)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK428]: %NAME% SK428 = +%SKILL(428)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK429]: %NAME% SK429 = +%SKILL(429)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK430]: %NAME% SK430 = +%SKILL(430)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK431]: %NAME% SK431 = +%SKILL(431)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK432]: %NAME% SK432 = +%SKILL(432)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK433]: %NAME% SK433 = +%SKILL(433)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK434]: %NAME% SK434 = +%SKILL(434)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK435]: %NAME% SK435 = +%SKILL(435)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK436]: %NAME% SK436 = +%SKILL(436)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK437]: %NAME% SK437 = +%SKILL(437)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK438]: %NAME% SK438 = +%SKILL(438)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK439]: %NAME% SK439 = +%SKILL(439)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK440]: %NAME% SK440 = +%SKILL(440)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK441]: %NAME% SK441 = +%SKILL(441)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK442]: %NAME% SK442 = +%SKILL(442)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK443]: %NAME% SK443 = +%SKILL(443)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK444]: %NAME% SK444 = +%SKILL(444)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK445]: %NAME% SK445 = +%SKILL(445)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK446]: %NAME% SK446 = +%SKILL(446)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK447]: %NAME% SK447 = +%SKILL(447)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK448]: %NAME% SK448 = +%SKILL(448)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK449]: %NAME% SK449 = +%SKILL(449)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK450]: %NAME% SK450 = +%SKILL(450)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK451]: %NAME% SK451 = +%SKILL(451)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK452]: %NAME% SK452 = +%SKILL(452)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK453]: %NAME% SK453 = +%SKILL(453)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK454]: %NAME% SK454 = +%SKILL(454)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK455]: %NAME% SK455 = +%SKILL(455)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK456]: %NAME% SK456 = +%SKILL(456)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK457]: %NAME% SK457 = +%SKILL(457)% Thunder Storm %NL% %CONTINUE%
+ItemDisplay[SK458]: %NAME% SK458 = +%SKILL(458)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK459]: %NAME% SK459 = +%SKILL(459)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK460]: %NAME% SK460 = +%SKILL(460)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK461]: %NAME% SK461 = +%SKILL(461)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK462]: %NAME% SK462 = +%SKILL(462)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK463]: %NAME% SK463 = +%SKILL(463)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK464]: %NAME% SK464 = +%SKILL(464)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK465]: %NAME% SK465 = +%SKILL(465)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK466]: %NAME% SK466 = +%SKILL(466)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK467]: %NAME% SK467 = +%SKILL(467)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK468]: %NAME% SK468 = +%SKILL(468)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK469]: %NAME% SK469 = +%SKILL(469)% Freezing Pulse %NL% %CONTINUE%
+ItemDisplay[SK470]: %NAME% SK470 = +%SKILL(470)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK471]: %NAME% SK471 = +%SKILL(471)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK472]: %NAME% SK472 = +%SKILL(472)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK473]: %NAME% SK473 = +%SKILL(473)% Dashing Strike %NL% %CONTINUE%
+ItemDisplay[SK474]: %NAME% SK474 = +%SKILL(474)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK475]: %NAME% SK475 = +%SKILL(475)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK476]: %NAME% SK476 = +%SKILL(476)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK477]: %NAME% SK477 = +%SKILL(477)% Hemorrhage %NL% %CONTINUE%
+ItemDisplay[SK478]: %NAME% SK478 = +%SKILL(478)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK479]: %NAME% SK479 = +%SKILL(479)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK480]: %NAME% SK480 = +%SKILL(480)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK481]: %NAME% SK481 = +%SKILL(481)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK482]: %NAME% SK482 = +%SKILL(482)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK483]: %NAME% SK483 = +%SKILL(483)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK484]: %NAME% SK484 = +%SKILL(484)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK485]: %NAME% SK485 = +%SKILL(485)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK486]: %NAME% SK486 = +%SKILL(486)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK487]: %NAME% SK487 = +%SKILL(487)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK488]: %NAME% SK488 = +%SKILL(488)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK489]: %NAME% SK489 = +%SKILL(489)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK490]: %NAME% SK490 = +%SKILL(490)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK491]: %NAME% SK491 = +%SKILL(491)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK492]: %NAME% SK492 = +%SKILL(492)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK493]: %NAME% SK493 = +%SKILL(493)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK494]: %NAME% SK494 = +%SKILL(494)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK495]: %NAME% SK495 = +%SKILL(495)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK496]: %NAME% SK496 = +%SKILL(496)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK497]: %NAME% SK497 = +%SKILL(497)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK498]: %NAME% SK498 = +%SKILL(498)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK499]: %NAME% SK499 = +%SKILL(499)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK500]: %NAME% SK500 = +%SKILL(500)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK501]: %NAME% SK501 = +%SKILL(501)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK502]: %NAME% SK502 = +%SKILL(502)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK503]: %NAME% SK503 = +%SKILL(503)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK504]: %NAME% SK504 = +%SKILL(504)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK505]: %NAME% SK505 = +%SKILL(505)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK506]: %NAME% SK506 = +%SKILL(506)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK507]: %NAME% SK507 = +%SKILL(507)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK508]: %NAME% SK508 = +%SKILL(508)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK509]: %NAME% SK509 = +%SKILL(509)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK510]: %NAME% SK510 = +%SKILL(510)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK511]: %NAME% SK511 = +%SKILL(511)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK512]: %NAME% SK512 = +%SKILL(512)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK513]: %NAME% SK513 = +%SKILL(513)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK514]: %NAME% SK514 = +%SKILL(514)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK515]: %NAME% SK515 = +%SKILL(515)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK516]: %NAME% SK516 = +%SKILL(516)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK517]: %NAME% SK517 = +%SKILL(517)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK518]: %NAME% SK518 = +%SKILL(518)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK519]: %NAME% SK519 = +%SKILL(519)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK520]: %NAME% SK520 = +%SKILL(520)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK521]: %NAME% SK521 = +%SKILL(521)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK522]: %NAME% SK522 = +%SKILL(522)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK523]: %NAME% SK523 = +%SKILL(523)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK524]: %NAME% SK524 = +%SKILL(524)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK525]: %NAME% SK525 = +%SKILL(525)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK526]: %NAME% SK526 = +%SKILL(526)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK527]: %NAME% SK527 = +%SKILL(527)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK528]: %NAME% SK528 = +%SKILL(528)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK529]: %NAME% SK529 = +%SKILL(529)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK530]: %NAME% SK530 = +%SKILL(530)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK531]: %NAME% SK531 = +%SKILL(531)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK532]: %NAME% SK532 = +%SKILL(532)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK533]: %NAME% SK533 = +%SKILL(533)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK534]: %NAME% SK534 = +%SKILL(534)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK535]: %NAME% SK535 = +%SKILL(535)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK536]: %NAME% SK536 = +%SKILL(536)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK537]: %NAME% SK537 = +%SKILL(537)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK538]: %NAME% SK538 = +%SKILL(538)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK539]: %NAME% SK539 = +%SKILL(539)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK540]: %NAME% SK540 = +%SKILL(540)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK541]: %NAME% SK541 = +%SKILL(541)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK542]: %NAME% SK542 = +%SKILL(542)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK543]: %NAME% SK543 = +%SKILL(543)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK544]: %NAME% SK544 = +%SKILL(544)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK545]: %NAME% SK545 = +%SKILL(545)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK546]: %NAME% SK546 = +%SKILL(546)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK547]: %NAME% SK547 = +%SKILL(547)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK548]: %NAME% SK548 = +%SKILL(548)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK549]: %NAME% SK549 = +%SKILL(549)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK550]: %NAME% SK550 = +%SKILL(550)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK551]: %NAME% SK551 = +%SKILL(551)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK552]: %NAME% SK552 = +%SKILL(552)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK553]: %NAME% SK553 = +%SKILL(553)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK554]: %NAME% SK554 = +%SKILL(554)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK555]: %NAME% SK555 = +%SKILL(555)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK556]: %NAME% SK556 = +%SKILL(556)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK557]: %NAME% SK557 = +%SKILL(557)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK558]: %NAME% SK558 = +%SKILL(558)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK559]: %NAME% SK559 = +%SKILL(559)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK560]: %NAME% SK560 = +%SKILL(560)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK561]: %NAME% SK561 = +%SKILL(561)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK562]: %NAME% SK562 = +%SKILL(562)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK563]: %NAME% SK563 = +%SKILL(563)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK564]: %NAME% SK564 = +%SKILL(564)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK565]: %NAME% SK565 = +%SKILL(565)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK566]: %NAME% SK566 = +%SKILL(566)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK567]: %NAME% SK567 = +%SKILL(567)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK568]: %NAME% SK568 = +%SKILL(568)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK569]: %NAME% SK569 = +%SKILL(569)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK570]: %NAME% SK570 = +%SKILL(570)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK571]: %NAME% SK571 = +%SKILL(571)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK572]: %NAME% SK572 = +%SKILL(572)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK573]: %NAME% SK573 = +%SKILL(573)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK574]: %NAME% SK574 = +%SKILL(574)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK575]: %NAME% SK575 = +%SKILL(575)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK576]: %NAME% SK576 = +%SKILL(576)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK577]: %NAME% SK577 = +%SKILL(577)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK578]: %NAME% SK578 = +%SKILL(578)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK579]: %NAME% SK579 = +%SKILL(579)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK580]: %NAME% SK580 = +%SKILL(580)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK581]: %NAME% SK581 = +%SKILL(581)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK582]: %NAME% SK582 = +%SKILL(582)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK583]: %NAME% SK583 = +%SKILL(583)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK584]: %NAME% SK584 = +%SKILL(584)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK585]: %NAME% SK585 = +%SKILL(585)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK586]: %NAME% SK586 = +%SKILL(586)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK587]: %NAME% SK587 = +%SKILL(587)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK588]: %NAME% SK588 = +%SKILL(588)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK589]: %NAME% SK589 = +%SKILL(589)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK590]: %NAME% SK590 = +%SKILL(590)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK591]: %NAME% SK591 = +%SKILL(591)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK592]: %NAME% SK592 = +%SKILL(592)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK593]: %NAME% SK593 = +%SKILL(593)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK594]: %NAME% SK594 = +%SKILL(594)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK595]: %NAME% SK595 = +%SKILL(595)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK596]: %NAME% SK596 = +%SKILL(596)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK597]: %NAME% SK597 = +%SKILL(597)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK598]: %NAME% SK598 = +%SKILL(598)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK599]: %NAME% SK599 = +%SKILL(599)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK600]: %NAME% SK600 = +%SKILL(600)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK601]: %NAME% SK601 = +%SKILL(601)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK602]: %NAME% SK602 = +%SKILL(602)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK603]: %NAME% SK603 = +%SKILL(603)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK604]: %NAME% SK604 = +%SKILL(604)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK605]: %NAME% SK605 = +%SKILL(605)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK606]: %NAME% SK606 = +%SKILL(606)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK607]: %NAME% SK607 = +%SKILL(607)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK608]: %NAME% SK608 = +%SKILL(608)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK609]: %NAME% SK609 = +%SKILL(609)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK610]: %NAME% SK610 = +%SKILL(610)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK611]: %NAME% SK611 = +%SKILL(611)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK612]: %NAME% SK612 = +%SKILL(612)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK613]: %NAME% SK613 = +%SKILL(613)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK614]: %NAME% SK614 = +%SKILL(614)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK615]: %NAME% SK615 = +%SKILL(615)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK616]: %NAME% SK616 = +%SKILL(616)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK617]: %NAME% SK617 = +%SKILL(617)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK618]: %NAME% SK618 = +%SKILL(618)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK619]: %NAME% SK619 = +%SKILL(619)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK620]: %NAME% SK620 = +%SKILL(620)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK621]: %NAME% SK621 = +%SKILL(621)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK622]: %NAME% SK622 = +%SKILL(622)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK623]: %NAME% SK623 = +%SKILL(623)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK624]: %NAME% SK624 = +%SKILL(624)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK625]: %NAME% SK625 = +%SKILL(625)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK626]: %NAME% SK626 = +%SKILL(626)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK627]: %NAME% SK627 = +%SKILL(627)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK628]: %NAME% SK628 = +%SKILL(628)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK629]: %NAME% SK629 = +%SKILL(629)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK630]: %NAME% SK630 = +%SKILL(630)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK631]: %NAME% SK631 = +%SKILL(631)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK632]: %NAME% SK632 = +%SKILL(632)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK633]: %NAME% SK633 = +%SKILL(633)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK634]: %NAME% SK634 = +%SKILL(634)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK635]: %NAME% SK635 = +%SKILL(635)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK636]: %NAME% SK636 = +%SKILL(636)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK637]: %NAME% SK637 = +%SKILL(637)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK638]: %NAME% SK638 = +%SKILL(638)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK639]: %NAME% SK639 = +%SKILL(639)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK640]: %NAME% SK640 = +%SKILL(640)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK641]: %NAME% SK641 = +%SKILL(641)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK642]: %NAME% SK642 = +%SKILL(642)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK643]: %NAME% SK643 = +%SKILL(643)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK644]: %NAME% SK644 = +%SKILL(644)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK645]: %NAME% SK645 = +%SKILL(645)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK646]: %NAME% SK646 = +%SKILL(646)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK647]: %NAME% SK647 = +%SKILL(647)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK648]: %NAME% SK648 = +%SKILL(648)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK649]: %NAME% SK649 = +%SKILL(649)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK650]: %NAME% SK650 = +%SKILL(650)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK651]: %NAME% SK651 = +%SKILL(651)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK652]: %NAME% SK652 = +%SKILL(652)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK653]: %NAME% SK653 = +%SKILL(653)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK654]: %NAME% SK654 = +%SKILL(654)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK655]: %NAME% SK655 = +%SKILL(655)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK656]: %NAME% SK656 = +%SKILL(656)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK657]: %NAME% SK657 = +%SKILL(657)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK658]: %NAME% SK658 = +%SKILL(658)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK659]: %NAME% SK659 = +%SKILL(659)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK660]: %NAME% SK660 = +%SKILL(660)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK661]: %NAME% SK661 = +%SKILL(661)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK662]: %NAME% SK662 = +%SKILL(662)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK663]: %NAME% SK663 = +%SKILL(663)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK664]: %NAME% SK664 = +%SKILL(664)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK665]: %NAME% SK665 = +%SKILL(665)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK666]: %NAME% SK666 = +%SKILL(666)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK667]: %NAME% SK667 = +%SKILL(667)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK668]: %NAME% SK668 = +%SKILL(668)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK669]: %NAME% SK669 = +%SKILL(669)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK670]: %NAME% SK670 = +%SKILL(670)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK671]: %NAME% SK671 = +%SKILL(671)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK672]: %NAME% SK672 = +%SKILL(672)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK673]: %NAME% SK673 = +%SKILL(673)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK674]: %NAME% SK674 = +%SKILL(674)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK675]: %NAME% SK675 = +%SKILL(675)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK676]: %NAME% SK676 = +%SKILL(676)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK677]: %NAME% SK677 = +%SKILL(677)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK678]: %NAME% SK678 = +%SKILL(678)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK679]: %NAME% SK679 = +%SKILL(679)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK680]: %NAME% SK680 = +%SKILL(680)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK681]: %NAME% SK681 = +%SKILL(681)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK682]: %NAME% SK682 = +%SKILL(682)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK683]: %NAME% SK683 = +%SKILL(683)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK684]: %NAME% SK684 = +%SKILL(684)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK685]: %NAME% SK685 = +%SKILL(685)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK686]: %NAME% SK686 = +%SKILL(686)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK687]: %NAME% SK687 = +%SKILL(687)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK688]: %NAME% SK688 = +%SKILL(688)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK689]: %NAME% SK689 = +%SKILL(689)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK690]: %NAME% SK690 = +%SKILL(690)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK691]: %NAME% SK691 = +%SKILL(691)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK692]: %NAME% SK692 = +%SKILL(692)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK693]: %NAME% SK693 = +%SKILL(693)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK694]: %NAME% SK694 = +%SKILL(694)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+
+ItemDisplay[CLSK0]: %NAME% CLSK0 = +X Amazon Skills %NL% %CONTINUE%
+ItemDisplay[CLSK1]: %NAME% CLSK1 = +X Sorceress Skills %NL% %CONTINUE%
+ItemDisplay[CLSK2]: %NAME% CLSK2 = +X Necromancer Skills %NL% %CONTINUE%
+ItemDisplay[CLSK3]: %NAME% CLSK3 = +X Paladin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK4]: %NAME% CLSK4 = +X Barbarian Skills %NL% %CONTINUE%
+ItemDisplay[CLSK5]: %NAME% CLSK5 = +X Druid Skills %NL% %CONTINUE%
+ItemDisplay[CLSK6]: %NAME% CLSK6 = +X Assassin Skills %NL% %CONTINUE%
+
+ItemDisplay[TABSK0]: %NAME% TABSK0 = +X Amazon Bow & Crossbow %NL% %CONTINUE%
+ItemDisplay[TABSK1]: %NAME% TABSK1 = +X Amazon Passive & Magic %NL% %CONTINUE%
+ItemDisplay[TABSK2]: %NAME% TABSK2 = +X Amazon Javelin & Spear %NL% %CONTINUE%
+ItemDisplay[TABSK3]: %NAME% TABSK3 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK4]: %NAME% TABSK4 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK5]: %NAME% TABSK5 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK6]: %NAME% TABSK6 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK7]: %NAME% TABSK7 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK8]: %NAME% TABSK8 = +X Sorceress Fire %NL% %CONTINUE%
+ItemDisplay[TABSK9]: %NAME% TABSK9 = +X Sorceress Lightning %NL% %CONTINUE%
+ItemDisplay[TABSK10]: %NAME% TABSK10 = +X Sorceress Cold %NL% %CONTINUE%
+ItemDisplay[TABSK11]: %NAME% TABSK11 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK12]: %NAME% TABSK12 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK13]: %NAME% TABSK13 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK14]: %NAME% TABSK14 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK15]: %NAME% TABSK15 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK16]: %NAME% TABSK16 = +X Necromancer Curses %NL% %CONTINUE%
+ItemDisplay[TABSK17]: %NAME% TABSK17 = +X Necromancer Poison & Bone %NL% %CONTINUE%
+ItemDisplay[TABSK18]: %NAME% TABSK18 = +X Necromancer Summon %NL% %CONTINUE%
+ItemDisplay[TABSK19]: %NAME% TABSK19 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK20]: %NAME% TABSK20 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK21]: %NAME% TABSK21 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK22]: %NAME% TABSK22 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK23]: %NAME% TABSK23 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK24]: %NAME% TABSK24 = +X Paladin Combat %NL% %CONTINUE%
+ItemDisplay[TABSK25]: %NAME% TABSK25 = +X Paladin Offensive %NL% %CONTINUE%
+ItemDisplay[TABSK26]: %NAME% TABSK26 = +X Paladin Defensive %NL% %CONTINUE%
+ItemDisplay[TABSK27]: %NAME% TABSK27 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK28]: %NAME% TABSK28 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK29]: %NAME% TABSK29 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK30]: %NAME% TABSK30 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK31]: %NAME% TABSK31 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK32]: %NAME% TABSK32 = +X Barbarian Combat %NL% %CONTINUE%
+ItemDisplay[TABSK33]: %NAME% TABSK33 = +X Barbarian Masteries %NL% %CONTINUE%
+ItemDisplay[TABSK34]: %NAME% TABSK34 = +X Barbarian Warcries %NL% %CONTINUE%
+ItemDisplay[TABSK35]: %NAME% TABSK35 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK36]: %NAME% TABSK36 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK37]: %NAME% TABSK37 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK38]: %NAME% TABSK38 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK39]: %NAME% TABSK39 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK40]: %NAME% TABSK40 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK41]: %NAME% TABSK41 = +X Druid Shapeshifting %NL% %CONTINUE%
+ItemDisplay[TABSK42]: %NAME% TABSK42 = +X Druid Elemental %NL% %CONTINUE%
+ItemDisplay[TABSK43]: %NAME% TABSK43 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK44]: %NAME% TABSK44 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK45]: %NAME% TABSK45 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK46]: %NAME% TABSK46 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK47]: %NAME% TABSK47 = %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[TABSK48]: %NAME% TABSK48 = +X Assassin Traps %NL% %CONTINUE%
+ItemDisplay[TABSK49]: %NAME% TABSK49 = +X Assassin Shadow Disciplines %NL% %CONTINUE%
+ItemDisplay[TABSK50]: %NAME% TABSK50 = +X Assassin Martial Arts %NL% %CONTINUE%
+
+EndIf[]
 
 ItemDisplay[]: %NAME%  Item %CODE% uses
