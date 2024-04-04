@@ -5,8 +5,8 @@
 
 Attribute[Author]: Mzyxptlk
 Attribute[Name]: identify
-Attribute[Version]: 0.5.1
-Attribute[Date]: 2024-04-01
+Attribute[Version]: 0.5.2
+Attribute[Date]: 2024-04-04
 
 // When item names become too long, the game crashes. Most of the common stats
 // are in the lower regions, so we split those out from the rest. If you really
@@ -17,7 +17,7 @@ FilterLevel[2]: IDs 81-510
 FilterLevel[3]: Skills
 FilterLevel[4]: All CRASH RISK
 
-Option[DefaultFilterLevel]: IDs 0-80
+Option[ DefaultFilterLevel]: IDs 0-80
 
 ItemDisplay[SYNTH]:                 %SAGE%%NAME%%WHITE% %NL% %CONTINUE%
 ItemDisplay[(UNI OR QUEST OR MAP)]: %GOLD%%NAME%%WHITE% %NL% %CONTINUE%
@@ -50,19 +50,19 @@ ItemDisplay[STAT504 FILTERLVL!=1]: %NAME% STAT504 = %STAT(504)% %PURPLE%???%WHIT
 ItemDisplay[STAT503 FILTERLVL!=1]: %NAME% STAT503 = %STAT(503)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT502 FILTERLVL!=1]: %NAME% STAT502 = %STAT(502)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT501 FILTERLVL!=1]: %NAME% STAT501 = %STAT(501)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT500 FILTERLVL!=1]: %NAME% STAT500 = +%STAT(500)%% MagicArrowDmgAsMagic %NL% %CONTINUE%
+ItemDisplay[STAT500 FILTERLVL!=1]: %NAME% STAT500 = +%STAT(500)%% Magic Arrow Dmg As Magic %NL% %CONTINUE%
 ItemDisplay[STAT499 FILTERLVL!=1]: %NAME% STAT499 = %STAT(499)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT498 FILTERLVL!=1]: %NAME% STAT498 = %STAT(498)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT497 FILTERLVL!=1]: %NAME% STAT497 = %STAT(497)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT496 FILTERLVL!=1]: %NAME% STAT496 = %STAT(496)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT495 FILTERLVL!=1]: %NAME% STAT495 = +%STAT(495)% ElePsnSkills %NL% %CONTINUE%
+ItemDisplay[STAT495 FILTERLVL!=1]: %NAME% STAT495 = +%STAT(495)% Ele Psn Skills %NL% %CONTINUE%
 ItemDisplay[STAT494 FILTERLVL!=1]: %NAME% STAT494 = %STAT(494)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT493 FILTERLVL!=1]: %NAME% STAT493 = %STAT(493)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT492 FILTERLVL!=1]: %NAME% STAT492 = %STAT(492)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT491 FILTERLVL!=1]: %NAME% STAT491 = %STAT(491)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT490 FILTERLVL!=1]: %NAME% STAT490 = %STAT(490)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT489 FILTERLVL!=1]: %NAME% STAT489 = %STAT(489)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT488 FILTERLVL!=1]: %NAME% STAT488 = +%STAT(488)%% SummonDef %NL% %CONTINUE%
+ItemDisplay[STAT488 FILTERLVL!=1]: %NAME% STAT488 = +%STAT(488)%% Summon Def %NL% %CONTINUE%
 ItemDisplay[STAT487 FILTERLVL!=1]: %NAME% STAT487 = %STAT(487)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT486 FILTERLVL!=1]: %NAME% STAT486 = %STAT(486)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT485 FILTERLVL!=1]: %NAME% STAT485 = %STAT(485)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -74,12 +74,12 @@ ItemDisplay[STAT480 FILTERLVL!=1]: %NAME% STAT480 = %STAT(480)% %PURPLE%???%WHIT
 ItemDisplay[STAT479 FILTERLVL!=1]: %NAME% STAT479 = %STAT(479)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT478 FILTERLVL!=1]: %NAME% STAT478 = %STAT(478)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT477 FILTERLVL!=1]: %NAME% STAT477 = %STAT(477)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT476 FILTERLVL!=1]: %NAME% STAT476 = %STAT(476)% MaxKickDmg %NL% %CONTINUE%
-ItemDisplay[STAT475 FILTERLVL!=1]: %NAME% STAT475 = %STAT(475)% MinKickDmg %NL% %CONTINUE%
+ItemDisplay[STAT476 FILTERLVL!=1]: %NAME% STAT476 = %STAT(476)% Max Kick Dmg %NL% %CONTINUE%
+ItemDisplay[STAT475 FILTERLVL!=1]: %NAME% STAT475 = %STAT(475)% Min Kick Dmg %NL% %CONTINUE%
 ItemDisplay[STAT474 FILTERLVL!=1]: %NAME% STAT474 = %STAT(474)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT473 FILTERLVL!=1]: %NAME% STAT473 = %STAT(473)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT472 FILTERLVL!=1]: %NAME% STAT472 = %STAT(472)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT471 FILTERLVL!=1]: %NAME% STAT471 = %STAT(471)% WeapRWSocs %NL% %CONTINUE%
+ItemDisplay[STAT471 FILTERLVL!=1]: %NAME% STAT471 = %STAT(471)% Weapon Socs %NL% %CONTINUE%
 ItemDisplay[STAT470 FILTERLVL!=1]: %NAME% STAT470 = %STAT(470)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT469 FILTERLVL!=1]: %NAME% STAT469 = %STAT(469)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT468 FILTERLVL!=1]: %NAME% STAT468 = %STAT(468)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -87,7 +87,7 @@ ItemDisplay[STAT467 FILTERLVL!=1]: %NAME% STAT467 = %STAT(467)% %PURPLE%???%WHIT
 ItemDisplay[STAT466 FILTERLVL!=1]: %NAME% STAT466 = %STAT(466)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT465 FILTERLVL!=1]: %NAME% STAT465 = %STAT(465)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT464 FILTERLVL!=1]: %NAME% STAT464 = %STAT(464)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT463 FILTERLVL!=1]: %NAME% STAT463 = %STAT(463)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT463 FILTERLVL!=1]: %NAME% STAT463 = %STAT(463)%*20% %BOLD%Freezing Arrow Radius???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT462 FILTERLVL!=1]: %NAME% STAT462 = %STAT(462)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT461 FILTERLVL!=1]: %NAME% STAT461 = %STAT(461)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT460 FILTERLVL!=1]: %NAME% STAT460 = %STAT(460)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -137,7 +137,7 @@ ItemDisplay[STAT417 FILTERLVL!=1]: %NAME% STAT417 = %STAT(417)% %PURPLE%???%WHIT
 ItemDisplay[STAT416 FILTERLVL!=1]: %NAME% STAT416 = %STAT(416)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT415 FILTERLVL!=1]: %NAME% STAT415 = %STAT(415)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT414 FILTERLVL!=1]: %NAME% STAT414 = %STAT(414)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT413 FILTERLVL!=1]: %NAME% STAT413 = +%STAT(413)% ColdDmg/Fists of Ice Charge %NL% %CONTINUE%
+ItemDisplay[STAT413 FILTERLVL!=1]: %NAME% STAT413 = +%STAT(413)% Cold Dmg/Fists of Ice Charge %NL% %CONTINUE%
 ItemDisplay[STAT412 FILTERLVL!=1]: %NAME% STAT412 = %STAT(412)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT411 FILTERLVL!=1]: %NAME% STAT411 = %STAT(411)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT410 FILTERLVL!=1]: %NAME% STAT410 = %STAT(410)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -170,7 +170,7 @@ ItemDisplay[STAT384 FILTERLVL!=1]: %NAME% STAT384 = %STAT(384)% %PURPLE%???%WHIT
 ItemDisplay[STAT383 FILTERLVL!=1]: %NAME% STAT383 = %STAT(383)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT382 FILTERLVL!=1]: %NAME% STAT382 = %STAT(382)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT381 FILTERLVL!=1]: %NAME% STAT381 = %STAT(381)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT380 FILTERLVL!=1]: %NAME% STAT380 = %STAT(380)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT380 FILTERLVL!=1]: %NAME% STAT380 = -%STAT(380)%% Cooldown Reduc %NL% %CONTINUE%
 ItemDisplay[STAT379 FILTERLVL!=1]: %NAME% STAT379 = %STAT(379)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT378 FILTERLVL!=1]: %NAME% STAT378 = +%STAT(378)% Life on Ranged Hit %NL% %CONTINUE%
 ItemDisplay[STAT377 FILTERLVL!=1]: %NAME% STAT377 = +%STAT(377)% Mana on Ranged Hit %NL% %CONTINUE%
@@ -190,16 +190,15 @@ ItemDisplay[STAT364 FILTERLVL!=1]: %NAME% STAT364 = +%STAT(364)%% Max Mana %NL% 
 ItemDisplay[STAT363 FILTERLVL!=1]: %NAME% STAT363 = %STAT(363)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT362 FILTERLVL!=1]: %NAME% STAT362 = +%STAT(362)% Life on Melee Hit %NL% %CONTINUE%
 ItemDisplay[STAT361 FILTERLVL!=1]: %NAME% STAT361 = %STAT(361)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT360 FILTERLVL!=1]: %NAME% STAT360 = %STAT(360)% IsCorrupted %NL% %CONTINUE%
-// I think the value of 359 tells you what corruption you got:
-// - 1261 = NoChange, boots
-// - 1333 = NoChange, armor
-// - 1337 = NoChange, armor
-// - 1553 = 3/5 Sockets, weapon
-// - 1928 = +18 Life, amulet
-//
-// More values welcome!
-ItemDisplay[STAT359 FILTERLVL!=1]: %NAME% STAT359 = %STAT(359)% Corruption %NL% %CONTINUE%
+ItemDisplay[STAT360 FILTERLVL!=1]: %NAME% STAT360 = %STAT(360)% Is Corrupted? %NL% %CONTINUE%
+// Until at least 2024-03-27, the value of 359 /seemed/ to be the value of the
+// corruption you got, ranging from (at least) 1261 to 1928, indicating whether
+// you got a no change, sockets, or some other corruption, as well as (I
+// speculated) the magnitude of that corruption (number of sockets, +X Life, +Y
+// All Resist, +Z LGoH, etc). By 2024-04-01, alas, that was patched out (proving my
+// speculation was probably correct): the value of this stat became always 0 and
+// thus became useless.
+ItemDisplay[STAT359 FILTERLVL!=1]: %NAME% STAT359 = %STAT(359)% Corruption Roll %NL% %CONTINUE%
 
 // 358 was D2's highest defined stat. The above are all PoD-only.
 ItemDisplay[STAT358 FILTERLVL!=1]: %NAME% STAT358 = -%STAT(358)%% Magic Pierc %NL% %CONTINUE%
@@ -269,43 +268,43 @@ ItemDisplay[STAT254 FILTERLVL!=1]: %NAME% STAT254 = +%STAT(254)% StackSize %NL% 
 ItemDisplay[STAT253 FILTERLVL!=1]: %NAME% STAT253 = %STAT(253)% %BOLD%Stask Replenish???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT252 FILTERLVL!=1]: %NAME% STAT252 = %STAT(252)% Repair 1 Dura per 100/X sec %NL% %CONTINUE%
 ItemDisplay[STAT251 FILTERLVL!=1]: %NAME% STAT251 = %STAT(251)% %BOLD%find_gems_per_level???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT250 FILTERLVL!=1]: %NAME% STAT250 = +%STAT(250)%%/8 %BOLD%DS/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT249 FILTERLVL!=1]: %NAME% STAT249 = %STAT(249)% %BOLD%KickDmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT250 FILTERLVL!=1]: %NAME% STAT250 = +%STAT(250)%%/8 DS/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT249 FILTERLVL!=1]: %NAME% STAT249 = %STAT(249)% %BOLD%Kick Dmg/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT248 FILTERLVL!=1]: %NAME% STAT248 = %STAT(248)% %BOLD%OW/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT247 FILTERLVL!=1]: %NAME% STAT247 = %STAT(247)% %BOLD%CB/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT246 FILTERLVL!=1]: %NAME% STAT246 = %STAT(246)% %BOLD%UndeadAR/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT245 FILTERLVL!=1]: %NAME% STAT245 = %STAT(245)% %BOLD%DemonAR/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT244 FILTERLVL!=1]: %NAME% STAT244 = %STAT(244)% %BOLD%UndeadDmg/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT243 FILTERLVL!=1]: %NAME% STAT243 = %STAT(243)% %BOLD%DemonDmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT246 FILTERLVL!=1]: %NAME% STAT246 = %STAT(246)% %BOLD%Undead AR/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT245 FILTERLVL!=1]: %NAME% STAT245 = %STAT(245)% %BOLD%Demon AR/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT244 FILTERLVL!=1]: %NAME% STAT244 = %STAT(244)% %BOLD%Undead Dmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT243 FILTERLVL!=1]: %NAME% STAT243 = %STAT(243)% %BOLD%Demon Dmg/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT242 FILTERLVL!=1]: %NAME% STAT242 = +%STAT(242)%/8 Stam/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT241 FILTERLVL!=1]: %NAME% STAT241 = +%STAT(241)%/8 StamRegen/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT240 FILTERLVL!=1]: %NAME% STAT240 = +%STAT(240)%/8 MF/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT239 FILTERLVL!=1]: %NAME% STAT239 = %STAT(239)%/8 %BOLD%GF/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT241 FILTERLVL!=1]: %NAME% STAT241 = +%STAT(241)%/8 Stam Regen/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT240 FILTERLVL!=1]: %NAME% STAT240 = +%STAT(240)%%/8 MF/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT239 FILTERLVL!=1]: %NAME% STAT239 = +%STAT(239)%%/8 GF/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT238 FILTERLVL!=1]: %NAME% STAT238 = %STAT(238)%/8 Attacker Takes Dmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT237 FILTERLVL!=1]: %NAME% STAT237 = %STAT(237)%/8 %BOLD%Pois Sorb/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT236 FILTERLVL!=1]: %NAME% STAT236 = %STAT(236)%/8 %BOLD%Light Sorb/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT235 FILTERLVL!=1]: %NAME% STAT235 = %STAT(235)%/8 %BOLD%Fire Sorb/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT234 FILTERLVL!=1]: %NAME% STAT234 = %STAT(234)%/8 %BOLD%Cold Sorb/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT233 FILTERLVL!=1]: %NAME% STAT233 = %STAT(233)%%/8 %BOLD%PoisRes/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT232 FILTERLVL!=1]: %NAME% STAT232 = %STAT(232)%%/8 %BOLD%LightRes/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT231 FILTERLVL!=1]: %NAME% STAT231 = %STAT(231)%%/8 %BOLD%FireRes/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT230 FILTERLVL!=1]: %NAME% STAT230 = %STAT(230)%%/8 %BOLD%ColdRes/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT229 FILTERLVL!=1]: %NAME% STAT229 = %STAT(229)%/8 %BOLD%PoisDmg/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT228 FILTERLVL!=1]: %NAME% STAT228 = %STAT(228)%/8 %BOLD%LightDmg/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT227 FILTERLVL!=1]: %NAME% STAT227 = %STAT(227)%/8 FireDmg/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT226 FILTERLVL!=1]: %NAME% STAT226 = %STAT(226)%/8 ColdDmg/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT234 FILTERLVL!=1]: %NAME% STAT234 = %STAT(234)%/8 Cold Sorb/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT233 FILTERLVL!=1]: %NAME% STAT233 = %STAT(233)%%/8 %BOLD%Pois Res/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT232 FILTERLVL!=1]: %NAME% STAT232 = %STAT(232)%%/8 %BOLD%Light Res/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT231 FILTERLVL!=1]: %NAME% STAT231 = %STAT(231)%%/8 %BOLD%Fire Res/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT230 FILTERLVL!=1]: %NAME% STAT230 = %STAT(230)%%/8 %BOLD%Cold Res/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT229 FILTERLVL!=1]: %NAME% STAT229 = %STAT(229)%/8 %BOLD%Pois Dmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT228 FILTERLVL!=1]: %NAME% STAT228 = +%STAT(228)%/8 Max Light Dmg/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT227 FILTERLVL!=1]: %NAME% STAT227 = +%STAT(227)%/8 Max Fire Dmg/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT226 FILTERLVL!=1]: %NAME% STAT226 = +%STAT(226)%/8 Max Cold Dmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT225 FILTERLVL!=1]: %NAME% STAT225 = +%STAT(225)%%/2 AR/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT224 FILTERLVL!=1]: %NAME% STAT224 = +%STAT(224)%/2 AR/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT223 FILTERLVL!=1]: %NAME% STAT223 = +%STAT(223)%/8 Vit/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT222 FILTERLVL!=1]: %NAME% STAT222 = +%STAT(222)%/8 %BOLD%Ene/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT221 FILTERLVL!=1]: %NAME% STAT221 = +%STAT(221)%/8 %BOLD%Dex/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT220 FILTERLVL!=1]: %NAME% STAT220 = +%STAT(220)%/8 Str/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT219 FILTERLVL!=1]: %NAME% STAT219 = +%STAT(219)%%/8 MaxDmg/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT218 FILTERLVL!=1]: %NAME% STAT218 = +%STAT(218)%/8 MaxDmg/Clvl %NL% %CONTINUE%
+ItemDisplay[STAT219 FILTERLVL!=1]: %NAME% STAT219 = +%STAT(219)%%/8 Max Dmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT218 FILTERLVL!=1]: %NAME% STAT218 = +%STAT(218)%/8 Max Dmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT217 FILTERLVL!=1]: %NAME% STAT217 = +%STAT(217)%/8 Mana/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT216 FILTERLVL!=1]: %NAME% STAT216 = +%STAT(216)%/8 Life/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT215 FILTERLVL!=1]: %NAME% STAT215 = +%STAT(215)%%/8 %BOLD%Arm/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT214 FILTERLVL!=1]: %NAME% STAT214 = +%STAT(214)%% %BOLD%DmgReduc????%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT214 FILTERLVL!=1]: %NAME% STAT214 = +%STAT(214)%/8 %BOLD% Def/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT213 FILTERLVL!=1]: %NAME% STAT213 = %STAT(213)% %BOLD%unused???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT212 FILTERLVL!=1]: %NAME% STAT212 = %STAT(212)% %BOLD%unused???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT211 FILTERLVL!=1]: %NAME% STAT211 = %STAT(211)% %BOLD%unused???%WHITE% %NL% %CONTINUE%
@@ -353,7 +352,7 @@ ItemDisplay[STAT172 FILTERLVL!=1]: %NAME% STAT172 = %STAT(172)% %BOLD%alignment?
 ItemDisplay[STAT171 FILTERLVL!=1]: %NAME% STAT171 = %STAT(171)% %BOLD%skill_armor_percent???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT170 FILTERLVL!=1]: %NAME% STAT170 = %STAT(170)% %BOLD%skill_decrepify???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT169 FILTERLVL!=1]: %NAME% STAT169 = %STAT(169)% %BOLD%skill_frenzy???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT168 FILTERLVL!=1]: %NAME% STAT168 = +%STAT(168)% %BOLD%MaxDmg or skill_chillingarmor???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT168 FILTERLVL!=1]: %NAME% STAT168 = +%STAT(168)% %BOLD%Max Dmg or skill_chillingarmor???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT167 FILTERLVL!=1]: %NAME% STAT167 = %STAT(167)% %BOLD%skill_conviction???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT166 FILTERLVL!=1]: %NAME% STAT166 = %STAT(166)% %BOLD%skill_pierce???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT165 FILTERLVL!=1]: %NAME% STAT165 = %STAT(165)% %BOLD%skill_enchant???%WHITE% %NL% %CONTINUE%
@@ -361,12 +360,12 @@ ItemDisplay[STAT164 FILTERLVL!=1]: %NAME% STAT164 = %STAT(164)% %BOLD%skill_conc
 ItemDisplay[STAT163 FILTERLVL!=1]: %NAME% STAT163 = %STAT(163)% %BOLD%skill_passive_staminapercent???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT162 FILTERLVL!=1]: %NAME% STAT162 = %STAT(162)% %BOLD%skill_staminapercent???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT161 FILTERLVL!=1]: %NAME% STAT161 = %STAT(161)% %BOLD%skill_handofathena???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT160 FILTERLVL!=1]: %NAME% STAT160 = %STAT(160)% MaxThrowDmg %NL% %CONTINUE%
-ItemDisplay[STAT159 FILTERLVL!=1]: %NAME% STAT159 = %STAT(159)% MinThrowDmg %NL% %CONTINUE%
+ItemDisplay[STAT160 FILTERLVL!=1]: %NAME% STAT160 = %STAT(160)% Max Throw Dmg %NL% %CONTINUE%
+ItemDisplay[STAT159 FILTERLVL!=1]: %NAME% STAT159 = %STAT(159)% Min Throw Dmg %NL% %CONTINUE%
 ItemDisplay[STAT158 FILTERLVL!=1]: %NAME% STAT158 = %STAT(158)% Fire Expl Arrow %NL% %CONTINUE%
 ItemDisplay[STAT157 FILTERLVL!=1]: %NAME% STAT157 = %STAT(157)% Fire Magic Arrow %NL% %CONTINUE%
 ItemDisplay[STAT156 FILTERLVL!=1]: %NAME% STAT156 = +%STAT(156)%% Pierc %NL% %CONTINUE%
-// As in the Faith Runeword?
+// As in the Faith runeword?
 ItemDisplay[STAT155 FILTERLVL!=1]: %NAME% STAT155 = %STAT(155)% %BOLD%ReAnimate? %NL% %CONTINUE%
 ItemDisplay[STAT154 FILTERLVL!=1]: %NAME% STAT154 = -%STAT(154)%% Stam Drain %NL% %CONTINUE%
 ItemDisplay[STAT153 FILTERLVL!=1]: %NAME% STAT153 = %STAT(153)% CBF %NL% %CONTINUE%
@@ -385,7 +384,7 @@ ItemDisplay[STAT141 FILTERLVL!=1]: %NAME% STAT141 = +%STAT(141)%% DS %NL% %CONTI
 ItemDisplay[STAT140 FILTERLVL!=1]: %NAME% STAT140 = %STAT(140)% %BOLD%item_extrablood???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT139 FILTERLVL!=1]: %NAME% STAT139 = +%STAT(139)% Life on Kill Demon %NL% %CONTINUE%
 ItemDisplay[STAT138 FILTERLVL!=1]: %NAME% STAT138 = %STAT(138)% MPK %NL% %CONTINUE%
-ItemDisplay[STAT137 FILTERLVL!=1]: %NAME% STAT137 = %STAT(137)% %BOLD%KickDmg? %NL% %CONTINUE%
+ItemDisplay[STAT137 FILTERLVL!=1]: %NAME% STAT137 = %STAT(137)% %BOLD%Kick Dmg? %NL% %CONTINUE%
 ItemDisplay[STAT136 FILTERLVL!=1]: %NAME% STAT136 = +%STAT(136)%% CB %NL% %CONTINUE%
 ItemDisplay[STAT135 FILTERLVL!=1]: %NAME% STAT135 = +%STAT(135)%% OW %NL% %CONTINUE%
 ItemDisplay[STAT134 FILTERLVL!=1]: %NAME% STAT134 = Freez Targ +%STAT(134)% %NL% %CONTINUE%
@@ -399,11 +398,11 @@ ItemDisplay[STAT128 FILTERLVL!=1]: %NAME% STAT128 = Atk Takes Light Dmg +%STAT(1
 ItemDisplay[STAT127 FILTERLVL!=1]: %NAME% STAT127/ALLSK = +%STAT(127)% All Skills %NL% %CONTINUE%
 ItemDisplay[STAT126 FILTERLVL!=1]: %NAME% STAT126 = %STAT(126)% %BOLD%Elemental Skill???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT125 FILTERLVL!=1]: %NAME% STAT125 = %STAT(125)% %BOLD%Throwable???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT124 FILTERLVL!=1]: %NAME% STAT124 = %STAT(124)% UndeadAR %NL% %CONTINUE%
-ItemDisplay[STAT123 FILTERLVL!=1]: %NAME% STAT123 = %STAT(123)% DemonAR %NL% %CONTINUE%
-ItemDisplay[STAT122 FILTERLVL!=1]: %NAME% STAT122 = +%STAT(122)%% UndeadDmg %NL% %CONTINUE%
-ItemDisplay[STAT121 FILTERLVL!=1]: %NAME% STAT121 = +%STAT(121)%% DemonDmg %NL% %CONTINUE%
-ItemDisplay[STAT120 FILTERLVL!=1]: %NAME% STAT120 = -%STAT(120,0) %BOLD%MonsterDef/Hit? %NL% %CONTINUE%
+ItemDisplay[STAT124 FILTERLVL!=1]: %NAME% STAT124 = %STAT(124)% Undead AR %NL% %CONTINUE%
+ItemDisplay[STAT123 FILTERLVL!=1]: %NAME% STAT123 = %STAT(123)% Demon AR %NL% %CONTINUE%
+ItemDisplay[STAT122 FILTERLVL!=1]: %NAME% STAT122 = +%STAT(122)%% Undead Dmg %NL% %CONTINUE%
+ItemDisplay[STAT121 FILTERLVL!=1]: %NAME% STAT121 = +%STAT(121)%% Demon Dmg %NL% %CONTINUE%
+ItemDisplay[STAT120 FILTERLVL!=1]: %NAME% STAT120 = -%STAT(120)% Monster Def/Hit %NL% %CONTINUE%
 ItemDisplay[STAT119 FILTERLVL!=1]: %NAME% STAT119 = +%STAT(119)%% AR %NL% %CONTINUE%
 ItemDisplay[STAT118 FILTERLVL!=1]: %NAME% STAT118 = %STAT(118)% HalfFreeze %NL% %CONTINUE%
 ItemDisplay[STAT117 FILTERLVL!=1]: %NAME% STAT117 = %STAT(117)% PMH %NL% %CONTINUE%
@@ -414,7 +413,7 @@ ItemDisplay[STAT113 FILTERLVL!=1]: %NAME% STAT113 = %STAT(113)% Blinds %NL% %CON
 ItemDisplay[STAT112 FILTERLVL!=1]: %NAME% STAT112 = %STAT(112)% MonsterFlee %NL% %CONTINUE%
 ItemDisplay[STAT111 FILTERLVL!=1]: %NAME% STAT111 = +%STAT(111)% Dmg %NL% %CONTINUE%
 ItemDisplay[STAT110 FILTERLVL!=1]: %NAME% STAT110 = %STAT(110)%% Pois Len Reduc %NL% %CONTINUE%
-ItemDisplay[STAT109 FILTERLVL!=1]: %NAME% STAT109 = %STAT(109)%% CurseRes %NL% %CONTINUE%
+ItemDisplay[STAT109 FILTERLVL!=1]: %NAME% STAT109 = %STAT(109)%% Curse Resist %NL% %CONTINUE%
 ItemDisplay[STAT108 FILTERLVL!=1]: %NAME% STAT108 = %STAT(108)% RIP %NL% %CONTINUE%
 ItemDisplay[STAT107 FILTERLVL!=1]: %NAME% STAT107 = +%STAT(107)% Class Sk? %NL% %CONTINUE%
 // ItemDisplay[STAT106 FILTERLVL!=1]: %NAME% STAT106 = %STAT(106)% %BOLD%Bypass beasts???%WHITE% %NL% %CONTINUE%
@@ -426,7 +425,7 @@ ItemDisplay[STAT101 FILTERLVL!=1]: %NAME% STAT101 = %STAT(101)% %BOLD%skill_pois
 ItemDisplay[STAT100 FILTERLVL!=1]: %NAME% STAT100 = %STAT(100)% %BOLD%Monster player count???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT99]: %NAME% STAT99 = %STAT(99)% FHR %NL% %CONTINUE%
 ItemDisplay[STAT98]: %NAME% STAT98 = %STAT(98)% %BOLD%state???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT97]: %NAME% STAT97 = %STAT(97,0)% Oskill? %NL% %CONTINUE%
+ItemDisplay[STAT97]: %NAME% STAT97 = %STAT(97)% %BOLD%Oskill???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT96]: %NAME% STAT96 = %STAT(96)%% FRW %NL% %CONTINUE%
 ItemDisplay[STAT95]: %NAME% STAT95 = %STAT(95)% %BOLD%Last block frame???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT94]: %NAME% STAT94 = %STAT(94)% %BOLD%item_levelreqpct? %NL% %CONTINUE%
@@ -434,9 +433,9 @@ ItemDisplay[STAT93]: %NAME% STAT93 = %STAT(93)% IAS %NL% %CONTINUE%
 ItemDisplay[STAT92]: %NAME% STAT92 = +%STAT(92)% Level req (Upgraded) %NL% %CONTINUE%
 ItemDisplay[STAT91]: %NAME% STAT91 = Reqs %STAT(91)%% %NL% %CONTINUE%
 ItemDisplay[STAT90]: %NAME% STAT90 = %STAT(90)% %BOLD%Light Color nv???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT89]: %NAME% STAT89 = %STAT(89)% LightRadius %NL% %CONTINUE%
+ItemDisplay[STAT89]: %NAME% STAT89 = %STAT(89)% Light Radius %NL% %CONTINUE%
 ItemDisplay[STAT88]: %NAME% STAT88 = %STAT(88)% %BOLD%Double Herb Duration???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT87]: %NAME% STAT87 = -%STAT(87)%% VendorPrice %NL% %CONTINUE%
+ItemDisplay[STAT87]: %NAME% STAT87 = -%STAT(87)%% Vendor Price %NL% %CONTINUE%
 ItemDisplay[STAT86]: %NAME% STAT86 = %STAT(86)% LPK %NL% %CONTINUE%
 ItemDisplay[STAT85]: %NAME% STAT85 = +%STAT(85)%% Exp (/6) %NL% %CONTINUE%
 ItemDisplay[STAT84]: %NAME% STAT84 = %STAT(84)% %BOLD%Unsentparam???%WHITE% %NL% %CONTINUE%
@@ -451,14 +450,14 @@ ItemDisplay[STAT79]: %NAME% STAT79 = %STAT(79)%% GF %NL% %CONTINUE%
 ItemDisplay[STAT78]: %NAME% STAT78 = %STAT(78)% Attacker Takes Damage %NL% %CONTINUE%
 ItemDisplay[STAT77]: %NAME% STAT77 = +%STAT(77)%% Mana %NL% %CONTINUE%
 ItemDisplay[STAT76]: %NAME% STAT76 = +%STAT(76)%% Life %NL% %CONTINUE%
-ItemDisplay[STAT75]: %NAME% STAT75 = +%STAT(75)%% %BOLD%MaxDura? %NL% %CONTINUE%
+ItemDisplay[STAT75]: %NAME% STAT75 = +%STAT(75)%% %BOLD%Max Dura? %NL% %CONTINUE%
 ItemDisplay[STAT74]: %NAME% STAT74 = Replen %STAT(74)%*25/256 Life/Sec %NL% %CONTINUE%
-ItemDisplay[STAT73]: %NAME% STAT73 = %STAT(73)% MaxDura %NL% %CONTINUE%
+ItemDisplay[STAT73]: %NAME% STAT73 = %STAT(73)% Max Dura %NL% %CONTINUE%
 ItemDisplay[STAT72]: %NAME% STAT72 = %STAT(72)% Dura %NL% %CONTINUE%
 // ItemDisplay[STAT71]: %NAME% STAT71 = %STAT(71)% value %NL% %CONTINUE%
 ItemDisplay[STAT70]: %NAME% STAT70 = %STAT(70)% Quantity %NL% %CONTINUE%
 // ItemDisplay[STAT69]: %NAME% STAT69 = %STAT(69)% other_animrate %NL% %CONTINUE%
-ItemDisplay[STAT68]: %NAME% STAT68 = %STAT(68)% WSM (negative) %NL% %CONTINUE%
+ItemDisplay[STAT68]: %NAME% STAT68 = -%STAT(68)% WSM %NL% %CONTINUE%
 ItemDisplay[STAT67]: %NAME% STAT67 = %STAT(67)% FRW (equip weight) %NL% %CONTINUE%
 ItemDisplay[STAT66]: %NAME% STAT66 = %STAT(66)% %BOLD%Stun (in frames?) %NL% %CONTINUE%
 ItemDisplay[STAT65]: %NAME% STAT65 = %STAT(65)% %BOLD%stamdrainmaxdam? %NL% %CONTINUE%
@@ -480,32 +479,32 @@ ItemDisplay[STAT50]: %NAME% STAT50 = %STAT(50)% Min Light Dmg %NL% %CONTINUE%
 ItemDisplay[STAT49]: %NAME% STAT49 = %STAT(49)% Max Fire Dmg %NL% %CONTINUE%
 ItemDisplay[STAT48]: %NAME% STAT48 = +%STAT(48)% Min Fire Dmg %NL% %CONTINUE%
 // ItemDisplay[STAT47]: %NAME% STAT47 = %STAT(47)% damage_aura %NL% %CONTINUE%
-ItemDisplay[STAT46]: %NAME% STAT46 = MaxPRes +%STAT(46)%% %NL% %CONTINUE%
+ItemDisplay[STAT46]: %NAME% STAT46 = Max PRes +%STAT(46)%% %NL% %CONTINUE%
 ItemDisplay[STAT45]: %NAME% STAT45 = PRes +%STAT(45)%% %NL% %CONTINUE%
-ItemDisplay[STAT44]: %NAME% STAT44 = MaxCR +%STAT(44)%% %NL% %CONTINUE%
+ItemDisplay[STAT44]: %NAME% STAT44 = Max CR +%STAT(44)%% %NL% %CONTINUE%
 ItemDisplay[STAT43]: %NAME% STAT43 = CRes +%STAT(43)%% %NL% %CONTINUE%
-ItemDisplay[STAT42]: %NAME% STAT42 = MaxLRes +%STAT(42)%% %NL% %CONTINUE%
+ItemDisplay[STAT42]: %NAME% STAT42 = Max LRes +%STAT(42)%% %NL% %CONTINUE%
 ItemDisplay[STAT41]: %NAME% STAT41 = LRes +%STAT(41)%% %NL% %CONTINUE%
-ItemDisplay[STAT40]: %NAME% STAT40 = MaxFRes +%STAT(40)%% %NL% %CONTINUE%
+ItemDisplay[STAT40]: %NAME% STAT40 = Max FRes +%STAT(40)%% %NL% %CONTINUE%
 ItemDisplay[STAT39]: %NAME% STAT39 = FRes +%STAT(39)%% %NL% %CONTINUE%
-ItemDisplay[STAT38]: %NAME% STAT38 = MaxMagRes +%STAT(38)%% %NL% %CONTINUE%
+ItemDisplay[STAT38]: %NAME% STAT38 = Max MagRes +%STAT(38)%% %NL% %CONTINUE%
 ItemDisplay[STAT37]: %NAME% STAT37 = MagRes +%STAT(37)%% %NL% %CONTINUE%
 ItemDisplay[STAT36]: %NAME% STAT36 = +%STAT(36)%% Phys Dmg Reduc %NL% %CONTINUE%
 ItemDisplay[STAT35]: %NAME% STAT35 = Magic/Ele Dmg Reduc by %STAT(35)% %NL% %CONTINUE%
 ItemDisplay[STAT34]: %NAME% STAT34 = Phys Dmg Reduc by %STAT(34)% %NL% %CONTINUE%
-ItemDisplay[STAT33]: %NAME% STAT33 = +%STAT(33)% MeleeDef %NL% %CONTINUE%
-ItemDisplay[STAT32]: %NAME% STAT32 = +%STAT(32)% MissileDef %NL% %CONTINUE%
+ItemDisplay[STAT33]: %NAME% STAT33 = +%STAT(33)% Melee Def %NL% %CONTINUE%
+ItemDisplay[STAT32]: %NAME% STAT32 = +%STAT(32)% Missile Def %NL% %CONTINUE%
 ItemDisplay[STAT31]: %NAME% STAT31 = %STAT(31)% Def %NL% %CONTINUE%
 // ItemDisplay[STAT30]: %NAME% STAT30 = %STAT(30)% CharExpPrevLvl %NL% %CONTINUE%
 // ItemDisplay[STAT29]: %NAME% STAT29 = %STAT(29)% CharExpNextLvl %NL% %CONTINUE%
 ItemDisplay[STAT28]: %NAME% STAT28 = StamHeal %STAT(28)%% %NL% %CONTINUE%
-ItemDisplay[STAT27]: %NAME% STAT27 = +%STAT(27)%% ManaRegen %NL% %CONTINUE%
+ItemDisplay[STAT27]: %NAME% STAT27 = +%STAT(27)%% Mana Regen %NL% %CONTINUE%
 ItemDisplay[STAT26]: %NAME% STAT26 = %STAT(26)% %BOLD%manarecovery? %NL% %CONTINUE%
 ItemDisplay[STAT25]: %NAME% STAT25 = %STAT(25)% %BOLD%damagepercent? %NL% %CONTINUE%
-ItemDisplay[STAT24]: %NAME% STAT24 = %STAT(24)% 2H MaxDmg %NL% %CONTINUE%
-ItemDisplay[STAT23]: %NAME% STAT23 = %STAT(23)% 2H MinDmg %NL% %CONTINUE%
-ItemDisplay[STAT22]: %NAME% STAT22 = %STAT(22)% 1H MaxDmg %NL% %CONTINUE%
-ItemDisplay[STAT21]: %NAME% STAT21 = %STAT(21)% 1H MinDmg %NL% %CONTINUE%
+ItemDisplay[STAT24]: %NAME% STAT24 = %STAT(24)% 2H Max Dmg %NL% %CONTINUE%
+ItemDisplay[STAT23]: %NAME% STAT23 = %STAT(23)% 2H Min Dmg %NL% %CONTINUE%
+ItemDisplay[STAT22]: %NAME% STAT22 = %STAT(22)% 1H Max Dmg %NL% %CONTINUE%
+ItemDisplay[STAT21]: %NAME% STAT21 = %STAT(21)% 1H Min Dmg %NL% %CONTINUE%
 ItemDisplay[STAT20]: %NAME% STAT20 = +%STAT(20)%% Block Rate (-16) %NL% %CONTINUE%
 ItemDisplay[STAT19]: %NAME% STAT19 = %STAT(19)% AR %NL% %CONTINUE%
 ItemDisplay[STAT18]: %NAME% STAT18 = +%STAT(18)%% Min Dmg %NL% %CONTINUE%
@@ -659,8 +658,8 @@ ItemDisplay[SK123]: %NAME% SK123 = +%SKILL(123)% Conviction %NL% %CONTINUE%
 ItemDisplay[SK124]: %NAME% SK124 = +%SKILL(124)% Redemption %NL% %CONTINUE%
 ItemDisplay[SK125]: %NAME% SK125 = +%SKILL(125)% Salvation %NL% %CONTINUE%
 ItemDisplay[SK126]: %NAME% SK126 = +%SKILL(126)% Bash %NL% %CONTINUE%
-ItemDisplay[SK127]: %NAME% SK127 = +%SKILL(127)% Sword Mastery %NL% %CONTINUE%
-ItemDisplay[SK128]: %NAME% SK128 = +%SKILL(128)% Axe Mastery %NL% %CONTINUE%
+ItemDisplay[SK127]: %NAME% SK127 = +%SKILL(127)% Edged Weapon Mastery %NL% %CONTINUE%
+ItemDisplay[SK128]: %NAME% SK128 = +%SKILL(128)% ??? Mastery %NL% %CONTINUE%
 ItemDisplay[SK129]: %NAME% SK129 = +%SKILL(129)% Blunt Mastery %NL% %CONTINUE%
 ItemDisplay[SK130]: %NAME% SK130 = +%SKILL(130)% Howl %NL% %CONTINUE%
 ItemDisplay[SK131]: %NAME% SK131 = +%SKILL(131)% Find Potion %NL% %CONTINUE%
@@ -712,7 +711,7 @@ ItemDisplay[SK237]: %NAME% SK237 = +%SKILL(237)% Summon Dire Wolf %NL% %CONTINUE
 ItemDisplay[SK238]: %NAME% SK238 = +%SKILL(238)% Rabies %NL% %CONTINUE%
 ItemDisplay[SK239]: %NAME% SK239 = +%SKILL(239)% Fire Claws %NL% %CONTINUE%
 ItemDisplay[SK240]: %NAME% SK240 = +%SKILL(240)% Twister %NL% %CONTINUE%
-ItemDisplay[SK241]: %NAME% SK241 = +%SKILL(241)% Spirit Creeper %NL% %CONTINUE%
+ItemDisplay[SK241]: %NAME% SK241 = +%SKILL(241)% ??? %NL% %CONTINUE%
 ItemDisplay[SK242]: %NAME% SK242 = +%SKILL(242)% Hunger %NL% %CONTINUE%
 ItemDisplay[SK243]: %NAME% SK243 = +%SKILL(243)% Shock Wave %NL% %CONTINUE%
 ItemDisplay[SK244]: %NAME% SK244 = +%SKILL(244)% Volcano %NL% %CONTINUE%
@@ -744,7 +743,7 @@ ItemDisplay[SK269]: %NAME% SK269 = +%SKILL(269)% Claws of Thunder %NL% %CONTINUE
 ItemDisplay[SK270]: %NAME% SK270 = +%SKILL(270)% Dragon Tail %NL% %CONTINUE%
 ItemDisplay[SK271]: %NAME% SK271 = +%SKILL(271)% Lightning Sentry %NL% %CONTINUE%
 ItemDisplay[SK272]: %NAME% SK272 = +%SKILL(272)% Wake of Inferno %NL% %CONTINUE%
-ItemDisplay[SK273]: %NAME% SK273 = +%SKILL(273)% Mind Blast %NL% %CONTINUE%
+ItemDisplay[SK273]: %NAME% SK273 = +%SKILL(273)% Min d Blast %NL% %CONTINUE%
 ItemDisplay[SK274]: %NAME% SK274 = +%SKILL(274)% Blades of Ice %NL% %CONTINUE%
 ItemDisplay[SK275]: %NAME% SK275 = +%SKILL(275)% Dragon Flight %NL% %CONTINUE%
 ItemDisplay[SK276]: %NAME% SK276 = +%SKILL(276)% Death Sentry %NL% %CONTINUE%
