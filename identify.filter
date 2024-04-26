@@ -5,8 +5,8 @@
 
 Attribute[Author]: Mzyxptlk
 Attribute[Name]: identify
-Attribute[Version]: 0.5.3
-Attribute[Date]: 2024-04-06
+Attribute[Version]: 0.5.5
+Attribute[Date]: 2024-04-26
 
 // When item names become too long, the game crashes. Most of the common stats
 // are in the lower regions, so we split those out from the rest. If you really
@@ -54,7 +54,7 @@ ItemDisplay[STAT500 FILTERLVL!=1]: %NAME% STAT500 = +%STAT(500)%% Magic Arrow Dm
 ItemDisplay[STAT499 FILTERLVL!=1]: %NAME% STAT499 = %STAT(499)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT498 FILTERLVL!=1]: %NAME% STAT498 = %STAT(498)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT497 FILTERLVL!=1]: %NAME% STAT497 = %STAT(497)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT496 FILTERLVL!=1]: %NAME% STAT496 = %STAT(496)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT496 FILTERLVL!=1]: %NAME% STAT496 = +%STAT(496)% Cold Dmg/RuneGem %NL% %CONTINUE%
 ItemDisplay[STAT495 FILTERLVL!=1]: %NAME% STAT495 = +%STAT(495)% Ele Psn Skills %NL% %CONTINUE%
 ItemDisplay[STAT494 FILTERLVL!=1]: %NAME% STAT494 = %STAT(494)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT493 FILTERLVL!=1]: %NAME% STAT493 = %STAT(493)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -68,12 +68,12 @@ ItemDisplay[STAT486 FILTERLVL!=1]: %NAME% STAT486 = %STAT(486)% %PURPLE%???%WHIT
 ItemDisplay[STAT485 FILTERLVL!=1]: %NAME% STAT485 = %STAT(485)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT484 FILTERLVL!=1]: %NAME% STAT484 = %STAT(484)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT483 FILTERLVL!=1]: %NAME% STAT483 = %STAT(483)% %BOLD%1 Extra Hydra???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT482 FILTERLVL!=1]: %NAME% STAT482 = %STAT(482)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT482 FILTERLVL!=1]: %NAME% STAT482 = -%STAT(482)% Rabies Enemy Poison Resist %NL% %CONTINUE%
 ItemDisplay[STAT481 FILTERLVL!=1]: %NAME% STAT481 = %STAT(481)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT480 FILTERLVL!=1]: %NAME% STAT480 = %STAT(480)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT479 FILTERLVL!=1]: %NAME% STAT479 = %STAT(479)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT478 FILTERLVL!=1]: %NAME% STAT478 = %STAT(478)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT477 FILTERLVL!=1]: %NAME% STAT477 = %STAT(477)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT477 FILTERLVL!=1]: %NAME% STAT477 = +%STAT(477)% Secs MA Charge %NL% %CONTINUE%
 ItemDisplay[STAT476 FILTERLVL!=1]: %NAME% STAT476 = %STAT(476)% Max Kick Dmg %NL% %CONTINUE%
 ItemDisplay[STAT475 FILTERLVL!=1]: %NAME% STAT475 = %STAT(475)% Min Kick Dmg %NL% %CONTINUE%
 ItemDisplay[STAT474 FILTERLVL!=1]: %NAME% STAT474 = %STAT(474)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -101,7 +101,7 @@ ItemDisplay[STAT455 FILTERLVL!=1]: %NAME% STAT455 = %STAT(455)% Armor/Helm Soc R
 ItemDisplay[STAT454 FILTERLVL!=1]: %NAME% STAT454 = %STAT(454)% Shield Soc Gems %NL% %CONTINUE%
 ItemDisplay[STAT453 FILTERLVL!=1]: %NAME% STAT453 = %STAT(453)% Shield Soc Runes %NL% %CONTINUE%
 ItemDisplay[STAT452 FILTERLVL!=1]: %NAME% STAT452 = %STAT(452)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT451 FILTERLVL!=1]: %NAME% STAT451 = +%STAT(451)% %BOLD%CE Dmg???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT451 FILTERLVL!=1]: %NAME% STAT451 = +%STAT(451)% CE Dmg %NL% %CONTINUE%
 ItemDisplay[STAT450 FILTERLVL!=1]: %NAME% STAT450 = %STAT(450)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT449 FILTERLVL!=1]: %NAME% STAT449 = %STAT(449)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT448 FILTERLVL!=1]: %NAME% STAT448 = %STAT(448)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -110,7 +110,8 @@ ItemDisplay[STAT446 FILTERLVL!=1]: %NAME% STAT446 = +%STAT(446)%% Summon Dmg %NL
 ItemDisplay[STAT445 FILTERLVL!=1]: %NAME% STAT445 = %STAT(445)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT444 FILTERLVL!=1]: %NAME% STAT444 = %STAT(444)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT443 FILTERLVL!=1]: %NAME% STAT443 = %STAT(443)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT442 FILTERLVL!=1]: %NAME% STAT442 = %STAT(442)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+// This might be 422.
+ItemDisplay[STAT442 FILTERLVL!=1]: %NAME% STAT442 = %STAT(442)%/2 %BOLD%Life on Demon Kill???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT441 FILTERLVL!=1]: %NAME% STAT441 = %STAT(441)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT440 FILTERLVL!=1]: %NAME% STAT440 = %STAT(440)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT439 FILTERLVL!=1]: %NAME% STAT439 = %STAT(439)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -130,7 +131,7 @@ ItemDisplay[STAT426 FILTERLVL!=1]: %NAME% STAT426 = +%STAT(426)% Cold Arrows %NL
 ItemDisplay[STAT425 FILTERLVL!=1]: %NAME% STAT425 = %STAT(425)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT424 FILTERLVL!=1]: %NAME% STAT424 = %STAT(424)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT423 FILTERLVL!=1]: %NAME% STAT423 = %STAT(423)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT422 FILTERLVL!=1]: %NAME% STAT422 = %STAT(422)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT422 FILTERLVL!=1]: %NAME% STAT422 = %STAT(422)%/2 %BOLD%Life on Demon Kill???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT421 FILTERLVL!=1]: %NAME% STAT421 = %STAT(421)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT420 FILTERLVL!=1]: %NAME% STAT420 = %STAT(420)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT419 FILTERLVL!=1]: %NAME% STAT419 = %STAT(419)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -143,8 +144,8 @@ ItemDisplay[STAT413 FILTERLVL!=1]: %NAME% STAT413 = +%STAT(413)% Cold Dmg/Fists 
 ItemDisplay[STAT412 FILTERLVL!=1]: %NAME% STAT412 = %STAT(412)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT411 FILTERLVL!=1]: %NAME% STAT411 = %STAT(411)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT410 FILTERLVL!=1]: %NAME% STAT410 = %STAT(410)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT409 FILTERLVL!=1]: %NAME% STAT409 = %STAT(409)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT408 FILTERLVL!=1]: %NAME% STAT408 = %STAT(408)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT409 FILTERLVL!=1]: %NAME% STAT409 = %STAT(409)% Grizzly+Werebear Cleave on Maul %NL% %CONTINUE%
+ItemDisplay[STAT408 FILTERLVL!=1]: %NAME% STAT408 = +%STAT(408)%*25/256 Bleed/Sec %NL% %CONTINUE%
 ItemDisplay[STAT407 FILTERLVL!=1]: %NAME% STAT407 = %STAT(407)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT406 FILTERLVL!=1]: %NAME% STAT406 = %STAT(406)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT405 FILTERLVL!=1]: %NAME% STAT405 = %STAT(405)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -152,9 +153,9 @@ ItemDisplay[STAT404 FILTERLVL!=1]: %NAME% STAT404 = %STAT(404)% %PURPLE%???%WHIT
 ItemDisplay[STAT403 FILTERLVL!=1]: %NAME% STAT403 = %STAT(403)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT402 FILTERLVL!=1]: %NAME% STAT402 = %STAT(402)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT401 FILTERLVL!=1]: %NAME% STAT401 = %STAT(401)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT400 FILTERLVL!=1]: %NAME% STAT400 = -%STAT(400)% Phys Pierc %NL% %CONTINUE%
-ItemDisplay[STAT399 FILTERLVL!=1]: %NAME% STAT399 = +%STAT(399)% Phys Skill Dmg %NL% %CONTINUE%
-ItemDisplay[STAT398 FILTERLVL!=1]: %NAME% STAT398 = %STAT(398)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT400 FILTERLVL!=1]: %NAME% STAT400 = -%STAT(400)%% Phys Pierc %NL% %CONTINUE%
+ItemDisplay[STAT399 FILTERLVL!=1]: %NAME% STAT399 = +%STAT(399)%% Phys Skill Dmg %NL% %CONTINUE%
+ItemDisplay[STAT398 FILTERLVL!=1]: %NAME% STAT398 = %STAT(398)%% Dmg Sorb %NL% %CONTINUE%
 ItemDisplay[STAT397 FILTERLVL!=1]: %NAME% STAT397 = %STAT(397)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT396 FILTERLVL!=1]: %NAME% STAT396 = %STAT(396)%% Pois Sorb %NL% %CONTINUE%
 ItemDisplay[STAT395 FILTERLVL!=1]: %NAME% STAT395 = %STAT(395)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -170,7 +171,7 @@ ItemDisplay[STAT386 FILTERLVL!=1]: %NAME% STAT386 = %STAT(386)% %PURPLE%???%WHIT
 ItemDisplay[STAT385 FILTERLVL!=1]: %NAME% STAT385 = %STAT(385)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT384 FILTERLVL!=1]: %NAME% STAT384 = %STAT(384)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT383 FILTERLVL!=1]: %NAME% STAT383 = +%STAT(383)%/8 Min Dmg/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT382 FILTERLVL!=1]: %NAME% STAT382 = %STAT(382)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT382 FILTERLVL!=1]: %NAME% STAT382 = %STAT(382)%% Life Regen/Sec %NL% %CONTINUE%
 ItemDisplay[STAT381 FILTERLVL!=1]: %NAME% STAT381 = %STAT(381)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT380 FILTERLVL!=1]: %NAME% STAT380 = -%STAT(380)%% Cooldown Reduc %NL% %CONTINUE%
 ItemDisplay[STAT379 FILTERLVL!=1]: %NAME% STAT379 = %STAT(379)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -192,14 +193,14 @@ ItemDisplay[STAT364 FILTERLVL!=1]: %NAME% STAT364 = +%STAT(364)%% Max Mana %NL% 
 ItemDisplay[STAT363 FILTERLVL!=1]: %NAME% STAT363 = %STAT(363)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT362 FILTERLVL!=1]: %NAME% STAT362 = +%STAT(362)% Life on Melee Hit %NL% %CONTINUE%
 ItemDisplay[STAT361 FILTERLVL!=1]: %NAME% STAT361 = %STAT(361)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT360 FILTERLVL!=1]: %NAME% STAT360 = %STAT(360)% Is Corrupted? %NL% %CONTINUE%
+ItemDisplay[STAT360 FILTERLVL!=1]: %NAME% STAT360 = %STAT(360)% Is Corrupted %NL% %CONTINUE%
 // Until at least 2024-03-27, the value of 359 /seemed/ to be the value of the
 // corruption you got, ranging from (at least) 1261 to 1928, indicating whether
 // you got a no change, sockets, or some other corruption, as well as (I
 // speculated) the magnitude of that corruption (number of sockets, +X Life, +Y
-// All Resist, +Z LGoH, etc). By 2024-04-01, alas, that was patched out (proving my
-// speculation was probably correct): the value of this stat became always 0 and
-// thus became useless.
+// All Resist, +Z LGoH, etc). By 2024-04-01, alas, that was patched out (proving
+// my speculation was probably correct!). The value of this stat became always 0
+// and thus became useless.
 ItemDisplay[STAT359 FILTERLVL!=1]: %NAME% STAT359 = %STAT(359)% Corruption Roll %NL% %CONTINUE%
 
 // 358 was D2's highest defined stat. The above are all PoD-only.
@@ -271,7 +272,7 @@ ItemDisplay[STAT253 FILTERLVL!=1]: %NAME% STAT253 = %STAT(253)% %BOLD%Stask Repl
 ItemDisplay[STAT252 FILTERLVL!=1]: %NAME% STAT252 = %STAT(252)% Repair 1 Dura per 100/X sec %NL% %CONTINUE%
 ItemDisplay[STAT251 FILTERLVL!=1]: %NAME% STAT251 = %STAT(251)% %BOLD%find_gems_per_level???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT250 FILTERLVL!=1]: %NAME% STAT250 = +%STAT(250)%%/8 DS/Clvl %NL% %CONTINUE%
-ItemDisplay[STAT249 FILTERLVL!=1]: %NAME% STAT249 = %STAT(249)% %BOLD%Kick Dmg/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT249 FILTERLVL!=1]: %NAME% STAT249 = %STAT(249)%/8 Kick Dmg/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT248 FILTERLVL!=1]: %NAME% STAT248 = %STAT(248)% %BOLD%OW/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT247 FILTERLVL!=1]: %NAME% STAT247 = %STAT(247)% %BOLD%CB/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT246 FILTERLVL!=1]: %NAME% STAT246 = %STAT(246)% %BOLD%Undead AR/Clvl???%WHITE% %NL% %CONTINUE%
@@ -299,7 +300,7 @@ ItemDisplay[STAT225 FILTERLVL!=1]: %NAME% STAT225 = +%STAT(225)%%/2 AR/Clvl %NL%
 ItemDisplay[STAT224 FILTERLVL!=1]: %NAME% STAT224 = +%STAT(224)%/2 AR/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT223 FILTERLVL!=1]: %NAME% STAT223 = +%STAT(223)%/8 Vit/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT222 FILTERLVL!=1]: %NAME% STAT222 = +%STAT(222)%/8 %BOLD%Ene/Clvl???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT221 FILTERLVL!=1]: %NAME% STAT221 = +%STAT(221)%/8 %BOLD%Dex/Clvl???%WHITE% %NL% %CONTINUE%
+ItemDisplay[STAT221 FILTERLVL!=1]: %NAME% STAT221 = +%STAT(221)%/8 Dex/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT220 FILTERLVL!=1]: %NAME% STAT220 = +%STAT(220)%/8 Str/Clvl %NL% %CONTINUE%
 ItemDisplay[STAT219 FILTERLVL!=1]: %NAME% STAT219 = +%STAT(219)%%/8 Max Dmg/Clvl???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT218 FILTERLVL!=1]: %NAME% STAT218 = +%STAT(218)%/8 Max Dmg/Clvl %NL% %CONTINUE%
@@ -385,9 +386,10 @@ ItemDisplay[STAT144 FILTERLVL!=1]: %NAME% STAT144 = %STAT(144)%% Light Sorb %NL%
 ItemDisplay[STAT143 FILTERLVL!=1]: %NAME% STAT143 = %STAT(143)% Fire Sorb %NL% %CONTINUE%
 ItemDisplay[STAT142 FILTERLVL!=1]: %NAME% STAT142 = %STAT(142)%% Fire Sorb %NL% %CONTINUE%
 ItemDisplay[STAT141 FILTERLVL!=1]: %NAME% STAT141 = +%STAT(141)%% DS %NL% %CONTINUE%
-ItemDisplay[STAT140 FILTERLVL!=1]: %NAME% STAT140 = %STAT(140)% %BOLD%item_extrablood???%WHITE% %NL% %CONTINUE%
+// This stat is only found on Gorefoot. As far as I can tell it does nothing.
+ItemDisplay[STAT140 FILTERLVL!=1]: %NAME% STAT140 = %STAT(140)% item_extrablood (does nothing) %NL% %CONTINUE%
 ItemDisplay[STAT139 FILTERLVL!=1]: %NAME% STAT139 = +%STAT(139)% Life on Kill Demon %NL% %CONTINUE%
-ItemDisplay[STAT138 FILTERLVL!=1]: %NAME% STAT138 = %STAT(138)% MPK %NL% %CONTINUE%
+ItemDisplay[STAT138 FILTERLVL!=1]: %NAME% STAT138 = %STAT(138)% MaeK %NL% %CONTINUE%
 ItemDisplay[STAT137 FILTERLVL!=1]: %NAME% STAT137 = %STAT(137)% %BOLD%Kick Dmg? %NL% %CONTINUE%
 ItemDisplay[STAT136 FILTERLVL!=1]: %NAME% STAT136 = +%STAT(136)%% CB %NL% %CONTINUE%
 ItemDisplay[STAT135 FILTERLVL!=1]: %NAME% STAT135 = +%STAT(135)%% OW %NL% %CONTINUE%
@@ -416,7 +418,7 @@ ItemDisplay[STAT114 FILTERLVL!=1]: %NAME% STAT114 = %STAT(114)%% Dmg to Mana %NL
 ItemDisplay[STAT113 FILTERLVL!=1]: %NAME% STAT113 = %STAT(113)% Blinds %NL% %CONTINUE%
 ItemDisplay[STAT112 FILTERLVL!=1]: %NAME% STAT112 = %STAT(112)% MonsterFlee %NL% %CONTINUE%
 ItemDisplay[STAT111 FILTERLVL!=1]: %NAME% STAT111 = +%STAT(111)% Dmg %NL% %CONTINUE%
-ItemDisplay[STAT110 FILTERLVL!=1]: %NAME% STAT110 = %STAT(110)%% Pois Len Reduc %NL% %CONTINUE%
+ItemDisplay[STAT110 FILTERLVL!=1]: %NAME% STAT110 = -%STAT(110)%% Poison Length %NL% %CONTINUE%
 ItemDisplay[STAT109 FILTERLVL!=1]: %NAME% STAT109 = %STAT(109)%% Curse Resist %NL% %CONTINUE%
 ItemDisplay[STAT108 FILTERLVL!=1]: %NAME% STAT108 = %STAT(108)% RIP %NL% %CONTINUE%
 ItemDisplay[STAT107 FILTERLVL!=1]: %NAME% STAT107 = +%STAT(107)% Class Sk? %NL% %CONTINUE%
@@ -440,8 +442,8 @@ ItemDisplay[STAT90]: %NAME% STAT90 = %STAT(90)% %BOLD%Light Color nv???%WHITE% %
 ItemDisplay[STAT89]: %NAME% STAT89 = %STAT(89)% Light Radius %NL% %CONTINUE%
 ItemDisplay[STAT88]: %NAME% STAT88 = %STAT(88)% %BOLD%Double Herb Duration???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT87]: %NAME% STAT87 = -%STAT(87)%% Vendor Price %NL% %CONTINUE%
-ItemDisplay[STAT86]: %NAME% STAT86 = %STAT(86)% LPK %NL% %CONTINUE%
-ItemDisplay[STAT85]: %NAME% STAT85 = +%STAT(85)%% Exp (/6) %NL% %CONTINUE%
+ItemDisplay[STAT86]: %NAME% STAT86 = %STAT(86)% LaeK %NL% %CONTINUE%
+ItemDisplay[STAT85]: %NAME% STAT85 = +%STAT(85)%% XP %NL% %CONTINUE%
 ItemDisplay[STAT84]: %NAME% STAT84 = %STAT(84)% %BOLD%Unsentparam???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT83]: %NAME% STAT83 = +%STAT(83)% Class SK %NL% %CONTINUE%
 // ItemDisplay[STAT82]: %NAME% STAT82 = %STAT(82)% timeduration %NL% %CONTINUE%
@@ -454,7 +456,8 @@ ItemDisplay[STAT79]: %NAME% STAT79 = %STAT(79)%% GF %NL% %CONTINUE%
 ItemDisplay[STAT78]: %NAME% STAT78 = %STAT(78)% Attacker Takes Damage %NL% %CONTINUE%
 ItemDisplay[STAT77]: %NAME% STAT77 = +%STAT(77)%% Mana %NL% %CONTINUE%
 ItemDisplay[STAT76]: %NAME% STAT76 = +%STAT(76)%% Life %NL% %CONTINUE%
-ItemDisplay[STAT75]: %NAME% STAT75 = +%STAT(75)%% %BOLD%Max Dura? %NL% %CONTINUE%
+// This stat is what some superior items get. It's never displayed, thogh.
+ItemDisplay[STAT75]: %NAME% STAT75 = +%STAT(75)%% Max Dura %NL% %CONTINUE%
 ItemDisplay[STAT74]: %NAME% STAT74 = Replen %STAT(74)%*25/256 Life/Sec %NL% %CONTINUE%
 ItemDisplay[STAT73]: %NAME% STAT73 = %STAT(73)% Max Dura %NL% %CONTINUE%
 ItemDisplay[STAT72]: %NAME% STAT72 = %STAT(72)% Dura %NL% %CONTINUE%
@@ -503,13 +506,15 @@ ItemDisplay[STAT31]: %NAME% STAT31 = %STAT(31)% Def %NL% %CONTINUE%
 // ItemDisplay[STAT29]: %NAME% STAT29 = %STAT(29)% CharExpNextLvl %NL% %CONTINUE%
 ItemDisplay[STAT28]: %NAME% STAT28 = StamHeal %STAT(28)%% %NL% %CONTINUE%
 ItemDisplay[STAT27]: %NAME% STAT27 = +%STAT(27)%% Mana Regen %NL% %CONTINUE%
-ItemDisplay[STAT26]: %NAME% STAT26 = %STAT(26)% %BOLD%manarecovery? %NL% %CONTINUE%
+ItemDisplay[STAT26]: %NAME% STAT26 = %STAT(26)% %BOLD%Integer Mana Recov? %NL% %CONTINUE%
 ItemDisplay[STAT25]: %NAME% STAT25 = %STAT(25)% %BOLD%damagepercent? %NL% %CONTINUE%
 ItemDisplay[STAT24]: %NAME% STAT24 = %STAT(24)% 2H Max Dmg %NL% %CONTINUE%
 ItemDisplay[STAT23]: %NAME% STAT23 = %STAT(23)% 2H Min Dmg %NL% %CONTINUE%
 ItemDisplay[STAT22]: %NAME% STAT22 = %STAT(22)% 1H Max Dmg %NL% %CONTINUE%
 ItemDisplay[STAT21]: %NAME% STAT21 = %STAT(21)% 1H Min Dmg %NL% %CONTINUE%
-ItemDisplay[STAT20]: %NAME% STAT20 = +%STAT(20)%% Block Rate (-16) %NL% %CONTINUE%
+// The rate that's displayed is the shield's /base/ block rate, without
+// including any Increased Chance of Blocking it may have.
+ItemDisplay[STAT20]: %NAME% STAT20 = +%STAT(20)%% Block Rate (without item ICB) %NL% %CONTINUE%
 ItemDisplay[STAT19]: %NAME% STAT19 = %STAT(19)% AR %NL% %CONTINUE%
 ItemDisplay[STAT18]: %NAME% STAT18 = +%STAT(18)%% Min Dmg %NL% %CONTINUE%
 ItemDisplay[STAT17]: %NAME% STAT17 = +%STAT(17)%% Max Dmg %NL% %CONTINUE%
@@ -533,7 +538,7 @@ ItemDisplay[STAT0]: %NAME% STAT0 = +%STAT(0)% Str %NL% %CONTINUE%
 EndIf[]
 
 // Yep, these go in the opposite order as stats, to ensure that the text appears
-// in the same order as the skill list.
+// in the same order as the skill list underneath the item.
 EnableIf[(FILTERLVL=3 OR FILTERLVL=4)]:
 // ItemDisplay[SK0]: %NAME% SK0 = +%SKILL(0)% Attack %NL% %CONTINUE%
 // ItemDisplay[SK1]: %NAME% SK1 = +%SKILL(1)% Kick %NL% %CONTINUE%
@@ -541,10 +546,12 @@ EnableIf[(FILTERLVL=3 OR FILTERLVL=4)]:
 // ItemDisplay[SK3]: %NAME% SK3 = +%SKILL(3)% Unsummon %NL% %CONTINUE%
 // ItemDisplay[SK4]: %NAME% SK4 = +%SKILL(4)% Left Hand Throw %NL% %CONTINUE%
 // ItemDisplay[SK5]: %NAME% SK5 = +%SKILL(5)% Left Hand Swing %NL% %CONTINUE%
-ItemDisplay[SK6]: %NAME% SK6 = +%SKILL(6)% Magic Arrow %NL% %CONTINUE%
-ItemDisplay[SK7]: %NAME% SK7 = +%SKILL(7)% Fire Arrow %NL% %CONTINUE%
-ItemDisplay[SK8]: %NAME% SK8 = +%SKILL(8)% Inner Sight %NL% %CONTINUE%
-ItemDisplay[SK9]: %NAME% SK9 = +%SKILL(9)% Critical Strike %NL% %CONTINUE%
+
+// Amazon skills (vanilla skills probably correct; PoD-only skills unconfirmed)
+ItemDisplay[SK6]:  %NAME% SK6 = +%SKILL(6)% Magic Arrow %NL% %CONTINUE%
+ItemDisplay[SK7]:  %NAME% SK7 = +%SKILL(7)% Fire Arrow %NL% %CONTINUE%
+ItemDisplay[SK8]:  %NAME% SK8 = +%SKILL(8)% Inner Sight %NL% %CONTINUE%
+ItemDisplay[SK9]:  %NAME% SK9 = +%SKILL(9)% Critical Strike %NL% %CONTINUE%
 ItemDisplay[SK10]: %NAME% SK10 = +%SKILL(10)% Jab %NL% %CONTINUE%
 ItemDisplay[SK11]: %NAME% SK11 = +%SKILL(11)% Cold Arrow %NL% %CONTINUE%
 ItemDisplay[SK12]: %NAME% SK12 = +%SKILL(12)% Multiple Shot %NL% %CONTINUE%
@@ -571,6 +578,8 @@ ItemDisplay[SK32]: %NAME% SK32 = +%SKILL(32)% Valkyrie %NL% %CONTINUE%
 ItemDisplay[SK33]: %NAME% SK33 = +%SKILL(33)% Pierce %NL% %CONTINUE%
 ItemDisplay[SK34]: %NAME% SK34 = +%SKILL(34)% Lightning Strike %NL% %CONTINUE%
 ItemDisplay[SK35]: %NAME% SK35 = +%SKILL(35)% Lightning Fury %NL% %CONTINUE%
+
+// Sorceress skills (all confirmed correct)
 ItemDisplay[SK36]: %NAME% SK36 = +%SKILL(36)% Fire Bolt %NL% %CONTINUE%
 ItemDisplay[SK37]: %NAME% SK37 = +%SKILL(37)% Warmth %NL% %CONTINUE%
 ItemDisplay[SK38]: %NAME% SK38 = +%SKILL(38)% Charged Bolt %NL% %CONTINUE%
@@ -601,6 +610,8 @@ ItemDisplay[SK62]: %NAME% SK62 = +%SKILL(62)% Hydra %NL% %CONTINUE%
 ItemDisplay[SK63]: %NAME% SK63 = +%SKILL(63)% Lightning Mastery %NL% %CONTINUE%
 ItemDisplay[SK64]: %NAME% SK64 = +%SKILL(64)% Frozen Orb %NL% %CONTINUE%
 ItemDisplay[SK65]: %NAME% SK65 = +%SKILL(65)% Cold Mastery %NL% %CONTINUE%
+
+// Necromancer skills (all confirmed correct)
 ItemDisplay[SK66]: %NAME% SK66 = +%SKILL(66)% Amplify Damage %NL% %CONTINUE%
 ItemDisplay[SK67]: %NAME% SK67 = +%SKILL(67)% Teeth %NL% %CONTINUE%
 ItemDisplay[SK68]: %NAME% SK68 = +%SKILL(68)% Bone Armor %NL% %CONTINUE%
@@ -631,10 +642,12 @@ ItemDisplay[SK92]: %NAME% SK92 = +%SKILL(92)% Poison Nova %NL% %CONTINUE%
 ItemDisplay[SK93]: %NAME% SK93 = +%SKILL(93)% Bone Spirit %NL% %CONTINUE%
 ItemDisplay[SK94]: %NAME% SK94 = +%SKILL(94)% Fire Golem %NL% %CONTINUE%
 ItemDisplay[SK95]: %NAME% SK95 = +%SKILL(95)% Revive %NL% %CONTINUE%
-ItemDisplay[SK96]: %NAME% SK96 = +%SKILL(96)% Sacrifice %NL% %CONTINUE%
-ItemDisplay[SK97]: %NAME% SK97 = +%SKILL(97)% Smite %NL% %CONTINUE%
-ItemDisplay[SK98]: %NAME% SK98 = +%SKILL(98)% Might %NL% %CONTINUE%
-ItemDisplay[SK99]: %NAME% SK99 = +%SKILL(99)% Prayer %NL% %CONTINUE%
+
+// Paladin skills (all confirmed correct)
+ItemDisplay[SK96]:  %NAME% SK96 = +%SKILL(96)% Sacrifice %NL% %CONTINUE%
+ItemDisplay[SK97]:  %NAME% SK97 = +%SKILL(97)% Smite %NL% %CONTINUE%
+ItemDisplay[SK98]:  %NAME% SK98 = +%SKILL(98)% Might %NL% %CONTINUE%
+ItemDisplay[SK99]:  %NAME% SK99 = +%SKILL(99)% Prayer %NL% %CONTINUE%
 ItemDisplay[SK100]: %NAME% SK100 = +%SKILL(100)% Resist Fire %NL% %CONTINUE%
 ItemDisplay[SK101]: %NAME% SK101 = +%SKILL(101)% Holy Bolt %NL% %CONTINUE%
 ItemDisplay[SK102]: %NAME% SK102 = +%SKILL(102)% Holy Fire %NL% %CONTINUE%
@@ -661,21 +674,23 @@ ItemDisplay[SK122]: %NAME% SK122 = +%SKILL(122)% Fanaticism %NL% %CONTINUE%
 ItemDisplay[SK123]: %NAME% SK123 = +%SKILL(123)% Conviction %NL% %CONTINUE%
 ItemDisplay[SK124]: %NAME% SK124 = +%SKILL(124)% Redemption %NL% %CONTINUE%
 ItemDisplay[SK125]: %NAME% SK125 = +%SKILL(125)% Salvation %NL% %CONTINUE%
+
+// Barbarian skills (mostly confirmed correct)
 ItemDisplay[SK126]: %NAME% SK126 = +%SKILL(126)% Bash %NL% %CONTINUE%
 ItemDisplay[SK127]: %NAME% SK127 = +%SKILL(127)% Edged Weapon Mastery %NL% %CONTINUE%
-ItemDisplay[SK128]: %NAME% SK128 = +%SKILL(128)% ??? Mastery %NL% %CONTINUE%
+ItemDisplay[SK128]: %NAME% SK128 = +%SKILL(128)% Pole Weapon Mastery %NL% %CONTINUE%
 ItemDisplay[SK129]: %NAME% SK129 = +%SKILL(129)% Blunt Mastery %NL% %CONTINUE%
 ItemDisplay[SK130]: %NAME% SK130 = +%SKILL(130)% Howl %NL% %CONTINUE%
 ItemDisplay[SK131]: %NAME% SK131 = +%SKILL(131)% Find Potion %NL% %CONTINUE%
 ItemDisplay[SK132]: %NAME% SK132 = +%SKILL(132)% Leap %NL% %CONTINUE%
-ItemDisplay[SK133]: %NAME% SK133 = +%SKILL(133)% Double Swing %NL% %CONTINUE%
+ItemDisplay[SK133]: %NAME% SK133 = +%SKILL(133)% %BOLD%Ethereal Throw???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK134]: %NAME% SK134 = +%SKILL(134)% Whirling Axes %NL% %CONTINUE%
-ItemDisplay[SK135]: %NAME% SK135 = +%SKILL(135)% Throwing Mastery %NL% %CONTINUE%
-ItemDisplay[SK136]: %NAME% SK136 = +%SKILL(136)% Spear Mastery %NL% %CONTINUE%
+ItemDisplay[SK135]: %NAME% SK135 = +%SKILL(135)% Thrown Weapon Mastery %NL% %CONTINUE%
+ItemDisplay[SK136]: %NAME% SK136 = +%SKILL(136)% ??? Mastery %NL% %CONTINUE%
 ItemDisplay[SK137]: %NAME% SK137 = +%SKILL(137)% Taunt %NL% %CONTINUE%
 ItemDisplay[SK138]: %NAME% SK138 = +%SKILL(138)% Shout %NL% %CONTINUE%
 ItemDisplay[SK139]: %NAME% SK139 = +%SKILL(139)% Stun %NL% %CONTINUE%
-ItemDisplay[SK140]: %NAME% SK140 = +%SKILL(140)% Double Throw %NL% %CONTINUE%
+ItemDisplay[SK140]: %NAME% SK140 = +%SKILL(140)% Power Throw %NL% %CONTINUE%
 ItemDisplay[SK141]: %NAME% SK141 = +%SKILL(141)% Increased Stamina %NL% %CONTINUE%
 ItemDisplay[SK142]: %NAME% SK142 = +%SKILL(142)% Find Item %NL% %CONTINUE%
 ItemDisplay[SK143]: %NAME% SK143 = +%SKILL(143)% Leap Attack %NL% %CONTINUE%
@@ -687,18 +702,21 @@ ItemDisplay[SK148]: %NAME% SK148 = +%SKILL(148)% Increased Speed %NL% %CONTINUE%
 ItemDisplay[SK149]: %NAME% SK149 = +%SKILL(149)% Battle Orders %NL% %CONTINUE%
 ItemDisplay[SK150]: %NAME% SK150 = +%SKILL(150)% Grim Ward %NL% %CONTINUE%
 ItemDisplay[SK151]: %NAME% SK151 = +%SKILL(151)% Whirlwind %NL% %CONTINUE%
-ItemDisplay[SK152]: %NAME% SK152 = +%SKILL(152)% Berserk %NL% %CONTINUE%
-ItemDisplay[SK153]: %NAME% SK154 = +%SKILL(154)% Natural Resistance %NL% %CONTINUE%
+ItemDisplay[SK152]: %NAME% SK152 = +%SKILL(152)% Cleave %NL% %CONTINUE%
+ItemDisplay[SK153]: %NAME% SK153 = +%SKILL(153)% Natural Resistance %NL% %CONTINUE%
 ItemDisplay[SK154]: %NAME% SK154 = +%SKILL(154)% War Cry %NL% %CONTINUE%
 ItemDisplay[SK155]: %NAME% SK155 = +%SKILL(155)% Battle Command %NL% %CONTINUE%
+
 // ItemDisplay[SK217]: %NAME% SK217 = +%SKILL(217)% Scroll of Identify %NL% %CONTINUE%
 // ItemDisplay[SK218]: %NAME% SK218 = +%SKILL(218)% Tome of Identify %NL% %CONTINUE%
 // ItemDisplay[SK219]: %NAME% SK219 = +%SKILL(219)% Scroll of Town Portal %NL% %CONTINUE%
 // ItemDisplay[SK220]: %NAME% SK220 = +%SKILL(220)% Tome of Town Portal %NL% %CONTINUE%
+
+// Druid skills (all confirmed correct)
 ItemDisplay[SK221]: %NAME% SK221 = +%SKILL(221)% Raven %NL% %CONTINUE%
 ItemDisplay[SK222]: %NAME% SK222 = +%SKILL(222)% Poison Creeper %NL% %CONTINUE%
 ItemDisplay[SK223]: %NAME% SK223 = +%SKILL(223)% Werewolf %NL% %CONTINUE%
-ItemDisplay[SK224]: %NAME% SK224 = +%SKILL(224)% Lycanthopy %NL% %CONTINUE%
+ItemDisplay[SK224]: %NAME% SK224 = +%SKILL(224)% Lycanthropy %NL% %CONTINUE%
 ItemDisplay[SK225]: %NAME% SK225 = +%SKILL(225)% Firestorm %NL% %CONTINUE%
 ItemDisplay[SK226]: %NAME% SK226 = +%SKILL(226)% Oak Sage %NL% %CONTINUE%
 ItemDisplay[SK227]: %NAME% SK227 = +%SKILL(227)% Summon Spirit Wolf %NL% %CONTINUE%
@@ -715,7 +733,7 @@ ItemDisplay[SK237]: %NAME% SK237 = +%SKILL(237)% Summon Dire Wolf %NL% %CONTINUE
 ItemDisplay[SK238]: %NAME% SK238 = +%SKILL(238)% Rabies %NL% %CONTINUE%
 ItemDisplay[SK239]: %NAME% SK239 = +%SKILL(239)% Fire Claws %NL% %CONTINUE%
 ItemDisplay[SK240]: %NAME% SK240 = +%SKILL(240)% Twister %NL% %CONTINUE%
-ItemDisplay[SK241]: %NAME% SK241 = +%SKILL(241)% ??? %NL% %CONTINUE%
+ItemDisplay[SK241]: %NAME% SK241 = +%SKILL(241)% Solar Creeper %NL% %CONTINUE%
 ItemDisplay[SK242]: %NAME% SK242 = +%SKILL(242)% Hunger %NL% %CONTINUE%
 ItemDisplay[SK243]: %NAME% SK243 = +%SKILL(243)% Shock Wave %NL% %CONTINUE%
 ItemDisplay[SK244]: %NAME% SK244 = +%SKILL(244)% Volcano %NL% %CONTINUE%
@@ -725,6 +743,8 @@ ItemDisplay[SK247]: %NAME% SK247 = +%SKILL(247)% Summon Grizzly Bear %NL% %CONTI
 ItemDisplay[SK248]: %NAME% SK248 = +%SKILL(248)% Fury %NL% %CONTINUE%
 ItemDisplay[SK249]: %NAME% SK249 = +%SKILL(249)% Armageddon %NL% %CONTINUE%
 ItemDisplay[SK250]: %NAME% SK250 = +%SKILL(250)% Hurricane %NL% %CONTINUE%
+
+// Assassin skills (mostly confirmed correct)
 ItemDisplay[SK251]: %NAME% SK251 = +%SKILL(251)% Fire Blast %NL% %CONTINUE%
 ItemDisplay[SK252]: %NAME% SK252 = +%SKILL(252)% Claw Mastery %NL% %CONTINUE%
 ItemDisplay[SK253]: %NAME% SK253 = +%SKILL(253)% Psychic Hammer %NL% %CONTINUE%
@@ -755,6 +775,7 @@ ItemDisplay[SK277]: %NAME% SK277 = +%SKILL(277)% Blade Shield %NL% %CONTINUE%
 ItemDisplay[SK278]: %NAME% SK278 = +%SKILL(278)% Venom %NL% %CONTINUE%
 ItemDisplay[SK279]: %NAME% SK279 = +%SKILL(279)% Shadow Master %NL% %CONTINUE%
 ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% Phoenix Strike %NL% %CONTINUE%
+
 ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK281]: %NAME% SK281 = +%SKILL(281)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK282]: %NAME% SK282 = +%SKILL(282)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -943,14 +964,14 @@ ItemDisplay[SK464]: %NAME% SK464 = +%SKILL(464)% %PURPLE%???%WHITE% %NL% %CONTIN
 ItemDisplay[SK465]: %NAME% SK465 = +%SKILL(465)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK466]: %NAME% SK466 = +%SKILL(466)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK467]: %NAME% SK467 = +%SKILL(467)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK468]: %NAME% SK468 = +%SKILL(468)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK468]: %NAME% SK468 = +%SKILL(468)% Flame Dash %NL% %CONTINUE%
 ItemDisplay[SK469]: %NAME% SK469 = +%SKILL(469)% Freezing Pulse %NL% %CONTINUE%
 ItemDisplay[SK470]: %NAME% SK470 = +%SKILL(470)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK471]: %NAME% SK471 = +%SKILL(471)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK472]: %NAME% SK472 = +%SKILL(472)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK473]: %NAME% SK473 = +%SKILL(473)% Dashing Strike %NL% %CONTINUE%
 ItemDisplay[SK474]: %NAME% SK474 = +%SKILL(474)% Puncture %NL% %CONTINUE%
-ItemDisplay[SK475]: %NAME% SK475 = +%SKILL(475)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK475]: %NAME% SK475 = +%SKILL(475)% Counter Attack %NL% %CONTINUE%
 ItemDisplay[SK476]: %NAME% SK476 = +%SKILL(476)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK477]: %NAME% SK477 = +%SKILL(477)% Hemorrhage %NL% %CONTINUE%
 ItemDisplay[SK478]: %NAME% SK478 = +%SKILL(478)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -1171,76 +1192,164 @@ ItemDisplay[SK692]: %NAME% SK692 = +%SKILL(692)% %PURPLE%???%WHITE% %NL% %CONTIN
 ItemDisplay[SK693]: %NAME% SK693 = +%SKILL(693)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK694]: %NAME% SK694 = +%SKILL(694)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 
-ItemDisplay[CLSK0]: %NAME% CLSK0 = +X Amazon Skills %NL% %CONTINUE%
-ItemDisplay[CLSK1]: %NAME% CLSK1 = +X Sorceress Skills %NL% %CONTINUE%
-ItemDisplay[CLSK2]: %NAME% CLSK2 = +X Necromancer Skills %NL% %CONTINUE%
-ItemDisplay[CLSK3]: %NAME% CLSK3 = +X Paladin Skills %NL% %CONTINUE%
-ItemDisplay[CLSK4]: %NAME% CLSK4 = +X Barbarian Skills %NL% %CONTINUE%
-ItemDisplay[CLSK5]: %NAME% CLSK5 = +X Druid Skills %NL% %CONTINUE%
-ItemDisplay[CLSK6]: %NAME% CLSK6 = +X Assassin Skills %NL% %CONTINUE%
+ItemDisplay[ALLSK]: %NAME% STAT127/ALLSK = +%STAT(127)% All Skills %NL% %CONTINUE%
 
-ItemDisplay[TABSK0]: %NAME% TABSK0 = +X Amazon Bow & Crossbow %NL% %CONTINUE%
-ItemDisplay[TABSK1]: %NAME% TABSK1 = +X Amazon Passive & Magic %NL% %CONTINUE%
-ItemDisplay[TABSK2]: %NAME% TABSK2 = +X Amazon Javelin & Spear %NL% %CONTINUE%
+// Unfortunately there's no way to show many class or tab skills an item grants,
+// so this is the best we can do.
+ItemDisplay[CLSK0=1]: %NAME% CLSK0 = +1 Amazon Skills %NL% %CONTINUE%
+ItemDisplay[CLSK0=2]: %NAME% CLSK0 = +2 Amazon Skills %NL% %CONTINUE%
+ItemDisplay[CLSK0=3]: %NAME% CLSK0 = +3 Amazon Skills %NL% %CONTINUE%
+ItemDisplay[CLSK0>3]: %NAME% CLSK0 = +X Amazon Skills %NL% %CONTINUE%
+ItemDisplay[CLSK1=1]: %NAME% CLSK1 = +1 Sorceress Skills %NL% %CONTINUE%
+ItemDisplay[CLSK1=2]: %NAME% CLSK1 = +2 Sorceress Skills %NL% %CONTINUE%
+ItemDisplay[CLSK1=3]: %NAME% CLSK1 = +3 Sorceress Skills %NL% %CONTINUE%
+ItemDisplay[CLSK1>3]: %NAME% CLSK1 = +X Sorceress Skills %NL% %CONTINUE%
+ItemDisplay[CLSK2=1]: %NAME% CLSK2 = +1 Necromancer Skills %NL% %CONTINUE%
+ItemDisplay[CLSK2=2]: %NAME% CLSK2 = +2 Necromancer Skills %NL% %CONTINUE%
+ItemDisplay[CLSK2=3]: %NAME% CLSK2 = +3 Necromancer Skills %NL% %CONTINUE%
+ItemDisplay[CLSK2>3]: %NAME% CLSK2 = +X Necromancer Skills %NL% %CONTINUE%
+ItemDisplay[CLSK3=1]: %NAME% CLSK3 = +1 Paladin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK3=2]: %NAME% CLSK3 = +2 Paladin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK3=3]: %NAME% CLSK3 = +3 Paladin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK3>3]: %NAME% CLSK3 = +X Paladin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK4=1]: %NAME% CLSK4 = +1 Barbarian Skills %NL% %CONTINUE%
+ItemDisplay[CLSK4=2]: %NAME% CLSK4 = +2 Barbarian Skills %NL% %CONTINUE%
+ItemDisplay[CLSK4=3]: %NAME% CLSK4 = +3 Barbarian Skills %NL% %CONTINUE%
+ItemDisplay[CLSK4>3]: %NAME% CLSK4 = +X Barbarian Skills %NL% %CONTINUE%
+ItemDisplay[CLSK5=1]: %NAME% CLSK5 = +1 Druid Skills %NL% %CONTINUE%
+ItemDisplay[CLSK5=2]: %NAME% CLSK5 = +2 Druid Skills %NL% %CONTINUE%
+ItemDisplay[CLSK5=3]: %NAME% CLSK5 = +3 Druid Skills %NL% %CONTINUE%
+ItemDisplay[CLSK5>3]: %NAME% CLSK5 = +X Druid Skills %NL% %CONTINUE%
+ItemDisplay[CLSK6=1]: %NAME% CLSK6 = +1 Assassin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK6=2]: %NAME% CLSK6 = +2 Assassin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK6=3]: %NAME% CLSK6 = +3 Assassin Skills %NL% %CONTINUE%
+ItemDisplay[CLSK6>3]: %NAME% CLSK6 = +X Assassin Skills %NL% %CONTINUE%
+
+ItemDisplay[TABSK0=1]: %NAME% TABSK0 = +1 Amazon Bow & Crossbow %NL% %CONTINUE%
+ItemDisplay[TABSK0=2]: %NAME% TABSK0 = +2 Amazon Bow & Crossbow %NL% %CONTINUE%
+ItemDisplay[TABSK0=3]: %NAME% TABSK0 = +3 Amazon Bow & Crossbow %NL% %CONTINUE%
+ItemDisplay[TABSK0>3]: %NAME% TABSK0 = +X Amazon Bow & Crossbow %NL% %CONTINUE%
+ItemDisplay[TABSK1=1]: %NAME% TABSK1 = +1 Amazon Passive & Magic %NL% %CONTINUE%
+ItemDisplay[TABSK1=2]: %NAME% TABSK1 = +2 Amazon Passive & Magic %NL% %CONTINUE%
+ItemDisplay[TABSK1=3]: %NAME% TABSK1 = +3 Amazon Passive & Magic %NL% %CONTINUE%
+ItemDisplay[TABSK1>3]: %NAME% TABSK1 = +X Amazon Passive & Magic %NL% %CONTINUE%
+ItemDisplay[TABSK2=1]: %NAME% TABSK2 = +1 Amazon Javelin & Spear %NL% %CONTINUE%
+ItemDisplay[TABSK2=2]: %NAME% TABSK2 = +2 Amazon Javelin & Spear %NL% %CONTINUE%
+ItemDisplay[TABSK2=3]: %NAME% TABSK2 = +3 Amazon Javelin & Spear %NL% %CONTINUE%
+ItemDisplay[TABSK2>3]: %NAME% TABSK2 = +X Amazon Javelin & Spear %NL% %CONTINUE%
 ItemDisplay[TABSK3]: %NAME% TABSK3 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK4]: %NAME% TABSK4 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK5]: %NAME% TABSK5 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK6]: %NAME% TABSK6 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK7]: %NAME% TABSK7 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK8]: %NAME% TABSK8 = +X Sorceress Fire %NL% %CONTINUE%
-ItemDisplay[TABSK9]: %NAME% TABSK9 = +X Sorceress Lightning %NL% %CONTINUE%
-ItemDisplay[TABSK10]: %NAME% TABSK10 = +X Sorceress Cold %NL% %CONTINUE%
+ItemDisplay[TABSK8=1]: %NAME% TABSK8 = +1 Sorceress Fire %NL% %CONTINUE%
+ItemDisplay[TABSK8=2]: %NAME% TABSK8 = +2 Sorceress Fire %NL% %CONTINUE%
+ItemDisplay[TABSK8=3]: %NAME% TABSK8 = +3 Sorceress Fire %NL% %CONTINUE%
+ItemDisplay[TABSK8>3]: %NAME% TABSK8 = +X Sorceress Fire %NL% %CONTINUE%
+ItemDisplay[TABSK9=1]: %NAME% TABSK9 = +1 Sorceress Lightning %NL% %CONTINUE%
+ItemDisplay[TABSK9=2]: %NAME% TABSK9 = +2 Sorceress Lightning %NL% %CONTINUE%
+ItemDisplay[TABSK9=3]: %NAME% TABSK9 = +3 Sorceress Lightning %NL% %CONTINUE%
+ItemDisplay[TABSK9>3]: %NAME% TABSK9 = +X Sorceress Lightning %NL% %CONTINUE%
+ItemDisplay[TABSK10=1]: %NAME% TABSK10 = +1 Sorceress Cold %NL% %CONTINUE%
+ItemDisplay[TABSK10=2]: %NAME% TABSK10 = +2 Sorceress Cold %NL% %CONTINUE%
+ItemDisplay[TABSK10=3]: %NAME% TABSK10 = +3 Sorceress Cold %NL% %CONTINUE%
+ItemDisplay[TABSK10>3]: %NAME% TABSK10 = +X Sorceress Cold %NL% %CONTINUE%
 ItemDisplay[TABSK11]: %NAME% TABSK11 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK12]: %NAME% TABSK12 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK13]: %NAME% TABSK13 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK14]: %NAME% TABSK14 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK15]: %NAME% TABSK15 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK16]: %NAME% TABSK16 = +X Necromancer Curses %NL% %CONTINUE%
-ItemDisplay[TABSK17]: %NAME% TABSK17 = +X Necromancer Poison & Bone %NL% %CONTINUE%
-ItemDisplay[TABSK18]: %NAME% TABSK18 = +X Necromancer Summon %NL% %CONTINUE%
+ItemDisplay[TABSK16=1]: %NAME% TABSK16 = +1 Necromancer Curses %NL% %CONTINUE%
+ItemDisplay[TABSK16=2]: %NAME% TABSK16 = +2 Necromancer Curses %NL% %CONTINUE%
+ItemDisplay[TABSK16=3]: %NAME% TABSK16 = +3 Necromancer Curses %NL% %CONTINUE%
+ItemDisplay[TABSK16>3]: %NAME% TABSK16 = +X Necromancer Curses %NL% %CONTINUE%
+ItemDisplay[TABSK17=1]: %NAME% TABSK17 = +1 Necromancer Poison & Bone %NL% %CONTINUE%
+ItemDisplay[TABSK17=2]: %NAME% TABSK17 = +2 Necromancer Poison & Bone %NL% %CONTINUE%
+ItemDisplay[TABSK17=3]: %NAME% TABSK17 = +3 Necromancer Poison & Bone %NL% %CONTINUE%
+ItemDisplay[TABSK17>3]: %NAME% TABSK17 = +X Necromancer Poison & Bone %NL% %CONTINUE%
+ItemDisplay[TABSK18=1]: %NAME% TABSK18 = +1 Necromancer Summon %NL% %CONTINUE%
+ItemDisplay[TABSK18=2]: %NAME% TABSK18 = +2 Necromancer Summon %NL% %CONTINUE%
+ItemDisplay[TABSK18=3]: %NAME% TABSK18 = +3 Necromancer Summon %NL% %CONTINUE%
+ItemDisplay[TABSK18>3]: %NAME% TABSK18 = +X Necromancer Summon %NL% %CONTINUE%
 ItemDisplay[TABSK19]: %NAME% TABSK19 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK20]: %NAME% TABSK20 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK21]: %NAME% TABSK21 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK22]: %NAME% TABSK22 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK23]: %NAME% TABSK23 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK24]: %NAME% TABSK24 = +X Paladin Combat %NL% %CONTINUE%
-ItemDisplay[TABSK25]: %NAME% TABSK25 = +X Paladin Offensive %NL% %CONTINUE%
-ItemDisplay[TABSK26]: %NAME% TABSK26 = +X Paladin Defensive %NL% %CONTINUE%
+ItemDisplay[TABSK24=1]: %NAME% TABSK24 = +1 Paladin Combat %NL% %CONTINUE%
+ItemDisplay[TABSK24=2]: %NAME% TABSK24 = +2 Paladin Combat %NL% %CONTINUE%
+ItemDisplay[TABSK24=3]: %NAME% TABSK24 = +3 Paladin Combat %NL% %CONTINUE%
+ItemDisplay[TABSK24>3]: %NAME% TABSK24 = +X Paladin Combat %NL% %CONTINUE%
+ItemDisplay[TABSK25=1]: %NAME% TABSK25 = +1 Paladin Offensive %NL% %CONTINUE%
+ItemDisplay[TABSK25=2]: %NAME% TABSK25 = +2 Paladin Offensive %NL% %CONTINUE%
+ItemDisplay[TABSK25=3]: %NAME% TABSK25 = +3 Paladin Offensive %NL% %CONTINUE%
+ItemDisplay[TABSK25>3]: %NAME% TABSK25 = +X Paladin Offensive %NL% %CONTINUE%
+ItemDisplay[TABSK26=1]: %NAME% TABSK26 = +1 Paladin Defensive %NL% %CONTINUE%
+ItemDisplay[TABSK26=2]: %NAME% TABSK26 = +2 Paladin Defensive %NL% %CONTINUE%
+ItemDisplay[TABSK26=3]: %NAME% TABSK26 = +3 Paladin Defensive %NL% %CONTINUE%
+ItemDisplay[TABSK26>3]: %NAME% TABSK26 = +X Paladin Defensive %NL% %CONTINUE%
 ItemDisplay[TABSK27]: %NAME% TABSK27 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK28]: %NAME% TABSK28 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK29]: %NAME% TABSK29 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK30]: %NAME% TABSK30 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK31]: %NAME% TABSK31 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK32]: %NAME% TABSK32 = +X Barbarian Combat %NL% %CONTINUE%
-ItemDisplay[TABSK33]: %NAME% TABSK33 = +X Barbarian Masteries %NL% %CONTINUE%
-ItemDisplay[TABSK34]: %NAME% TABSK34 = +X Barbarian Warcries %NL% %CONTINUE%
+ItemDisplay[TABSK32=1]: %NAME% TABSK32 = +1 Barbarian Combat %NL% %CONTINUE%
+ItemDisplay[TABSK32=2]: %NAME% TABSK32 = +2 Barbarian Combat %NL% %CONTINUE%
+ItemDisplay[TABSK32=3]: %NAME% TABSK32 = +3 Barbarian Combat %NL% %CONTINUE%
+ItemDisplay[TABSK32>3]: %NAME% TABSK32 = +X Barbarian Combat %NL% %CONTINUE%
+ItemDisplay[TABSK33=1]: %NAME% TABSK33 = +1 Barbarian Masteries %NL% %CONTINUE%
+ItemDisplay[TABSK33=2]: %NAME% TABSK33 = +2 Barbarian Masteries %NL% %CONTINUE%
+ItemDisplay[TABSK33=3]: %NAME% TABSK33 = +3 Barbarian Masteries %NL% %CONTINUE%
+ItemDisplay[TABSK33>3]: %NAME% TABSK33 = +X Barbarian Masteries %NL% %CONTINUE%
+ItemDisplay[TABSK34=1]: %NAME% TABSK34 = +1 Barbarian Warcries %NL% %CONTINUE%
+ItemDisplay[TABSK34=2]: %NAME% TABSK34 = +2 Barbarian Warcries %NL% %CONTINUE%
+ItemDisplay[TABSK34=3]: %NAME% TABSK34 = +3 Barbarian Warcries %NL% %CONTINUE%
+ItemDisplay[TABSK34>3]: %NAME% TABSK34 = +X Barbarian Warcries %NL% %CONTINUE%
 ItemDisplay[TABSK35]: %NAME% TABSK35 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK36]: %NAME% TABSK36 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK37]: %NAME% TABSK37 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK38]: %NAME% TABSK38 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK39]: %NAME% TABSK39 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK40]: %NAME% TABSK40 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK41]: %NAME% TABSK41 = +X Druid Shapeshifting %NL% %CONTINUE%
-ItemDisplay[TABSK42]: %NAME% TABSK42 = +X Druid Elemental %NL% %CONTINUE%
+ItemDisplay[TABSK40=1]: %NAME% TABSK40 = +1 Druid Summoning %NL% %CONTINUE%
+ItemDisplay[TABSK40=2]: %NAME% TABSK40 = +2 Druid Summoning %NL% %CONTINUE%
+ItemDisplay[TABSK40=3]: %NAME% TABSK40 = +3 Druid Summoning %NL% %CONTINUE%
+ItemDisplay[TABSK40>3]: %NAME% TABSK40 = +X Druid Summoning %NL% %CONTINUE%
+ItemDisplay[TABSK41=1]: %NAME% TABSK41 = +1 Druid Shapeshifting %NL% %CONTINUE%
+ItemDisplay[TABSK41=2]: %NAME% TABSK41 = +2 Druid Shapeshifting %NL% %CONTINUE%
+ItemDisplay[TABSK41=3]: %NAME% TABSK41 = +3 Druid Shapeshifting %NL% %CONTINUE%
+ItemDisplay[TABSK41>3]: %NAME% TABSK41 = +X Druid Shapeshifting %NL% %CONTINUE%
+ItemDisplay[TABSK42=1]: %NAME% TABSK42 = +1 Druid Elemental %NL% %CONTINUE%
+ItemDisplay[TABSK42=2]: %NAME% TABSK42 = +2 Druid Elemental %NL% %CONTINUE%
+ItemDisplay[TABSK42=3]: %NAME% TABSK42 = +3 Druid Elemental %NL% %CONTINUE%
+ItemDisplay[TABSK42>3]: %NAME% TABSK42 = +X Druid Elemental %NL% %CONTINUE%
 ItemDisplay[TABSK43]: %NAME% TABSK43 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK44]: %NAME% TABSK44 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK45]: %NAME% TABSK45 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK46]: %NAME% TABSK46 = %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[TABSK47]: %NAME% TABSK47 = %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[TABSK48]: %NAME% TABSK48 = +X Assassin Traps %NL% %CONTINUE%
-ItemDisplay[TABSK49]: %NAME% TABSK49 = +X Assassin Shadow Disciplines %NL% %CONTINUE%
-ItemDisplay[TABSK50]: %NAME% TABSK50 = +X Assassin Martial Arts %NL% %CONTINUE%
+ItemDisplay[TABSK48=1]: %NAME% TABSK48 = +1 Assassin Traps %NL% %CONTINUE%
+ItemDisplay[TABSK48=2]: %NAME% TABSK48 = +2 Assassin Traps %NL% %CONTINUE%
+ItemDisplay[TABSK48=3]: %NAME% TABSK48 = +3 Assassin Traps %NL% %CONTINUE%
+ItemDisplay[TABSK48>3]: %NAME% TABSK48 = +X Assassin Traps %NL% %CONTINUE%
+ItemDisplay[TABSK49=1]: %NAME% TABSK49 = +1 Assassin Shadow Disciplines %NL% %CONTINUE%
+ItemDisplay[TABSK49=2]: %NAME% TABSK49 = +2 Assassin Shadow Disciplines %NL% %CONTINUE%
+ItemDisplay[TABSK49=3]: %NAME% TABSK49 = +3 Assassin Shadow Disciplines %NL% %CONTINUE%
+ItemDisplay[TABSK49>3]: %NAME% TABSK49 = +X Assassin Shadow Disciplines %NL% %CONTINUE%
+ItemDisplay[TABSK50=1]: %NAME% TABSK50 = +1 Assassin Martial Arts %NL% %CONTINUE%
+ItemDisplay[TABSK50=2]: %NAME% TABSK50 = +2 Assassin Martial Arts %NL% %CONTINUE%
+ItemDisplay[TABSK50=3]: %NAME% TABSK50 = +3 Assassin Martial Arts %NL% %CONTINUE%
+ItemDisplay[TABSK50>3]: %NAME% TABSK50 = +X Assassin Martial Arts %NL% %CONTINUE%
 
 EndIf[]
 
-ItemDisplay[SYNTH]:                 %NAME% Item %SAGE%%CODE%%WHITE% has
-ItemDisplay[(UNI OR QUEST OR MAP)]: %NAME% Item %GOLD%%CODE%%WHITE% has
-ItemDisplay[SET]:                   %NAME% Item %GREEN%%CODE%%WHITE% has
-ItemDisplay[(CRAFTED OR RUNE)]:     %NAME% Item %ORANGE%%CODE%%WHITE% has
-ItemDisplay[RARE]:                  %NAME% Item %YELLOW%%CODE%%WHITE% has
-ItemDisplay[MAGIC]:                 %NAME% Item %BLUE%%CODE%%WHITE% has
-ItemDisplay[RW]:                    %NAME% Item %TAN%%CODE%%WHITE% has
-ItemDisplay[INFERIOR]:              %NAME% Item %BLACK%%CODE%%WHITE% has
-ItemDisplay[(NMAG OR GEM)]:         %NAME% Item %WHITE%%CODE%%WHITE% has
-ItemDisplay[SPECIAL]:               %NAME% Item %RED%%CODE%%WHITE% has
-ItemDisplay[]:                      %NAME% Item %CODE% %PURPLE%(unknown type)%WHITE% has
+ItemDisplay[SYNTH]:               %NAME% Item %SAGE%%CODE%%WHITE% has
+ItemDisplay[UNI OR QUEST OR MAP]: %NAME% Item %GOLD%%CODE%%WHITE% has
+ItemDisplay[SET]:                 %NAME% Item %GREEN%%CODE%%WHITE% has
+ItemDisplay[CRAFTED OR RUNE]:     %NAME% Item %ORANGE%%CODE%%WHITE% has
+ItemDisplay[RARE]:                %NAME% Item %YELLOW%%CODE%%WHITE% has
+ItemDisplay[MAGIC]:               %NAME% Item %BLUE%%CODE%%WHITE% has
+ItemDisplay[RW]:                  %NAME% Item %TAN%%CODE%%WHITE% has
+ItemDisplay[INFERIOR]:            %NAME% Item %BLACK%%CODE%%WHITE% has
+ItemDisplay[NMAG OR GEM]:         %NAME% Item %WHITE%%CODE%%WHITE% has
+ItemDisplay[SPECIAL]:             %NAME% Item %RED%%CODE%%WHITE% has
+ItemDisplay[]:                    %NAME% Item %CODE% %PURPLE%(unknown type)%WHITE% has
