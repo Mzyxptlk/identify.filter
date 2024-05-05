@@ -1,14 +1,13 @@
 # identify.filter
 
-This Path of Diablo item filter is a tool to identify all stat IDs on items by
-name. It is meant as an aid for filter writers, *not* for use while playing the
-game.
+This Path of Diablo item filter is a tool to identify all stat and skill IDs. It
+is meant as an aid for filter writers, *not* for use while playing the game.
 
-If you look at the filter file, you'll see a lot of stat and skill IDs are
-listed either in purple, or bold (cyan). Purple means I have no idea what the
-stat is or does. Cyan means I have a good guess, but no confirmation that it's
-actually correct (because I don't have the item in question). **Contributions
-welcome!**
+If you look at the filter file (or its output ingame), you'll see a lot of stat
+and skill IDs are listed either in purple, or bold (cyan). Purple means I have
+no idea what the stat is or does. Cyan means I have a good guess, but no
+confirmation that it's actually correct (because I don't have the item in
+question). **Contributions are very welcome!**
 
 I've defined 4 filter levels:
 - Level 1 shows stat IDs 0-80
