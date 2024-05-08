@@ -5,8 +5,8 @@
 
 Attribute[Author]: Mzyxptlk
 Attribute[Name]: identify
-Attribute[Version]: 0.5.7
-Attribute[Date]: 2024-05-05
+Attribute[Version]: 0.5.8
+Attribute[Date]: 2024-05-08
 
 // When item names become too long, the game crashes. Most of the common stats
 // are in the lower regions, so we split those out from the rest. If you really
