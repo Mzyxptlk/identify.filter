@@ -5,8 +5,8 @@
 
 Attribute[Author]: Mzyxptlk
 Attribute[Name]: identify
-Attribute[Version]: 0.5.8
-Attribute[Date]: 2024-05-08
+Attribute[Version]: 0.6.0
+Attribute[Date]: 2024-05-27
 
 // When item names become too long, the game crashes. Most of the common stats
 // are in the lower regions, so we split those out from the rest. If you really
@@ -17,7 +17,7 @@ FilterLevel[2]: IDs 81-510
 FilterLevel[3]: Skills
 FilterLevel[4]: All CRASH RISK
 
-Option[ DefaultFilterLevel]: IDs 0-80
+Option[DefaultFilterLevel]: IDs 0-80
 
 ItemDisplay[SYNTH]:               %SAGE%%NAME%%WHITE% %NL% %CONTINUE%
 ItemDisplay[UNI OR QUEST OR MAP]: %GOLD%%NAME%%WHITE% %NL% %CONTINUE%
@@ -28,7 +28,7 @@ ItemDisplay[MAGIC]:               %BLUE%%NAME%%WHITE% %NL% %CONTINUE%
 ItemDisplay[RW]:                  %TAN%%NAME%%WHITE% %NL% %CONTINUE%
 ItemDisplay[INFERIOR]:            %BLACK%%NAME%%WHITE% %NL% %CONTINUE%
 ItemDisplay[NMAG OR GEM]:         %WHITE%%NAME%%WHITE% %NL% %CONTINUE%
-ItemDisplay[!SYNTH !UNI !QUEST !MAP !SET !CRAFTED !RUNE !RARE !MAGIC !RW !INFERIOR ! NMAG !GEM]: %RED%%NAME%%WHITE% (unknown type) %NL% %CONTINUE%
+ItemDisplay[!SYNTH !UNI !QUEST !MAP !SET !CRAFTED !RUNE !RARE !MAGIC !RW !INFERIOR !NMAG !GEM]: %RED%%NAME%%WHITE% (unknown type) %NL% %CONTINUE%
 
 // Stats in purple indicate an unknown stat. Stats in cyan (%BOLD%) indicate a
 // tentative stat. Everything else should(TM) be correct. If it's not, that's a
@@ -44,7 +44,10 @@ ItemDisplay[STAT510]: %NAME% STAT510 = %STAT(510)% %PURPLE%???%WHITE% %NL% %CONT
 ItemDisplay[STAT509]: %NAME% STAT509 = %STAT(509)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT508]: %NAME% STAT508 = %STAT(508)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT507]: %NAME% STAT507 = %STAT(507)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT506]: %NAME% STAT506 = %STAT(506)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+// In vanilla, aura stacking was a bug. In PoD, that bug has been fixed, but
+// stacking has been re-enabled for Dream (Holy Shock), Hand of Justice, and
+// Dragon (Holy Fire). This is that stat for the latter 2.
+ItemDisplay[STAT506]: %NAME% STAT506 = %STAT(506)% Holy Fire Stacking %NL% %CONTINUE%
 ItemDisplay[STAT505]: %NAME% STAT505 = %STAT(505)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT504]: %NAME% STAT504 = %STAT(504)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT503]: %NAME% STAT503 = %STAT(503)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -54,7 +57,7 @@ ItemDisplay[STAT500]: %NAME% STAT500 = +%STAT(500)%% Magic Arrow Dmg As Magic %N
 ItemDisplay[STAT499]: %NAME% STAT499 = %STAT(499)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT498]: %NAME% STAT498 = %STAT(498)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT497]: %NAME% STAT497 = %STAT(497)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[STAT496]: %NAME% STAT496 = +%STAT(496)% Cold Dmg/RuneGem %NL% %CONTINUE%
+ItemDisplay[STAT496]: %NAME% STAT496 = +%STAT(496)% Cold Dmg/RuneAndGem %NL% %CONTINUE%
 ItemDisplay[STAT495]: %NAME% STAT495 = +%STAT(495)% Ele Psn Skills %NL% %CONTINUE%
 ItemDisplay[STAT494]: %NAME% STAT494 = %STAT(494)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT493]: %NAME% STAT493 = %STAT(493)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -94,8 +97,8 @@ ItemDisplay[STAT460]: %NAME% STAT460 = +%STAT(460)% %BOLD%Grizz OR No Curse Griz
 ItemDisplay[STAT459]: %NAME% STAT459 = %STAT(459)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT458]: %NAME% STAT458 = %STAT(458)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT457]: %NAME% STAT457 = %STAT(457)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-// For Weapons, Armors/Helms, and Shields, there are properties describing the
-// number of gems and runes, but not jewels.
+// For Weapons, Armors/Helms, and Shields, there are stats describing the number
+// of gems and runes, but not jewels.
 ItemDisplay[STAT456]: %NAME% STAT456 = %STAT(456)% Armor/Helm Soc Gems %NL% %CONTINUE%
 ItemDisplay[STAT455]: %NAME% STAT455 = %STAT(455)% Armor/Helm Soc Runes %NL% %CONTINUE%
 ItemDisplay[STAT454]: %NAME% STAT454 = %STAT(454)% Shield Soc Gems %NL% %CONTINUE%
@@ -131,6 +134,7 @@ ItemDisplay[STAT426]: %NAME% STAT426 = +%STAT(426)% Cold Arrows %NL% %CONTINUE%
 ItemDisplay[STAT425]: %NAME% STAT425 = %STAT(425)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT424]: %NAME% STAT424 = %STAT(424)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT423]: %NAME% STAT423 = %STAT(423)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+// This might be 442.
 ItemDisplay[STAT422]: %NAME% STAT422 = %STAT(422)%/2 %BOLD%Life on Demon Kill???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT421]: %NAME% STAT421 = %STAT(421)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT420]: %NAME% STAT420 = %STAT(420)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -203,13 +207,16 @@ ItemDisplay[STAT360]: %NAME% STAT360 = %STAT(360)% Is Corrupted %NL% %CONTINUE%
 // and thus became useless.
 ItemDisplay[STAT359]: %NAME% STAT359 = %STAT(359)% Corruption Roll %NL% %CONTINUE%
 
-// 358 was D2's highest defined stat. The above are all PoD-only.
+// 358 was vanilla LoD's highest defined stat. The above are all PoD-only.
 ItemDisplay[STAT358]: %NAME% STAT358 = -%STAT(358)%% Magic Pierc %NL% %CONTINUE%
 ItemDisplay[STAT357]: %NAME% STAT357 = +%STAT(357)%% Magic Skill Dmg %NL% %CONTINUE%
 // Used to distinguish between quest items in Normal, Nightmare, and Hell, to
 // ensure so you can't open the cow level on Hell with a Normal Wirt's Leg, for
 // example.
-ItemDisplay[STAT356]: %NAME% STAT356 = From Difficulty %STAT(356)% (0=Norm, 1=NM, 2=Hell) %NL% %CONTINUE%
+ItemDisplay[STAT356=0]: %NAME% STAT356 = From Difficulty %STAT(356)% (Norm) %NL% %CONTINUE%
+ItemDisplay[STAT356=1]: %NAME% STAT356 = From Difficulty %STAT(356)% (Nightmare) %NL% %CONTINUE%
+ItemDisplay[STAT356=2]: %NAME% STAT356 = From Difficulty %STAT(356)% (Hell) %NL% %CONTINUE%
+ItemDisplay[STAT356>2]: %NAME% STAT356 = From Difficulty %STAT(356)% (Unknown) %NL% %CONTINUE%
 ItemDisplay[STAT355]: %NAME% STAT355 = %STAT(355)% %BOLD%shortparam1???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT354]: %NAME% STAT354 = %STAT(354)% %BOLD%source_unit_id???%WHITE% %NL% %CONTINUE%
 ItemDisplay[STAT353]: %NAME% STAT353 = %STAT(353)% %BOLD%source_unit_type???%WHITE% %NL% %CONTINUE%
@@ -547,7 +554,8 @@ EnableIf[(FILTERLVL=3 OR FILTERLVL=4)]:
 // ItemDisplay[SK4]: %NAME% SK4 = +%SKILL(4)% Left Hand Throw %NL% %CONTINUE%
 // ItemDisplay[SK5]: %NAME% SK5 = +%SKILL(5)% Left Hand Swing %NL% %CONTINUE%
 
-// Amazon skills (vanilla skills probably correct; PoD-only skills unconfirmed)
+// Amazon skills (vanilla skills probably correct; PoD-only skills unconfirmed
+// because they don't roll as staffmods)
 ItemDisplay[SK6]:  %NAME% SK6 = +%SKILL(6)% Magic Arrow %NL% %CONTINUE%
 ItemDisplay[SK7]:  %NAME% SK7 = +%SKILL(7)% Fire Arrow %NL% %CONTINUE%
 ItemDisplay[SK8]:  %NAME% SK8 = +%SKILL(8)% Inner Sight %NL% %CONTINUE%
@@ -675,8 +683,9 @@ ItemDisplay[SK123]: %NAME% SK123 = +%SKILL(123)% Conviction %NL% %CONTINUE%
 ItemDisplay[SK124]: %NAME% SK124 = +%SKILL(124)% Redemption %NL% %CONTINUE%
 ItemDisplay[SK125]: %NAME% SK125 = +%SKILL(125)% Salvation %NL% %CONTINUE%
 
-// Barbarian skills (mostly confirmed correct)
-ItemDisplay[SK126]: %NAME% SK126 = +%SKILL(126)% Bash %NL% %CONTINUE%
+// Barbarian skills (mostly confirmed correct, missing skills mostly no longer
+// in the game)
+ItemDisplay[SK126]: %NAME% SK126 = +%SKILL(126)% %BOLD%Bash???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK127]: %NAME% SK127 = +%SKILL(127)% Edged Weapon Mastery %NL% %CONTINUE%
 ItemDisplay[SK128]: %NAME% SK128 = +%SKILL(128)% Pole Weapon Mastery %NL% %CONTINUE%
 ItemDisplay[SK129]: %NAME% SK129 = +%SKILL(129)% Blunt Mastery %NL% %CONTINUE%
@@ -686,23 +695,23 @@ ItemDisplay[SK132]: %NAME% SK132 = +%SKILL(132)% Leap %NL% %CONTINUE%
 ItemDisplay[SK133]: %NAME% SK133 = +%SKILL(133)% %BOLD%Ethereal Throw???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK134]: %NAME% SK134 = +%SKILL(134)% Whirling Axes %NL% %CONTINUE%
 ItemDisplay[SK135]: %NAME% SK135 = +%SKILL(135)% Thrown Weapon Mastery %NL% %CONTINUE%
-ItemDisplay[SK136]: %NAME% SK136 = +%SKILL(136)% ??? Mastery %NL% %CONTINUE%
+ItemDisplay[SK136]: %NAME% SK136 = +%SKILL(136)% %BOLD%??? Mastery???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK137]: %NAME% SK137 = +%SKILL(137)% Taunt %NL% %CONTINUE%
 ItemDisplay[SK138]: %NAME% SK138 = +%SKILL(138)% Shout %NL% %CONTINUE%
-ItemDisplay[SK139]: %NAME% SK139 = +%SKILL(139)% Stun %NL% %CONTINUE%
-ItemDisplay[SK140]: %NAME% SK140 = +%SKILL(140)% Power Throw %NL% %CONTINUE%
+ItemDisplay[SK139]: %NAME% SK139 = +%SKILL(139)% %BOLD%Stun???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK140]: %NAME% SK140 = +%SKILL(140)% %BOLD%Power Throw???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK141]: %NAME% SK141 = +%SKILL(141)% Increased Stamina %NL% %CONTINUE%
 ItemDisplay[SK142]: %NAME% SK142 = +%SKILL(142)% Find Item %NL% %CONTINUE%
-ItemDisplay[SK143]: %NAME% SK143 = +%SKILL(143)% Leap Attack %NL% %CONTINUE%
-ItemDisplay[SK144]: %NAME% SK144 = +%SKILL(144)% Concentrate %NL% %CONTINUE%
+ItemDisplay[SK143]: %NAME% SK143 = +%SKILL(143)% %BOLD%Leap Attack???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK144]: %NAME% SK144 = +%SKILL(144)% %BOLD%Concentrate???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK145]: %NAME% SK145 = +%SKILL(145)% Iron Skin %NL% %CONTINUE%
 ItemDisplay[SK146]: %NAME% SK146 = +%SKILL(146)% Battle Cry %NL% %CONTINUE%
-ItemDisplay[SK147]: %NAME% SK147 = +%SKILL(147)% Frenzy %NL% %CONTINUE%
+ItemDisplay[SK147]: %NAME% SK147 = +%SKILL(147)% %BOLD%Frenzy???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK148]: %NAME% SK148 = +%SKILL(148)% Increased Speed %NL% %CONTINUE%
 ItemDisplay[SK149]: %NAME% SK149 = +%SKILL(149)% Battle Orders %NL% %CONTINUE%
 ItemDisplay[SK150]: %NAME% SK150 = +%SKILL(150)% Grim Ward %NL% %CONTINUE%
-ItemDisplay[SK151]: %NAME% SK151 = +%SKILL(151)% Whirlwind %NL% %CONTINUE%
-ItemDisplay[SK152]: %NAME% SK152 = +%SKILL(152)% Cleave %NL% %CONTINUE%
+ItemDisplay[SK151]: %NAME% SK151 = +%SKILL(151)% %BOLD%Whirlwind???%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK152]: %NAME% SK152 = +%SKILL(152)% %BOLD%Cleave???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK153]: %NAME% SK153 = +%SKILL(153)% Natural Resistance %NL% %CONTINUE%
 ItemDisplay[SK154]: %NAME% SK154 = +%SKILL(154)% War Cry %NL% %CONTINUE%
 ItemDisplay[SK155]: %NAME% SK155 = +%SKILL(155)% Battle Command %NL% %CONTINUE%
@@ -749,7 +758,7 @@ ItemDisplay[SK251]: %NAME% SK251 = +%SKILL(251)% Fire Blast %NL% %CONTINUE%
 ItemDisplay[SK252]: %NAME% SK252 = +%SKILL(252)% Claw Mastery %NL% %CONTINUE%
 ItemDisplay[SK253]: %NAME% SK253 = +%SKILL(253)% Psychic Hammer %NL% %CONTINUE%
 ItemDisplay[SK254]: %NAME% SK254 = +%SKILL(254)% Tiger Strike %NL% %CONTINUE%
-ItemDisplay[SK255]: %NAME% SK255 = +%SKILL(255)% Dragon Talon %NL% %CONTINUE%
+ItemDisplay[SK255]: %NAME% SK255 = +%SKILL(255)% %BOLD%Dragon Talon???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK256]: %NAME% SK256 = +%SKILL(256)% Shock Web %NL% %CONTINUE%
 ItemDisplay[SK257]: %NAME% SK257 = +%SKILL(257)% Blade Throw %NL% %CONTINUE%
 ItemDisplay[SK258]: %NAME% SK258 = +%SKILL(258)% Burst of Speed %NL% %CONTINUE%
@@ -764,97 +773,109 @@ ItemDisplay[SK266]: %NAME% SK266 = +%SKILL(266)% Blade Fury %NL% %CONTINUE%
 ItemDisplay[SK267]: %NAME% SK267 = +%SKILL(267)% Fade %NL% %CONTINUE%
 ItemDisplay[SK268]: %NAME% SK268 = +%SKILL(268)% Shadow Warrior %NL% %CONTINUE%
 ItemDisplay[SK269]: %NAME% SK269 = +%SKILL(269)% Claws of Thunder %NL% %CONTINUE%
-ItemDisplay[SK270]: %NAME% SK270 = +%SKILL(270)% Dragon Tail %NL% %CONTINUE%
+ItemDisplay[SK270]: %NAME% SK270 = +%SKILL(270)% %BOLD%Dragon Tail???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK271]: %NAME% SK271 = +%SKILL(271)% Lightning Sentry %NL% %CONTINUE%
 ItemDisplay[SK272]: %NAME% SK272 = +%SKILL(272)% Wake of Inferno %NL% %CONTINUE%
 ItemDisplay[SK273]: %NAME% SK273 = +%SKILL(273)% Mind Blast %NL% %CONTINUE%
 ItemDisplay[SK274]: %NAME% SK274 = +%SKILL(274)% Blades of Ice %NL% %CONTINUE%
-ItemDisplay[SK275]: %NAME% SK275 = +%SKILL(275)% Dragon Flight %NL% %CONTINUE%
+ItemDisplay[SK275]: %NAME% SK275 = +%SKILL(275)% %BOLD%Dragon Flight???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK276]: %NAME% SK276 = +%SKILL(276)% Death Sentry %NL% %CONTINUE%
 ItemDisplay[SK277]: %NAME% SK277 = +%SKILL(277)% Blade Shield %NL% %CONTINUE%
 ItemDisplay[SK278]: %NAME% SK278 = +%SKILL(278)% Venom %NL% %CONTINUE%
 ItemDisplay[SK279]: %NAME% SK279 = +%SKILL(279)% Shadow Master %NL% %CONTINUE%
-ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% Phoenix Strike %NL% %CONTINUE%
+ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% %BOLD%Phoenix Strike???%WHITE% %NL% %CONTINUE%
 
-ItemDisplay[SK280]: %NAME% SK280 = +%SKILL(280)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK281]: %NAME% SK281 = +%SKILL(281)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK282]: %NAME% SK282 = +%SKILL(282)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK283]: %NAME% SK283 = +%SKILL(283)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK284]: %NAME% SK284 = +%SKILL(284)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK285]: %NAME% SK285 = +%SKILL(285)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK286]: %NAME% SK286 = +%SKILL(286)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK287]: %NAME% SK287 = +%SKILL(287)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK288]: %NAME% SK288 = +%SKILL(288)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK289]: %NAME% SK289 = +%SKILL(289)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK290]: %NAME% SK290 = +%SKILL(290)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK291]: %NAME% SK291 = +%SKILL(291)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK292]: %NAME% SK292 = +%SKILL(292)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK293]: %NAME% SK293 = +%SKILL(293)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK294]: %NAME% SK294 = +%SKILL(294)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK295]: %NAME% SK295 = +%SKILL(295)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK296]: %NAME% SK296 = +%SKILL(296)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK297]: %NAME% SK297 = +%SKILL(297)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK298]: %NAME% SK298 = +%SKILL(298)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK299]: %NAME% SK299 = +%SKILL(299)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK300]: %NAME% SK300 = +%SKILL(300)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK301]: %NAME% SK301 = +%SKILL(301)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK302]: %NAME% SK302 = +%SKILL(302)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK303]: %NAME% SK303 = +%SKILL(303)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK304]: %NAME% SK304 = +%SKILL(304)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK305]: %NAME% SK305 = +%SKILL(305)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK306]: %NAME% SK306 = +%SKILL(306)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK307]: %NAME% SK307 = +%SKILL(307)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK308]: %NAME% SK308 = +%SKILL(308)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK309]: %NAME% SK309 = +%SKILL(309)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK310]: %NAME% SK310 = +%SKILL(310)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK311]: %NAME% SK311 = +%SKILL(311)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK312]: %NAME% SK312 = +%SKILL(312)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK313]: %NAME% SK313 = +%SKILL(313)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK314]: %NAME% SK314 = +%SKILL(314)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK315]: %NAME% SK315 = +%SKILL(315)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK316]: %NAME% SK316 = +%SKILL(316)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK317]: %NAME% SK317 = +%SKILL(317)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK318]: %NAME% SK318 = +%SKILL(318)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK319]: %NAME% SK319 = +%SKILL(319)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK320]: %NAME% SK320 = +%SKILL(320)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK321]: %NAME% SK321 = +%SKILL(321)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK322]: %NAME% SK322 = +%SKILL(322)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK323]: %NAME% SK323 = +%SKILL(323)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK324]: %NAME% SK324 = +%SKILL(324)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK325]: %NAME% SK325 = +%SKILL(325)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK326]: %NAME% SK326 = +%SKILL(326)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK327]: %NAME% SK327 = +%SKILL(327)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK328]: %NAME% SK328 = +%SKILL(328)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK329]: %NAME% SK329 = +%SKILL(329)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK330]: %NAME% SK330 = +%SKILL(330)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK331]: %NAME% SK331 = +%SKILL(331)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK332]: %NAME% SK332 = +%SKILL(332)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK333]: %NAME% SK333 = +%SKILL(333)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK334]: %NAME% SK334 = +%SKILL(334)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK335]: %NAME% SK335 = +%SKILL(335)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK336]: %NAME% SK336 = +%SKILL(336)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK337]: %NAME% SK337 = +%SKILL(337)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK338]: %NAME% SK338 = +%SKILL(338)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK339]: %NAME% SK339 = +%SKILL(339)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK340]: %NAME% SK340 = +%SKILL(340)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK341]: %NAME% SK341 = +%SKILL(341)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK342]: %NAME% SK342 = +%SKILL(342)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK343]: %NAME% SK343 = +%SKILL(343)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK344]: %NAME% SK344 = +%SKILL(344)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK345]: %NAME% SK345 = +%SKILL(345)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK346]: %NAME% SK346 = +%SKILL(346)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK347]: %NAME% SK347 = +%SKILL(347)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK348]: %NAME% SK348 = +%SKILL(348)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK349]: %NAME% SK349 = +%SKILL(349)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK350]: %NAME% SK350 = +%SKILL(350)% Delirium %NL% %CONTINUE%
-ItemDisplay[SK351]: %NAME% SK351 = +%SKILL(351)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK352]: %NAME% SK352 = +%SKILL(352)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK353]: %NAME% SK353 = +%SKILL(353)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK354]: %NAME% SK354 = +%SKILL(354)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK355]: %NAME% SK355 = +%SKILL(355)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK356]: %NAME% SK356 = +%SKILL(356)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK357]: %NAME% SK357 = +%SKILL(357)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK358]: %NAME% SK358 = +%SKILL(358)% %PURPLE%???%WHITE% %NL% %CONTINUE%
+// 281 through 357 are vanilla monster and summons skills, like Baal's teleport
+// (329), the Blood Mana curse (310), Grizzly Bear's smite (326), or Spirit of
+// Wolverine Aura (297).
+//
+// Path of Diablo made changes to some of these skills. For example, the skill
+// Hydra uses to attack has changed. Since these skills never spawn on items,
+// there's no way to verify that, so I've left them defined as "probably right",
+// simply for the sake of clarity and completeness.
+ItemDisplay[SK281]: %NAME% SK281 = +%SKILL(281)% %BOLD%Wake of Destruction Sentry%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK282]: %NAME% SK282 = +%SKILL(282)% %BOLD%Imp Inferno%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK283]: %NAME% SK283 = +%SKILL(283)% %BOLD%Imp Fireball%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK284]: %NAME% SK284 = +%SKILL(284)% %BOLD%Baal Taunt%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK285]: %NAME% SK285 = +%SKILL(285)% %BOLD%Baal Corpse Explode%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK286]: %NAME% SK286 = +%SKILL(286)% %BOLD%Baal Monster Spawn%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK287]: %NAME% SK287 = +%SKILL(287)% %BOLD%Catapult Charged Ball%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK288]: %NAME% SK288 = +%SKILL(288)% %BOLD%Catapult Spike Ball%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK289]: %NAME% SK289 = +%SKILL(289)% %BOLD%Suck Blood%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK290]: %NAME% SK290 = +%SKILL(290)% %BOLD%Cry Help%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK291]: %NAME% SK291 = +%SKILL(291)% %BOLD%Healing Vortex%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK292]: %NAME% SK292 = +%SKILL(292)% %BOLD%Teleport 2%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK293]: %NAME% SK293 = +%SKILL(293)% %BOLD%Self-Resurrect%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK294]: %NAME% SK294 = +%SKILL(294)% %BOLD%Vine Attack%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK295]: %NAME% SK295 = +%SKILL(295)% %BOLD%Overseer Whip%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK296]: %NAME% SK296 = +%SKILL(296)% %BOLD%Barbs Aura%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK297]: %NAME% SK297 = +%SKILL(297)% %BOLD%Wolverine Aura%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK298]: %NAME% SK298 = +%SKILL(298)% %BOLD%Oak Sage Aura%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK299]: %NAME% SK299 = +%SKILL(299)% %BOLD%Imp Fire Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK300]: %NAME% SK300 = +%SKILL(300)% %BOLD%Impregnate%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK301]: %NAME% SK301 = +%SKILL(301)% %BOLD%Siege Beast Stomp%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK302]: %NAME% SK302 = +%SKILL(302)% %BOLD%Minion Spawner%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK303]: %NAME% SK303 = +%SKILL(303)% %BOLD%Catapult Blizzard%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK304]: %NAME% SK304 = +%SKILL(304)% %BOLD%Catapult Plague%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK305]: %NAME% SK305 = +%SKILL(305)% %BOLD%Catapult Meteor%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK306]: %NAME% SK306 = +%SKILL(306)% %BOLD%Bolt Sentry%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK307]: %NAME% SK307 = +%SKILL(307)% %BOLD%Corpse Cycler%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK308]: %NAME% SK308 = +%SKILL(308)% %BOLD%Death Maul%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK309]: %NAME% SK309 = +%SKILL(309)% %BOLD%-Defense Curse%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK310]: %NAME% SK310 = +%SKILL(310)% %BOLD%Blood Mana%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK311]: %NAME% SK311 = +%SKILL(311)% %BOLD%Mon Inferno Sentry%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK312]: %NAME% SK312 = +%SKILL(312)% %BOLD%Mon Death Sentry%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK313]: %NAME% SK313 = +%SKILL(313)% %BOLD%Sentry Lightning%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK314]: %NAME% SK314 = +%SKILL(314)% %BOLD%Dire Wolf Rage%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK315]: %NAME% SK315 = +%SKILL(315)% %BOLD%Baal Tentacle%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK316]: %NAME% SK316 = +%SKILL(316)% %BOLD%Baal Nova%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK317]: %NAME% SK317 = +%SKILL(317)% %BOLD%Baal Inferno%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK318]: %NAME% SK318 = +%SKILL(318)% %BOLD%Baal Cold Missiles%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK319]: %NAME% SK319 = +%SKILL(319)% %BOLD%Megademon Inferno%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK320]: %NAME% SK320 = +%SKILL(320)% %BOLD%Evil Hut Spawner%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK321]: %NAME% SK321 = +%SKILL(321)% %BOLD%Countess Firewall%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK322]: %NAME% SK322 = +%SKILL(322)% %BOLD%Imp Bolt%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK323]: %NAME% SK323 = +%SKILL(323)% %BOLD%Horror Arctic Blast%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK324]: %NAME% SK324 = +%SKILL(324)% %BOLD%Death Sentry Lightning%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK325]: %NAME% SK325 = +%SKILL(325)% %BOLD%Vine Cycler%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK326]: %NAME% SK326 = +%SKILL(326)% %BOLD%Bear Smite%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK327]: %NAME% SK327 = +%SKILL(327)% %BOLD%Resurrect 2%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK328]: %NAME% SK328 = +%SKILL(328)% %BOLD%Blood Lord Frenzy%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK329]: %NAME% SK329 = +%SKILL(329)% %BOLD%Baal Teleport%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK330]: %NAME% SK330 = +%SKILL(330)% %BOLD%Imp Teleport%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK331]: %NAME% SK331 = +%SKILL(331)% %BOLD%Baal Clone Teleport%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK332]: %NAME% SK332 = +%SKILL(332)% %BOLD%Zakarum Lightning%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK333]: %NAME% SK333 = +%SKILL(333)% %BOLD%Vampire Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK334]: %NAME% SK334 = +%SKILL(334)% %BOLD%Mephisto Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK335]: %NAME% SK335 = +%SKILL(335)% %BOLD%Doom Knight Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK336]: %NAME% SK336 = +%SKILL(336)% %BOLD%Rogue Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK337]: %NAME% SK337 = +%SKILL(337)% %BOLD%Hydra Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK338]: %NAME% SK338 = +%SKILL(338)% %BOLD%Skeltal Mage Missile%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK339]: %NAME% SK339 = +%SKILL(339)% %BOLD%Mon Bow%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK340]: %NAME% SK340 = +%SKILL(340)% %BOLD%Mon Fire Arrow%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK341]: %NAME% SK341 = +%SKILL(341)% %BOLD%Mon Cold Arrow%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK342]: %NAME% SK342 = +%SKILL(342)% %BOLD%Mon Exploding Arrow%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK343]: %NAME% SK343 = +%SKILL(343)% %BOLD%Mon Freezing Arrow%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK344]: %NAME% SK344 = +%SKILL(344)% %BOLD%Mon Power Strike%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK345]: %NAME% SK345 = +%SKILL(345)% %BOLD%Succubus Bolt%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK346]: %NAME% SK346 = +%SKILL(346)% %BOLD%Mephisto Frost Nova%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK347]: %NAME% SK347 = +%SKILL(347)% %BOLD%Mon Ice Spear%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK348]: %NAME% SK348 = +%SKILL(348)% %BOLD%Shaman Ice%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK349]: %NAME% SK349 = +%SKILL(349)% %BOLD%Diablo Armageddon%WHITE% %NL% %CONTINUE%
+// This is the skill that the Delirium runeword procs to transform into a
+// fetish.
+ItemDisplay[SK350]: %NAME% SK350 = +%SKILL(350)% Delirium Transformation %NL% %CONTINUE%
+ItemDisplay[SK351]: %NAME% SK351 = +%SKILL(351)% %BOLD%Nihlathak Corpse Explosion%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK352]: %NAME% SK352 = +%SKILL(352)% %BOLD%Serpent Charge%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK353]: %NAME% SK353 = +%SKILL(353)% %BOLD%Trap Nova%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK354]: %NAME% SK354 = +%SKILL(354)% %BOLD%Un Holy Bolt Ex%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK355]: %NAME% SK355 = +%SKILL(355)% %BOLD%Shaman Fire Ex%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK356]: %NAME% SK356 = +%SKILL(356)% %BOLD%Imp Fire Missile Ex%WHITE% %NL% %CONTINUE%
+ItemDisplay[SK357]: %NAME% SK357 = +%SKILL(357)% %BOLD%Fixed Siege Beast Stomp%WHITE% %NL% %CONTINUE%
+
+// 357 was vanilla LoD's highest defined skill. The remainder of this list is
+// PoD-only.
+ItemDisplay[SK358]: %NAME% SK358 = +%SKILL(358)% %PURPLE%Melee splash???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK359]: %NAME% SK359 = +%SKILL(359)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK360]: %NAME% SK360 = +%SKILL(360)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK361]: %NAME% SK361 = +%SKILL(361)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -1002,7 +1023,7 @@ ItemDisplay[SK502]: %NAME% SK502 = +%SKILL(502)% %PURPLE%???%WHITE% %NL% %CONTIN
 ItemDisplay[SK503]: %NAME% SK503 = +%SKILL(503)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK504]: %NAME% SK504 = +%SKILL(504)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK505]: %NAME% SK505 = +%SKILL(505)% %PURPLE%???%WHITE% %NL% %CONTINUE%
-ItemDisplay[SK506]: %NAME% SK506 = +%SKILL(506)% Holy Fire Stacking %NL% %CONTINUE%
+ItemDisplay[SK506]: %NAME% SK506 = +%SKILL(506)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK507]: %NAME% SK507 = +%SKILL(507)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK508]: %NAME% SK508 = +%SKILL(508)% %PURPLE%???%WHITE% %NL% %CONTINUE%
 ItemDisplay[SK509]: %NAME% SK509 = +%SKILL(509)% %PURPLE%???%WHITE% %NL% %CONTINUE%
@@ -1342,14 +1363,19 @@ ItemDisplay[TABSK50>3]: %NAME% TABSK50 = +X Assassin Martial Arts %NL% %CONTINUE
 
 EndIf[]
 
-ItemDisplay[SYNTH]:               %NAME% Item %SAGE%%CODE%%WHITE% has
-ItemDisplay[UNI OR QUEST OR MAP]: %NAME% Item %GOLD%%CODE%%WHITE% has
-ItemDisplay[SET]:                 %NAME% Item %GREEN%%CODE%%WHITE% has
-ItemDisplay[CRAFTED OR RUNE]:     %NAME% Item %ORANGE%%CODE%%WHITE% has
-ItemDisplay[RARE]:                %NAME% Item %YELLOW%%CODE%%WHITE% has
-ItemDisplay[MAGIC]:               %NAME% Item %BLUE%%CODE%%WHITE% has
-ItemDisplay[RW]:                  %NAME% Item %TAN%%CODE%%WHITE% has
-ItemDisplay[INFERIOR]:            %NAME% Item %BLACK%%CODE%%WHITE% has
-ItemDisplay[NMAG OR GEM]:         %NAME% Item %WHITE%%CODE%%WHITE% has
-ItemDisplay[SPECIAL]:             %NAME% Item %RED%%CODE%%WHITE% has
-ItemDisplay[]:                    %NAME% Item %CODE% %PURPLE%(unknown type)%WHITE% has
+// This uses vanilla item colors for vanilla item types.
+ItemDisplay[SYNTH]:    %NAME% %SAGE%Synth item with code %CODE%%WHITE% has
+ItemDisplay[UNI]:      %NAME% %GOLD%Unique item with code %CODE%%WHITE% has
+ItemDisplay[QUEST]:    %NAME% %GOLD%Quest item with code %CODE%%WHITE% has
+ItemDisplay[MAP]:      %NAME% %GOLD%Relic with code %CODE%%WHITE% has
+ItemDisplay[SET]:      %NAME% %GREEN%Set item with code %CODE%%WHITE% has
+ItemDisplay[CRAFTED]:  %NAME% %ORANGE%Crafted item with code %CODE%%WHITE% has
+ItemDisplay[RUNE]:     %NAME% %ORANGE%Rune with code %CODE%%WHITE% has
+ItemDisplay[RARE]:     %NAME% %YELLOW%Rare item with code %CODE%%WHITE% has
+ItemDisplay[MAGIC]:    %NAME% %BLUE%Magic item with code %CODE%%WHITE% has
+ItemDisplay[RW]:       %NAME% %TAN%Runeworded item with code %CODE%%WHITE% has
+ItemDisplay[INFERIOR]: %NAME% %BLACK%Inferior item with code %CODE%%WHITE% has
+ItemDisplay[NMAG]:     %NAME% %WHITE%Non-magical item with code %CODE%%WHITE% has
+ItemDisplay[GEM]:      %NAME% %WHITE%Gem with code %CODE%%WHITE% has
+ItemDisplay[SPECIAL]:  %NAME% %RED%Special item with code %CODE%%WHITE% has
+ItemDisplay[]:         %NAME% %PURPLE%(unknown type) item with code %CODE% %WHITE% has
